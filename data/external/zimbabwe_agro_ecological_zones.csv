@@ -1,0 +1,7 @@
+zone,location,rainfall_min,rainfall_max,temperature_min,temperature_max,agricultural_characteristics
+Region I,"Eastern Highlands (Mutare, Nyanga, Chipinge)",1000.0,2000.0,12.0,24.0,"Specialized and Diversified Farming. Suitable for Tea, Coffee, Fruit, Macadamia, Wheat, Forestries."
+Region IIa,"Northern Highveld (Harare, Mazowe, Marondera, Chinhoyi)",750.0,1000.0,15.0,28.0,"Intensive Farming. Highly suitable for Maize, Tobacco, Wheat, Soybean, Horticulture."
+Region IIb,"Sub-central Highveld (Murehwa, Chegutu, Norton)",700.0,850.0,16.0,29.0,"Intensive Crop & Livestock Farming. Suitable for Maize, Tobacco, Groundnuts, Sunflower."
+Region III,"Midveld (Gweru, Kwekwe, Kadoma, Bindura)",500.0,700.0,18.0,32.0,"Semi-Intensive Farming. Suitable for Drought-tolerant Maize, Cotton, Sorghum, Sunflower, Soybeans."
+Region IV,"Low-lying areas (Masvingo, Lupane, Gokwe, Gutu)",450.0,650.0,20.0,36.0,"Semi-Extensive Farming. Suitable for Sorghum, Millet, Groundnuts, Cotton, Livestock rearing."
+Region V,"Lowveld (Binga, Chiredzi, Gwanda, Beitbridge)",300.0,500.0,22.0,42.0,"Extensive Cattle Rearing & Wildlife. Crop cultivation requires irrigation (Sugarcane, Irrigated Maize/Cotton, Cassava)."

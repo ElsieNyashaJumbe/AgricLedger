@@ -1,0 +1,35 @@
+{
+  "dataset_name": "Zimbabwe Geoportal - In-situ Crop Data Summer 2024",
+  "source_url": "https://zimgeoportal.org.zw/datasets/in-situ-crop-data-summer-2024/",
+  "publisher_organization": "Zimbabwe Geoportal / FAO / Ministry of Lands, Agriculture, Fisheries, Water and Rural Development",
+  "collection_period": "February 2024 - March 2024",
+  "geographic_coverage": "Zimbabwe (National Coverage - 10 Provinces, 60+ Districts)",
+  "bounding_box": {
+    "min_latitude": -22.4,
+    "max_latitude": -15.6,
+    "min_longitude": 25.2,
+    "max_longitude": 33.1
+  },
+  "sample_counts": {
+    "probability_sample_points": 1691,
+    "windshield_survey_points": 2910,
+    "total_field_observations": 4601
+  },
+  "available_formats": ["GeoJSON", "CSV", "KML", "Shapefile"],
+  "license": "Public Access via ZimGeoportal Terms / Authoritative Government Data",
+  "access_status": "AUTHENTICATION_REQUIRED",
+  "access_note": "Direct automated scraping/download is restricted by ZimGeoportal login gate (https://zimgeoportal.org.zw/accounts/login/). Data access requires registered user credentials.",
+  "provenance_class": "REAL",
+  "variables_captured": [
+    "point_id",
+    "latitude",
+    "longitude",
+    "province",
+    "district",
+    "crop_type",
+    "crop_condition",
+    "planting_stage",
+    "aez_zone",
+    "survey_method"
+  ]
+}

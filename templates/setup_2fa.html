@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setup 2FA - AgricLedger</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .setup-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .setup-container h1 {
+            color: #1a5c4a;
+            font-size: 1.6rem;
+        }
+        .setup-container p {
+            color: #6b8a7a;
+            margin: 8px 0 16px;
+        }
+        .qr-container {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            margin: 16px 0;
+            display: inline-block;
+        }
+        .qr-container img {
+            width: 200px;
+            height: 200px;
+        }
+        .secret-box {
+            background: #f0f4f2;
+            padding: 8px 16px;
+            border-radius: 8px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin: 8px 0;
+        }
+        .form-group {
+            margin-top: 16px;
+        }
+        .form-group input {
+            width: 200px;
+            padding: 12px;
+            border: 2px solid #e0e8e4;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: 4px;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #1a5c4a;
+        }
+        .btn {
+            width: 100%;
+            padding: 12px;
+            background: #1a5c4a;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-top: 12px;
+        }
+        .btn:hover {
+            background: #2a7c6a;
+        }
+        .btn-secondary {
+            background: #6b8a7a;
+        }
+        .btn-secondary:hover {
+            background: #5a7a6a;
+        }
+        .alert {
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+        }
+        .alert-success { background: #d4edda; color: #155724; }
+        .alert-danger { background: #f8d7da; color: #721c24; }
+        .alert-warning { background: #fff3cd; color: #856404; }
+        .alert-info { background: #d1ecf1; color: #0c5460; }
+        .steps {
+            text-align: left;
+            margin: 16px 0;
+            padding: 0 16px;
+        }
+        .steps li {
+            margin-bottom: 8px;
+            color: #3a5a4a;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 480px) {
+            .setup-container { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="setup-container">
+        <h1>📱 Setup Two-Factor Authentication</h1>
+        <p>Scan the QR code with your authenticator app</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="steps">
+            <ol>
+                <li>Download Google Authenticator or Authy</li>
+                <li>Scan the QR code below</li>
+                <li>Enter the 6-digit code to confirm</li>
+            </ol>
+        </div>
+
+        <div class="qr-container">
+            <img src="{{ qr_code }}" alt="QR Code for 2FA" />
+        </div>
+
+        <div>
+            <p style="font-size:0.85rem;color:#6b8a7a;">Or enter this secret key manually:</p>
+            <div class="secret-box">{{ secret }}</div>
+        </div>
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.code(placeholder="000000", maxlength=6) }}
+                {% if form.code.errors %}
+                    <div<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Setup 2FA - AgricLedger</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(26, 92, 74, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(244, 162, 97, 0.05) 0%, transparent 50%);
+            animation: backgroundFloat 20s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+        @keyframes backgroundFloat {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(2deg); }
+        }
+        .setup-container {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(26, 92, 74, 0.08);
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.6s ease;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .setup-container .brand-icon {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .setup-container h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a3c34;
+        }
+        .setup-container p {
+            color: #6b8a7a;
+            margin: 4px 0 16px;
+            font-size: 0.95rem;
+        }
+        .qr-container {
+            background: white;
+            padding: 16px;
+            border-radius: 16px;
+            margin: 12px 0;
+            display: inline-block;
+            border: 2px solid #e8edea;
+        }
+        .qr-container img {
+            width: 200px;
+            height: 200px;
+        }
+        .secret-box {
+            background: #f0f4f2;
+            padding: 8px 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+            display: inline-block;
+            margin: 4px 0 12px;
+            border: 1px solid #e8edea;
+        }
+        .steps {
+            text-align: left;
+            margin: 12px 0 16px;
+            padding: 0 16px;
+        }
+        .steps li {
+            margin-bottom: 6px;
+            color: #3a5a4a;
+            font-size: 0.9rem;
+        }
+        .form-group {
+            margin-top: 16px;
+        }
+        .form-group input {
+            width: 200px;
+            padding: 12px;
+            border: 2px solid #e8edea;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            text-align: center;
+            letter-spacing: 4px;
+            transition: border-color 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #1a5c4a;
+            box-shadow: 0 0 0 4px rgba(26, 92, 74, 0.08);
+        }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #1a5c4a, #2a7c6a);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 20px rgba(26, 92, 74, 0.2);
+            margin-top: 12px;
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(26, 92, 74, 0.3);
+        }
+        .btn-secondary {
+            background: #6b8a7a;
+            box-shadow: none;
+        }
+        .btn-secondary:hover {
+            background: #5a7a6a;
+        }
+        .alert {
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .alert-success { background: #d4edda; color: #155724; border: 1px solid #b8d4b0; }
+        .alert-danger { background: #f8d7da; color: #721c24; border: 1px solid #f1b0b7; }
+        .alert-warning { background: #fff3cd; color: #856404; border: 1px solid #ffd970; }
+        .alert-info { background: #d1ecf1; color: #0c5460; border: 1px solid #9ccbd6; }
+        .back-link {
+            display: block;
+            margin-top: 12px;
+            color: #6b8a7a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #1a5c4a;
+            text-decoration: underline;
+        }
+        @media (max-width: 480px) {
+            .setup-container { padding: 24px; }
+            .qr-container img { width: 160px; height: 160px; }
+            .form-group input { width: 160px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="setup-container">
+        <span class="brand-icon">📱</span>
+        <h1>Setup Two-Factor Authentication</h1>
+        <p>Scan the QR code with your authenticator app</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <i class="fas {% if category == 'success' %}fa-check-circle{% elif category == 'danger' %}fa-exclamation-circle{% else %}fa-info-circle{% endif %}"></i>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <div class="steps">
+            <ol>
+                <li>📲 Download <strong>Google Authenticator</strong> or <strong>Authy</strong></li>
+                <li>📷 Scan the QR code below with your app</li>
+                <li>🔢 Enter the 6-digit code to confirm</li>
+            </ol>
+        </div>
+
+        <div class="qr-container">
+            <img src="{{ qr_code }}" alt="QR Code for 2FA" />
+        </div>
+
+        <div>
+            <p style="font-size:0.85rem;color:#6b8a7a;">Or enter this secret key manually:</p>
+            <div class="secret-box">{{ secret }}</div>
+        </div>
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.code(placeholder="000000", maxlength=6) }}
+                {% if form.code.errors %}
+                    <div style="color:#dc3545;font-size:0.8rem;margin-top:4px;">
+                        {{ form.code.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn">
+                <i class="fas fa-check-circle"></i> Enable 2FA
+            </button>
+        </form>
+
+        <a href="{{ url_for('dashboard') }}" class="back-link">
+            <i class="fas fa-arrow-left"></i> Skip for now
+        </a>
+    </div>
+</body>
+</html> style="color:#dc3545;font-size:0.8rem;margin-top:4px;">
+                        {{ form.code.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn">Enable 2FA</button>
+        </form>
+
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary" style="text-align:center;text-decoration:none;display:block;margin-top:8px;">
+            Skip for now
+        </a>
+    </div>
+</body>
+</html>

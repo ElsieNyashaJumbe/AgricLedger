@@ -1,0 +1,701 @@
+farmer_id,province,district,ward,farm_type,farm_size,land_tenure_type,crop,cultivated_area,production,yield,irrigation,soil_type,agro_ecological_zone,planting_date,harvesting_date,data_classification
+ZW-GOR-1001,Mashonaland East,Goromonzi,21,Communal,1.35,Customary Offer Letter,Soybean,0.68,1.66,2.44,Rainfed,Clay Loam,Region IIa,2025-11-17,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1002,Mashonaland East,Goromonzi,14,Communal,1.42,99-Year Lease,Soybean,0.89,1.56,1.75,Rainfed,Sandy,Region IIa,2025-12-02,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1003,Mashonaland East,Goromonzi,23,Peri-Urban,4.09,Customary Offer Letter,Maize,3.03,15.18,5.01,Rainfed,Clay,Region IIa,2025-11-19,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1004,Mashonaland East,Goromonzi,25,A2 Commercial,33.29,Communal,Tobacco,18.69,54.95,2.94,Overhead Canal,Clay Loam,Region IIa,2025-11-23,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1005,Mashonaland East,Goromonzi,2,Peri-Urban,8.51,Communal,Tobacco,5.52,15.62,2.83,Overhead Canal,Clay Loam,Region IIa,2025-11-21,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1006,Mashonaland East,Goromonzi,3,Communal,10.26,Customary Offer Letter,Tobacco,8.05,15.21,1.89,Rainfed,Sandy Loam,Region IIa,2025-11-23,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1007,Mashonaland East,Goromonzi,21,A2 Commercial,41.15,Customary Offer Letter,Soybean,28.87,65.53,2.27,Rainfed,Sandy,Region IIa,2025-12-04,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1008,Mashonaland East,Goromonzi,6,A1 Smallholder,3.29,Communal,Cotton,2.78,1.97,0.71,Rainfed,Clay Loam,Region IIa,2025-11-22,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1009,Mashonaland East,Goromonzi,11,Communal,4.21,Deed of Grant,Groundnuts,2.44,3.42,1.4,Rainfed,Clay Loam,Region IIa,2025-12-13,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1010,Mashonaland East,Goromonzi,11,A1 Smallholder,10.18,Communal,Sunflower,4.73,10.03,2.12,Rainfed,Loam,Region IIa,2025-11-22,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1011,Mashonaland East,Goromonzi,18,A2 Commercial,117.11,Communal,Cassava,67.89,1153.45,16.99,Rainfed,Clay Loam,Region IIa,2025-11-30,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1012,Mashonaland East,Goromonzi,25,Communal,13.06,99-Year Lease,Wheat,9.88,82.99,8.4,Center Pivot,Clay Loam,Region IIa,2025-11-17,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1013,Mashonaland East,Goromonzi,13,Peri-Urban,8.41,Deed of Grant,Tobacco,5.94,12.59,2.12,Overhead Canal,Sandy,Region IIa,2025-11-24,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1014,Mashonaland East,Goromonzi,6,Peri-Urban,1.05,Customary Offer Letter,SweetPotato,0.78,9.02,11.56,Rainfed,Clay Loam,Region IIa,2025-12-14,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1015,Mashonaland East,Goromonzi,21,A2 Commercial,129.42,99-Year Lease,Wheat,73.54,464.04,6.31,Rainfed,Clay Loam,Region IIa,2025-11-25,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1016,Mashonaland East,Goromonzi,1,Communal,14.01,Customary Offer Letter,Soybean,5.97,21.19,3.55,Rainfed,Clay Loam,Region IIa,2025-12-15,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1017,Mashonaland East,Goromonzi,3,Peri-Urban,12.42,99-Year Lease,Wheat,8.66,48.24,5.57,Center Pivot,Loam,Region IIa,2025-12-14,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1018,Mashonaland East,Goromonzi,25,A1 Smallholder,10.98,Communal,Groundnuts,6.56,6.3,0.96,Rainfed,Clay Loam,Region IIa,2025-11-29,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1019,Mashonaland East,Goromonzi,8,A1 Smallholder,1.9,Deed of Grant,Cassava,1.23,18.07,14.69,Rainfed,Sandy,Region IIa,2025-11-22,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1020,Mashonaland East,Goromonzi,2,A2 Commercial,29.21,99-Year Lease,Cotton,20.48,20.28,0.99,Rainfed,Loam,Region IIa,2025-12-02,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1021,Mashonaland East,Goromonzi,24,Peri-Urban,4.4,Communal,Sorghum,2.14,3.77,1.76,Rainfed,Sandy Loam,Region IIa,2025-11-28,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1022,Mashonaland East,Goromonzi,24,Communal,10.43,Deed of Grant,Maize,6.06,30.6,5.05,Rainfed,Clay,Region IIa,2025-12-10,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1023,Mashonaland East,Goromonzi,4,A1 Smallholder,3.68,Communal,Wheat,2.17,10.55,4.86,Rainfed,Sandy Loam,Region IIa,2025-12-10,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1024,Mashonaland East,Goromonzi,18,Communal,1.71,Deed of Grant,Tobacco,1.4,4.02,2.87,Drip,Loam,Region IIa,2025-11-28,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1025,Mashonaland East,Goromonzi,16,A1 Smallholder,13.11,Deed of Grant,Wheat,7.48,43.23,5.78,Center Pivot,Clay,Region IIa,2025-11-28,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1026,Mashonaland East,Goromonzi,24,Peri-Urban,3.17,Customary Offer Letter,Soybean,2.65,6.52,2.46,Rainfed,Clay Loam,Region IIa,2025-12-08,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1027,Mashonaland East,Goromonzi,2,A2 Commercial,27.43,Communal,SweetPotato,22.32,249.76,11.19,Rainfed,Clay Loam,Region IIa,2025-11-17,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1028,Mashonaland East,Goromonzi,6,Communal,9.33,99-Year Lease,Sorghum,4.24,6.28,1.48,Rainfed,Clay Loam,Region IIa,2025-11-22,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1029,Mashonaland East,Goromonzi,20,Communal,9.67,Communal,Cassava,6.33,89.0,14.06,Rainfed,Clay,Region IIa,2025-11-22,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1030,Mashonaland East,Goromonzi,13,A1 Smallholder,10.4,Customary Offer Letter,Sunflower,5.64,11.62,2.06,Rainfed,Sandy,Region IIa,2025-11-15,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1031,Mashonaland East,Goromonzi,20,Communal,2.03,99-Year Lease,SweetPotato,1.05,17.35,16.52,Rainfed,Loam,Region IIa,2025-11-26,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1032,Mashonaland East,Goromonzi,6,Peri-Urban,12.67,Customary Offer Letter,Cassava,10.68,133.29,12.48,Rainfed,Clay Loam,Region IIa,2025-11-15,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1033,Mashonaland East,Goromonzi,18,A2 Commercial,141.13,Deed of Grant,Wheat,73.25,459.28,6.27,Drip,Clay,Region IIa,2025-11-24,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1034,Mashonaland East,Goromonzi,7,A2 Commercial,46.47,Customary Offer Letter,SweetPotato,28.8,272.74,9.47,Rainfed,Sandy,Region IIa,2025-11-17,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GOR-1035,Mashonaland East,Goromonzi,14,A2 Commercial,25.73,Customary Offer Letter,Wheat,17.67,86.23,4.88,Center Pivot,Clay Loam,Region IIa,2025-11-15,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1036,Mashonaland East,Murehwa,3,A1 Smallholder,8.64,Customary Offer Letter,Cassava,5.6,111.55,19.92,Rainfed,Sandy Loam,Region IIb,2025-11-19,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1037,Mashonaland East,Murehwa,10,A2 Commercial,136.87,Deed of Grant,Groundnuts,67.69,67.69,1.0,Rainfed,Clay Loam,Region IIb,2025-12-13,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1038,Mashonaland East,Murehwa,14,A1 Smallholder,13.96,99-Year Lease,Wheat,11.72,64.11,5.47,Drip,Sandy Loam,Region IIb,2025-11-15,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1039,Mashonaland East,Murehwa,24,A2 Commercial,121.71,Communal,Soybean,63.3,162.05,2.56,Rainfed,Sandy,Region IIb,2025-12-12,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1040,Mashonaland East,Murehwa,8,A1 Smallholder,12.43,Communal,Groundnuts,6.68,6.08,0.91,Rainfed,Loam,Region IIb,2025-11-22,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1041,Mashonaland East,Murehwa,22,A1 Smallholder,6.58,Customary Offer Letter,Tobacco,5.49,13.01,2.37,Center Pivot,Clay Loam,Region IIb,2025-11-25,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1042,Mashonaland East,Murehwa,1,Communal,13.28,Customary Offer Letter,Wheat,8.78,56.28,6.41,Overhead Canal,Sandy,Region IIb,2025-11-18,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1043,Mashonaland East,Murehwa,14,A2 Commercial,114.71,Customary Offer Letter,Sorghum,77.18,92.62,1.2,Rainfed,Clay Loam,Region IIb,2025-11-21,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1044,Mashonaland East,Murehwa,2,Peri-Urban,1.02,99-Year Lease,Groundnuts,0.61,0.6,0.99,Rainfed,Clay,Region IIb,2025-12-04,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1045,Mashonaland East,Murehwa,22,Communal,11.08,Customary Offer Letter,SweetPotato,5.97,59.46,9.96,Rainfed,Clay,Region IIb,2025-12-02,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1046,Mashonaland East,Murehwa,7,Peri-Urban,10.31,Communal,Wheat,6.98,38.74,5.55,Overhead Canal,Sandy Loam,Region IIb,2025-12-02,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1047,Mashonaland East,Murehwa,1,A2 Commercial,57.3,Communal,Cassava,38.56,523.64,13.58,Rainfed,Loam,Region IIb,2025-12-01,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1048,Mashonaland East,Murehwa,24,A1 Smallholder,10.22,Customary Offer Letter,SweetPotato,7.14,102.32,14.33,Rainfed,Clay Loam,Region IIb,2025-11-25,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1049,Mashonaland East,Murehwa,25,A1 Smallholder,10.42,99-Year Lease,Soybean,4.86,18.86,3.88,Rainfed,Clay Loam,Region IIb,2025-12-12,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1050,Mashonaland East,Murehwa,3,Peri-Urban,6.8,99-Year Lease,Sorghum,4.23,7.4,1.75,Rainfed,Loam,Region IIb,2025-11-19,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1051,Mashonaland East,Murehwa,23,Communal,13.5,Deed of Grant,Sorghum,6.73,11.1,1.65,Rainfed,Sandy Loam,Region IIb,2025-11-16,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1052,Mashonaland East,Murehwa,8,Communal,7.39,Communal,SweetPotato,6.24,53.1,8.51,Rainfed,Clay Loam,Region IIb,2025-11-25,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1053,Mashonaland East,Murehwa,25,Peri-Urban,9.58,Communal,SweetPotato,5.75,83.83,14.58,Rainfed,Sandy Loam,Region IIb,2025-11-23,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1054,Mashonaland East,Murehwa,8,A2 Commercial,119.56,Communal,Soybean,62.6,209.08,3.34,Rainfed,Sandy,Region IIb,2025-12-07,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1055,Mashonaland East,Murehwa,8,A2 Commercial,63.66,Deed of Grant,Wheat,29.78,136.09,4.57,Drip,Sandy,Region IIb,2025-11-28,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1056,Mashonaland East,Murehwa,11,Peri-Urban,6.82,99-Year Lease,Sorghum,3.92,6.35,1.62,Rainfed,Clay Loam,Region IIb,2025-12-15,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1057,Mashonaland East,Murehwa,1,Peri-Urban,7.68,Customary Offer Letter,Cotton,5.68,7.38,1.3,Rainfed,Sandy Loam,Region IIb,2025-12-02,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1058,Mashonaland East,Murehwa,24,A1 Smallholder,7.84,Customary Offer Letter,Sorghum,4.85,4.41,0.91,Rainfed,Sandy Loam,Region IIb,2025-11-25,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1059,Mashonaland East,Murehwa,22,Peri-Urban,11.14,Communal,Wheat,9.37,26.89,2.87,Rainfed,Sandy,Region IIb,2025-12-05,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1060,Mashonaland East,Murehwa,5,Peri-Urban,3.54,Customary Offer Letter,Sorghum,1.94,2.64,1.36,Rainfed,Sandy Loam,Region IIb,2025-11-25,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1061,Mashonaland East,Murehwa,25,Peri-Urban,4.9,Communal,Cotton,3.8,2.55,0.67,Rainfed,Sandy,Region IIb,2025-12-15,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1062,Mashonaland East,Murehwa,8,Communal,11.94,Deed of Grant,Maize,9.88,47.23,4.78,Rainfed,Loam,Region IIb,2025-12-11,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1063,Mashonaland East,Murehwa,20,A1 Smallholder,4.34,Communal,Tobacco,2.84,7.55,2.66,Overhead Canal,Loam,Region IIb,2025-12-04,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1064,Mashonaland East,Murehwa,24,Communal,11.89,99-Year Lease,Cotton,5.33,6.93,1.3,Rainfed,Sandy,Region IIb,2025-12-14,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1065,Mashonaland East,Murehwa,19,Peri-Urban,6.55,99-Year Lease,Tobacco,4.37,11.71,2.68,Overhead Canal,Clay Loam,Region IIb,2025-12-10,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1066,Mashonaland East,Murehwa,19,Communal,5.86,Communal,Groundnuts,2.53,2.2,0.87,Rainfed,Clay,Region IIb,2025-11-15,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1067,Mashonaland East,Murehwa,14,Peri-Urban,2.48,Customary Offer Letter,Sunflower,1.78,2.24,1.26,Rainfed,Clay,Region IIb,2025-12-04,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1068,Mashonaland East,Murehwa,18,Peri-Urban,7.51,Customary Offer Letter,Groundnuts,5.88,6.64,1.13,Rainfed,Sandy,Region IIb,2025-11-23,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1069,Mashonaland East,Murehwa,15,A1 Smallholder,11.51,Communal,Groundnuts,4.75,5.13,1.08,Rainfed,Loam,Region IIb,2025-11-26,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-MUR-1070,Mashonaland East,Murehwa,9,A2 Commercial,56.36,Customary Offer Letter,SweetPotato,22.8,245.78,10.78,Rainfed,Loam,Region IIb,2025-11-17,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1071,Mashonaland East,Marondera,24,Peri-Urban,7.84,99-Year Lease,Sunflower,5.41,6.28,1.16,Rainfed,Sandy,Region IIa,2025-11-24,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1072,Mashonaland East,Marondera,13,A1 Smallholder,5.29,Customary Offer Letter,Sunflower,3.43,6.31,1.84,Rainfed,Clay,Region IIa,2025-11-28,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1073,Mashonaland East,Marondera,18,A2 Commercial,65.74,Communal,Cotton,35.37,36.78,1.04,Rainfed,Clay,Region IIa,2025-11-18,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1074,Mashonaland East,Marondera,18,A1 Smallholder,3.68,Communal,Cotton,2.67,3.52,1.32,Rainfed,Clay Loam,Region IIa,2025-12-04,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1075,Mashonaland East,Marondera,4,A1 Smallholder,5.15,Customary Offer Letter,Wheat,2.76,13.41,4.86,Rainfed,Sandy,Region IIa,2025-12-02,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1076,Mashonaland East,Marondera,23,A1 Smallholder,9.93,Communal,Tobacco,7.87,17.71,2.25,Overhead Canal,Sandy Loam,Region IIa,2025-11-30,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1077,Mashonaland East,Marondera,11,A1 Smallholder,14.52,Customary Offer Letter,Sunflower,6.55,14.28,2.18,Rainfed,Clay Loam,Region IIa,2025-12-05,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1078,Mashonaland East,Marondera,2,A1 Smallholder,3.09,Customary Offer Letter,Tobacco,2.62,7.15,2.73,Rainfed,Clay Loam,Region IIa,2025-12-09,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1079,Mashonaland East,Marondera,20,A1 Smallholder,11.86,Communal,Sunflower,9.59,15.92,1.66,Rainfed,Sandy Loam,Region IIa,2025-11-24,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1080,Mashonaland East,Marondera,20,Communal,9.53,Deed of Grant,Soybean,6.49,20.38,3.14,Rainfed,Clay,Region IIa,2025-12-06,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1081,Mashonaland East,Marondera,6,A1 Smallholder,3.43,Deed of Grant,Wheat,1.38,5.13,3.72,Overhead Canal,Sandy,Region IIa,2025-11-22,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1082,Mashonaland East,Marondera,23,A2 Commercial,111.39,Communal,Tobacco,79.01,214.12,2.71,Overhead Canal,Clay Loam,Region IIa,2025-12-06,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1083,Mashonaland East,Marondera,7,Peri-Urban,2.61,99-Year Lease,Wheat,2.11,10.93,5.18,Drip,Clay,Region IIa,2025-12-04,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1084,Mashonaland East,Marondera,19,A2 Commercial,77.09,Communal,Cotton,55.11,51.25,0.93,Rainfed,Clay,Region IIa,2025-12-01,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1085,Mashonaland East,Marondera,16,Peri-Urban,2.13,Deed of Grant,Sorghum,1.56,2.26,1.45,Rainfed,Loam,Region IIa,2025-12-15,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1086,Mashonaland East,Marondera,19,Communal,14.99,Customary Offer Letter,Cassava,6.27,91.42,14.58,Rainfed,Loam,Region IIa,2025-11-30,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1087,Mashonaland East,Marondera,21,Peri-Urban,13.83,99-Year Lease,Cassava,8.24,149.23,18.11,Rainfed,Sandy Loam,Region IIa,2025-11-26,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1088,Mashonaland East,Marondera,11,A2 Commercial,107.12,99-Year Lease,Groundnuts,62.69,32.6,0.52,Rainfed,Sandy Loam,Region IIa,2025-11-24,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1089,Mashonaland East,Marondera,13,Communal,7.37,Customary Offer Letter,Cotton,4.02,4.82,1.2,Rainfed,Clay Loam,Region IIa,2025-12-11,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1090,Mashonaland East,Marondera,22,Peri-Urban,6.79,99-Year Lease,SweetPotato,3.82,44.12,11.55,Rainfed,Sandy Loam,Region IIa,2025-12-05,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1091,Mashonaland East,Marondera,25,Communal,3.85,99-Year Lease,Cotton,2.3,2.23,0.97,Rainfed,Clay Loam,Region IIa,2025-12-10,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1092,Mashonaland East,Marondera,23,A1 Smallholder,5.35,Deed of Grant,SweetPotato,3.12,33.82,10.84,Rainfed,Loam,Region IIa,2025-12-11,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1093,Mashonaland East,Marondera,4,Peri-Urban,14.26,99-Year Lease,Sunflower,11.69,19.29,1.65,Rainfed,Sandy Loam,Region IIa,2025-12-11,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1094,Mashonaland East,Marondera,16,A1 Smallholder,7.4,99-Year Lease,Sorghum,3.59,7.0,1.95,Rainfed,Clay Loam,Region IIa,2025-12-01,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1095,Mashonaland East,Marondera,5,Communal,4.87,Communal,Groundnuts,4.0,2.52,0.63,Rainfed,Clay,Region IIa,2025-12-08,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1096,Mashonaland East,Marondera,19,Peri-Urban,13.11,Communal,SweetPotato,8.1,95.42,11.78,Rainfed,Clay,Region IIa,2025-12-02,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1097,Mashonaland East,Marondera,18,Peri-Urban,7.37,Customary Offer Letter,Soybean,6.2,15.69,2.53,Rainfed,Sandy Loam,Region IIa,2025-11-16,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1098,Mashonaland East,Marondera,24,Peri-Urban,10.87,Communal,Sorghum,9.18,16.43,1.79,Rainfed,Loam,Region IIa,2025-11-30,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1099,Mashonaland East,Marondera,2,A1 Smallholder,8.03,Customary Offer Letter,Tobacco,6.37,12.29,1.93,Center Pivot,Sandy,Region IIa,2025-12-08,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1100,Mashonaland East,Marondera,14,A1 Smallholder,2.05,Customary Offer Letter,Groundnuts,1.39,1.52,1.09,Rainfed,Sandy Loam,Region IIa,2025-12-05,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1101,Mashonaland East,Marondera,11,Peri-Urban,14.36,Communal,SweetPotato,5.98,90.18,15.08,Rainfed,Clay,Region IIa,2025-11-22,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1102,Mashonaland East,Marondera,3,Peri-Urban,14.7,Deed of Grant,Sunflower,6.98,14.03,2.01,Rainfed,Clay,Region IIa,2025-12-13,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1103,Mashonaland East,Marondera,2,A2 Commercial,123.5,Customary Offer Letter,Groundnuts,70.23,80.76,1.15,Rainfed,Clay Loam,Region IIa,2025-12-06,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1104,Mashonaland East,Marondera,6,A1 Smallholder,3.45,Communal,Cassava,2.44,43.75,17.93,Rainfed,Sandy Loam,Region IIa,2025-12-14,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-MAR-1105,Mashonaland East,Marondera,5,A1 Smallholder,7.46,Customary Offer Letter,Sunflower,3.84,9.41,2.45,Rainfed,Clay,Region IIa,2025-12-06,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1106,Mashonaland West,Chinhoyi,6,Communal,7.18,Customary Offer Letter,Cassava,3.84,58.83,15.32,Rainfed,Sandy Loam,Region IIa,2025-12-07,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1107,Mashonaland West,Chinhoyi,15,A2 Commercial,45.9,Communal,Sunflower,20.56,31.87,1.55,Rainfed,Clay,Region IIa,2025-12-07,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1108,Mashonaland West,Chinhoyi,1,Peri-Urban,4.84,Deed of Grant,Cassava,3.56,60.24,16.92,Rainfed,Clay,Region IIa,2025-12-09,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1109,Mashonaland West,Chinhoyi,8,A2 Commercial,48.47,99-Year Lease,Cassava,24.85,377.22,15.18,Rainfed,Loam,Region IIa,2025-12-05,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1110,Mashonaland West,Chinhoyi,21,Communal,5.33,Communal,Maize,3.52,10.42,2.96,Rainfed,Loam,Region IIa,2025-11-17,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1111,Mashonaland West,Chinhoyi,10,A2 Commercial,117.17,99-Year Lease,Soybean,53.84,65.15,1.21,Rainfed,Clay Loam,Region IIa,2025-12-01,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1112,Mashonaland West,Chinhoyi,9,A1 Smallholder,4.6,Communal,Cotton,3.39,2.95,0.87,Rainfed,Clay,Region IIa,2025-12-10,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1113,Mashonaland West,Chinhoyi,15,Communal,2.97,99-Year Lease,Sorghum,2.48,3.97,1.6,Rainfed,Sandy Loam,Region IIa,2025-11-15,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1114,Mashonaland West,Chinhoyi,18,Communal,7.37,Customary Offer Letter,Cassava,4.21,51.78,12.3,Rainfed,Clay,Region IIa,2025-11-18,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1115,Mashonaland West,Chinhoyi,8,Peri-Urban,1.35,Customary Offer Letter,Cassava,0.67,13.51,20.16,Rainfed,Clay,Region IIa,2025-12-05,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1116,Mashonaland West,Chinhoyi,4,A1 Smallholder,1.63,Deed of Grant,Cotton,1.38,1.57,1.14,Rainfed,Sandy,Region IIa,2025-11-18,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1117,Mashonaland West,Chinhoyi,18,A1 Smallholder,6.44,Customary Offer Letter,SweetPotato,3.79,45.21,11.93,Rainfed,Sandy Loam,Region IIa,2025-12-05,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1118,Mashonaland West,Chinhoyi,16,Peri-Urban,14.15,Customary Offer Letter,Maize,10.06,40.04,3.98,Rainfed,Loam,Region IIa,2025-11-29,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1119,Mashonaland West,Chinhoyi,8,A2 Commercial,32.92,Customary Offer Letter,SweetPotato,26.53,304.56,11.48,Rainfed,Clay,Region IIa,2025-11-21,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1120,Mashonaland West,Chinhoyi,4,Peri-Urban,2.28,99-Year Lease,Cassava,1.91,27.05,14.16,Rainfed,Sandy,Region IIa,2025-12-10,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1121,Mashonaland West,Chinhoyi,8,A1 Smallholder,12.02,99-Year Lease,Tobacco,9.3,17.39,1.87,Drip,Clay,Region IIa,2025-12-09,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1122,Mashonaland West,Chinhoyi,20,Communal,4.88,99-Year Lease,Wheat,3.14,14.32,4.56,Drip,Sandy,Region IIa,2025-12-06,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1123,Mashonaland West,Chinhoyi,1,A1 Smallholder,1.21,99-Year Lease,Cassava,0.66,10.2,15.45,Rainfed,Sandy Loam,Region IIa,2025-12-01,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1124,Mashonaland West,Chinhoyi,24,Communal,7.67,Customary Offer Letter,SweetPotato,5.12,65.02,12.7,Rainfed,Sandy Loam,Region IIa,2025-12-01,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1125,Mashonaland West,Chinhoyi,20,Communal,11.18,Customary Offer Letter,Sunflower,7.71,23.75,3.08,Rainfed,Sandy Loam,Region IIa,2025-11-28,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1126,Mashonaland West,Chinhoyi,4,Peri-Urban,10.97,Communal,Tobacco,8.83,25.17,2.85,Overhead Canal,Clay Loam,Region IIa,2025-11-19,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1127,Mashonaland West,Chinhoyi,5,A2 Commercial,101.16,Customary Offer Letter,Sorghum,85.74,101.17,1.18,Rainfed,Clay Loam,Region IIa,2025-11-28,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1128,Mashonaland West,Chinhoyi,23,Communal,12.94,99-Year Lease,Sorghum,7.81,11.25,1.44,Rainfed,Loam,Region IIa,2025-11-28,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1129,Mashonaland West,Chinhoyi,15,Peri-Urban,6.82,Deed of Grant,Groundnuts,4.04,3.64,0.9,Rainfed,Loam,Region IIa,2025-12-06,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1130,Mashonaland West,Chinhoyi,16,Communal,2.28,Deed of Grant,Tobacco,1.36,2.83,2.08,Overhead Canal,Loam,Region IIa,2025-12-02,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1131,Mashonaland West,Chinhoyi,19,A2 Commercial,107.1,Communal,Groundnuts,84.94,101.93,1.2,Rainfed,Sandy,Region IIa,2025-12-15,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1132,Mashonaland West,Chinhoyi,20,A2 Commercial,65.71,99-Year Lease,Wheat,45.7,211.13,4.62,Drip,Sandy,Region IIa,2025-11-26,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1133,Mashonaland West,Chinhoyi,18,A2 Commercial,34.94,Customary Offer Letter,Cassava,17.53,202.12,11.53,Rainfed,Clay Loam,Region IIa,2025-12-04,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1134,Mashonaland West,Chinhoyi,21,Communal,9.53,Customary Offer Letter,Maize,4.59,22.95,5.0,Rainfed,Clay,Region IIa,2025-12-14,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1135,Mashonaland West,Chinhoyi,12,Communal,3.54,99-Year Lease,Cassava,2.46,47.9,19.47,Rainfed,Sandy,Region IIa,2025-11-17,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1136,Mashonaland West,Chinhoyi,17,A1 Smallholder,6.27,Communal,Groundnuts,2.95,3.36,1.14,Rainfed,Clay,Region IIa,2025-12-08,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1137,Mashonaland West,Chinhoyi,25,Communal,13.37,99-Year Lease,Wheat,9.89,53.31,5.39,Center Pivot,Sandy Loam,Region IIa,2025-11-30,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1138,Mashonaland West,Chinhoyi,15,Peri-Urban,4.82,Deed of Grant,Groundnuts,2.86,2.95,1.03,Rainfed,Clay,Region IIa,2025-12-06,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1139,Mashonaland West,Chinhoyi,19,Peri-Urban,8.38,Customary Offer Letter,Maize,4.18,20.06,4.8,Rainfed,Loam,Region IIa,2025-11-24,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1140,Mashonaland West,Chinhoyi,7,A1 Smallholder,11.7,Customary Offer Letter,Groundnuts,5.31,5.26,0.99,Rainfed,Sandy Loam,Region IIa,2025-12-08,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1141,Mashonaland West,Kadoma,6,A1 Smallholder,6.32,99-Year Lease,SweetPotato,4.12,44.87,10.89,Rainfed,Sandy Loam,Region III,2025-12-12,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1142,Mashonaland West,Kadoma,2,Peri-Urban,1.26,Deed of Grant,Groundnuts,0.83,1.25,1.51,Rainfed,Clay Loam,Region III,2025-11-27,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1143,Mashonaland West,Kadoma,21,Peri-Urban,5.05,Communal,Maize,4.22,23.34,5.53,Rainfed,Sandy Loam,Region III,2025-12-11,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1144,Mashonaland West,Kadoma,12,Communal,7.11,Deed of Grant,Soybean,4.24,15.14,3.57,Rainfed,Sandy Loam,Region III,2025-12-01,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1145,Mashonaland West,Kadoma,13,A2 Commercial,116.95,99-Year Lease,Groundnuts,87.78,197.5,2.25,Rainfed,Clay Loam,Region III,2025-12-01,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1146,Mashonaland West,Kadoma,25,A2 Commercial,65.64,99-Year Lease,Soybean,29.29,82.89,2.83,Rainfed,Clay,Region III,2025-11-21,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1147,Mashonaland West,Kadoma,20,A1 Smallholder,11.64,Deed of Grant,Wheat,9.64,40.78,4.23,Center Pivot,Clay Loam,Region III,2025-12-05,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1148,Mashonaland West,Kadoma,20,A2 Commercial,132.35,Customary Offer Letter,Wheat,79.13,332.35,4.2,Center Pivot,Sandy Loam,Region III,2025-12-05,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1149,Mashonaland West,Kadoma,9,Communal,5.93,Deed of Grant,Cotton,3.6,8.53,2.37,Rainfed,Clay,Region III,2025-11-17,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1150,Mashonaland West,Kadoma,3,Peri-Urban,7.48,Deed of Grant,Sunflower,6.05,11.37,1.88,Rainfed,Clay Loam,Region III,2025-12-05,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1151,Mashonaland West,Kadoma,11,Peri-Urban,8.02,Deed of Grant,Sunflower,3.58,7.41,2.07,Rainfed,Sandy,Region III,2025-12-01,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1152,Mashonaland West,Kadoma,6,Communal,4.47,Communal,Sunflower,2.84,4.54,1.6,Rainfed,Clay Loam,Region III,2025-11-20,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1153,Mashonaland West,Kadoma,12,A2 Commercial,70.36,Customary Offer Letter,Cassava,29.8,392.17,13.16,Rainfed,Clay,Region III,2025-11-18,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1154,Mashonaland West,Kadoma,22,Peri-Urban,4.98,99-Year Lease,Groundnuts,2.17,3.39,1.56,Rainfed,Loam,Region III,2025-12-14,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1155,Mashonaland West,Kadoma,10,Peri-Urban,2.81,Deed of Grant,Cotton,1.83,3.26,1.78,Rainfed,Loam,Region III,2025-12-06,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1156,Mashonaland West,Kadoma,24,Communal,10.04,Communal,SweetPotato,5.65,58.31,10.32,Rainfed,Clay,Region III,2025-11-24,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1157,Mashonaland West,Kadoma,7,A2 Commercial,143.2,Communal,Soybean,71.88,189.04,2.63,Rainfed,Sandy,Region III,2025-12-01,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1158,Mashonaland West,Kadoma,18,Communal,10.27,99-Year Lease,Cassava,5.85,93.07,15.91,Rainfed,Loam,Region III,2025-11-20,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1159,Mashonaland West,Kadoma,23,A1 Smallholder,11.1,Deed of Grant,Sorghum,6.26,8.45,1.35,Rainfed,Clay Loam,Region III,2025-11-24,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1160,Mashonaland West,Kadoma,24,Peri-Urban,4.28,99-Year Lease,Cotton,3.57,3.43,0.96,Rainfed,Sandy Loam,Region III,2025-12-13,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1161,Mashonaland West,Kadoma,7,A2 Commercial,108.18,Communal,Sunflower,80.73,150.97,1.87,Rainfed,Sandy Loam,Region III,2025-12-15,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1162,Mashonaland West,Kadoma,7,A1 Smallholder,13.22,Deed of Grant,Sunflower,10.49,14.48,1.38,Rainfed,Clay Loam,Region III,2025-12-14,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1163,Mashonaland West,Kadoma,23,Communal,4.99,99-Year Lease,Cotton,3.0,3.75,1.25,Rainfed,Sandy,Region III,2025-12-15,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1164,Mashonaland West,Kadoma,8,Peri-Urban,13.38,Deed of Grant,Sorghum,5.67,8.22,1.45,Rainfed,Clay Loam,Region III,2025-11-26,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1165,Mashonaland West,Kadoma,13,Communal,6.25,Deed of Grant,Groundnuts,5.12,10.65,2.08,Rainfed,Loam,Region III,2025-11-19,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1166,Mashonaland West,Kadoma,10,Peri-Urban,10.75,99-Year Lease,Sunflower,6.47,8.8,1.36,Rainfed,Sandy,Region III,2025-12-13,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1167,Mashonaland West,Kadoma,1,A2 Commercial,48.04,99-Year Lease,SweetPotato,39.54,397.38,10.05,Rainfed,Clay,Region III,2025-11-22,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1168,Mashonaland West,Kadoma,4,Communal,4.34,Communal,Tobacco,1.95,4.23,2.17,Center Pivot,Clay Loam,Region III,2025-12-02,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1169,Mashonaland West,Kadoma,21,A1 Smallholder,11.06,Customary Offer Letter,Sorghum,4.43,5.63,1.27,Rainfed,Loam,Region III,2025-12-06,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1170,Mashonaland West,Kadoma,3,A2 Commercial,28.8,Deed of Grant,Sorghum,22.84,41.34,1.81,Rainfed,Sandy,Region III,2025-12-05,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1171,Mashonaland West,Kadoma,12,A2 Commercial,117.15,Customary Offer Letter,Tobacco,65.04,157.4,2.42,Overhead Canal,Loam,Region III,2025-11-16,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1172,Mashonaland West,Kadoma,18,A2 Commercial,125.76,99-Year Lease,Sunflower,105.81,137.55,1.3,Rainfed,Sandy Loam,Region III,2025-12-05,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1173,Mashonaland West,Kadoma,5,Communal,11.02,Communal,Maize,5.86,29.77,5.08,Rainfed,Sandy,Region III,2025-11-25,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1174,Mashonaland West,Kadoma,10,Peri-Urban,14.85,Communal,Cotton,6.18,12.79,2.07,Rainfed,Loam,Region III,2025-11-24,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-KAD-1175,Mashonaland West,Kadoma,25,Communal,13.12,Customary Offer Letter,Cotton,5.98,8.55,1.43,Rainfed,Sandy Loam,Region III,2025-12-13,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1176,Mashonaland West,Kariba,13,A2 Commercial,146.58,Communal,Sunflower,82.86,195.55,2.36,Rainfed,Clay Loam,Region V,2025-11-23,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1177,Mashonaland West,Kariba,3,Peri-Urban,2.1,99-Year Lease,SweetPotato,1.12,15.36,13.71,Rainfed,Clay,Region V,2025-11-24,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1178,Mashonaland West,Kariba,20,Peri-Urban,3.33,Communal,Groundnuts,2.0,2.22,1.11,Rainfed,Clay,Region V,2025-12-04,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1179,Mashonaland West,Kariba,9,Communal,2.05,Communal,Groundnuts,1.29,1.29,1.0,Rainfed,Sandy,Region V,2025-11-19,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1180,Mashonaland West,Kariba,20,Peri-Urban,1.49,Deed of Grant,Soybean,1.12,1.48,1.32,Rainfed,Clay,Region V,2025-11-26,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1181,Mashonaland West,Kariba,19,Communal,9.47,Communal,Groundnuts,5.37,5.48,1.02,Rainfed,Clay Loam,Region V,2025-11-26,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1182,Mashonaland West,Kariba,11,A2 Commercial,52.45,Deed of Grant,Maize,38.34,34.12,0.89,Rainfed,Sandy Loam,Region V,2025-12-01,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1183,Mashonaland West,Kariba,18,Communal,4.66,Customary Offer Letter,Sunflower,2.31,3.19,1.38,Rainfed,Sandy Loam,Region V,2025-11-21,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1184,Mashonaland West,Kariba,5,Communal,7.33,Communal,Tobacco,5.61,5.39,0.96,Overhead Canal,Clay,Region V,2025-12-07,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1185,Mashonaland West,Kariba,18,A2 Commercial,135.87,99-Year Lease,Wheat,102.88,277.78,2.7,Drip,Loam,Region V,2025-11-22,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1186,Mashonaland West,Kariba,16,Communal,6.05,Customary Offer Letter,Sunflower,4.61,8.25,1.79,Rainfed,Clay Loam,Region V,2025-11-19,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1187,Mashonaland West,Kariba,3,Communal,5.33,Communal,SweetPotato,3.12,29.2,9.36,Rainfed,Loam,Region V,2025-11-25,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1188,Mashonaland West,Kariba,3,Peri-Urban,7.52,Customary Offer Letter,Wheat,5.98,20.45,3.42,Drip,Loam,Region V,2025-11-28,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1189,Mashonaland West,Kariba,2,Communal,8.25,Customary Offer Letter,Wheat,3.9,13.22,3.39,Overhead Canal,Sandy,Region V,2025-11-23,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1190,Mashonaland West,Kariba,21,A2 Commercial,36.27,Customary Offer Letter,Cassava,23.22,328.56,14.15,Rainfed,Clay Loam,Region V,2025-12-05,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1191,Mashonaland West,Kariba,19,A1 Smallholder,3.4,Customary Offer Letter,Cassava,1.42,22.45,15.81,Rainfed,Clay Loam,Region V,2025-11-23,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1192,Mashonaland West,Kariba,7,Peri-Urban,9.65,Deed of Grant,Sunflower,7.72,13.05,1.69,Rainfed,Clay Loam,Region V,2025-11-24,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1193,Mashonaland West,Kariba,10,Peri-Urban,4.43,Communal,Cotton,2.68,5.12,1.91,Rainfed,Sandy Loam,Region V,2025-11-30,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1194,Mashonaland West,Kariba,7,A2 Commercial,98.87,Customary Offer Letter,Groundnuts,72.21,64.27,0.89,Rainfed,Clay,Region V,2025-11-27,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1195,Mashonaland West,Kariba,25,A2 Commercial,86.95,Deed of Grant,Groundnuts,44.24,51.32,1.16,Rainfed,Loam,Region V,2025-11-18,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1196,Mashonaland West,Kariba,10,Peri-Urban,13.1,Communal,Soybean,10.92,18.89,1.73,Rainfed,Loam,Region V,2025-12-11,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1197,Mashonaland West,Kariba,19,A2 Commercial,44.68,99-Year Lease,Sunflower,37.9,40.93,1.08,Rainfed,Sandy Loam,Region V,2025-11-15,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1198,Mashonaland West,Kariba,13,Peri-Urban,14.53,99-Year Lease,Cassava,8.12,132.19,16.28,Rainfed,Sandy,Region V,2025-11-24,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1199,Mashonaland West,Kariba,20,Peri-Urban,5.0,Deed of Grant,Tobacco,2.97,4.43,1.49,Center Pivot,Clay,Region V,2025-11-16,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1200,Mashonaland West,Kariba,2,A1 Smallholder,6.08,Customary Offer Letter,Tobacco,3.49,3.28,0.94,Center Pivot,Clay Loam,Region V,2025-11-23,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1201,Mashonaland West,Kariba,20,Communal,2.8,Deed of Grant,Sorghum,1.59,5.58,3.51,Rainfed,Clay,Region V,2025-12-09,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1202,Mashonaland West,Kariba,7,Peri-Urban,8.0,Deed of Grant,Maize,3.69,4.32,1.17,Rainfed,Clay,Region V,2025-12-10,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1203,Mashonaland West,Kariba,17,Peri-Urban,3.09,99-Year Lease,Groundnuts,2.53,2.33,0.92,Rainfed,Clay Loam,Region V,2025-12-08,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1204,Mashonaland West,Kariba,10,A2 Commercial,85.95,Communal,Cassava,45.98,814.77,17.72,Rainfed,Sandy,Region V,2025-11-26,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1205,Mashonaland West,Kariba,22,Communal,14.72,Customary Offer Letter,Maize,9.84,11.51,1.17,Rainfed,Clay Loam,Region V,2025-12-03,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1206,Mashonaland West,Kariba,24,Communal,9.17,99-Year Lease,SweetPotato,6.26,96.97,15.49,Rainfed,Clay Loam,Region V,2025-12-09,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1207,Mashonaland West,Kariba,13,A1 Smallholder,12.5,99-Year Lease,Maize,8.22,9.45,1.15,Rainfed,Sandy Loam,Region V,2025-11-25,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1208,Mashonaland West,Kariba,5,Peri-Urban,10.67,Communal,SweetPotato,7.99,83.97,10.51,Rainfed,Sandy Loam,Region V,2025-12-12,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1209,Mashonaland West,Kariba,24,Communal,10.88,99-Year Lease,SweetPotato,5.94,62.13,10.46,Rainfed,Clay,Region V,2025-12-15,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KAR-1210,Mashonaland West,Kariba,15,A2 Commercial,91.02,Customary Offer Letter,Cassava,56.24,668.13,11.88,Rainfed,Loam,Region V,2025-11-23,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1211,Midlands,Gweru,10,A1 Smallholder,14.18,Customary Offer Letter,Cotton,10.17,18.61,1.83,Rainfed,Sandy Loam,Region III,2025-11-26,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1212,Midlands,Gweru,24,A2 Commercial,57.41,Communal,Sorghum,44.11,52.05,1.18,Rainfed,Loam,Region III,2025-11-24,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1213,Midlands,Gweru,10,Communal,5.85,Communal,Cotton,4.31,9.35,2.17,Rainfed,Clay,Region III,2025-12-14,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1214,Midlands,Gweru,23,A2 Commercial,37.85,99-Year Lease,Soybean,16.0,54.56,3.41,Rainfed,Clay Loam,Region III,2025-11-22,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1215,Midlands,Gweru,8,Communal,2.4,Customary Offer Letter,Sunflower,1.07,1.93,1.8,Rainfed,Clay Loam,Region III,2025-12-14,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1216,Midlands,Gweru,14,Peri-Urban,7.68,99-Year Lease,Cotton,4.18,8.19,1.96,Rainfed,Sandy,Region III,2025-12-14,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1217,Midlands,Gweru,3,A1 Smallholder,8.49,Deed of Grant,Wheat,4.99,31.04,6.22,Rainfed,Sandy Loam,Region III,2025-12-10,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1218,Midlands,Gweru,6,A2 Commercial,133.98,Deed of Grant,Cotton,87.83,106.27,1.21,Rainfed,Sandy,Region III,2025-12-14,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1219,Midlands,Gweru,10,Peri-Urban,14.85,Communal,Wheat,11.63,50.71,4.36,Rainfed,Clay,Region III,2025-11-20,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1220,Midlands,Gweru,15,A2 Commercial,113.42,Deed of Grant,Groundnuts,85.73,158.6,1.85,Rainfed,Clay Loam,Region III,2025-12-06,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1221,Midlands,Gweru,7,A1 Smallholder,9.55,Communal,Sorghum,6.03,11.34,1.88,Rainfed,Loam,Region III,2025-11-19,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1222,Midlands,Gweru,11,A1 Smallholder,1.1,Communal,Soybean,0.66,1.91,2.89,Rainfed,Clay,Region III,2025-12-15,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1223,Midlands,Gweru,10,Communal,4.66,Customary Offer Letter,Soybean,1.99,5.61,2.82,Rainfed,Sandy Loam,Region III,2025-12-06,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1224,Midlands,Gweru,23,A2 Commercial,109.74,Customary Offer Letter,Groundnuts,74.25,149.24,2.01,Rainfed,Loam,Region III,2025-12-15,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1225,Midlands,Gweru,16,A1 Smallholder,7.37,Customary Offer Letter,Sorghum,5.28,10.19,1.93,Rainfed,Loam,Region III,2025-12-09,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1226,Midlands,Gweru,22,Communal,8.36,Customary Offer Letter,Tobacco,6.79,13.99,2.06,Rainfed,Sandy,Region III,2025-12-11,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1227,Midlands,Gweru,17,A1 Smallholder,9.02,99-Year Lease,Wheat,4.94,22.28,4.51,Drip,Clay Loam,Region III,2025-11-30,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1228,Midlands,Gweru,17,Peri-Urban,12.32,Communal,Wheat,7.77,38.38,4.94,Center Pivot,Clay Loam,Region III,2025-11-16,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1229,Midlands,Gweru,15,A2 Commercial,114.03,Communal,Cotton,87.51,174.14,1.99,Rainfed,Sandy,Region III,2025-11-28,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1230,Midlands,Gweru,23,Communal,8.58,Deed of Grant,Tobacco,7.24,13.32,1.84,Center Pivot,Sandy,Region III,2025-11-24,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1231,Midlands,Gweru,6,A1 Smallholder,11.72,Communal,Groundnuts,9.92,12.5,1.26,Rainfed,Sandy Loam,Region III,2025-11-27,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1232,Midlands,Gweru,22,A1 Smallholder,10.15,Customary Offer Letter,Tobacco,4.88,15.52,3.18,Center Pivot,Clay Loam,Region III,2025-11-19,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1233,Midlands,Gweru,8,Communal,11.59,Customary Offer Letter,Sunflower,8.15,11.17,1.37,Rainfed,Loam,Region III,2025-11-22,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1234,Midlands,Gweru,12,A1 Smallholder,4.86,Deed of Grant,Maize,3.71,15.54,4.19,Rainfed,Sandy Loam,Region III,2025-12-04,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1235,Midlands,Gweru,1,A1 Smallholder,3.89,Deed of Grant,Cassava,1.61,18.0,11.18,Rainfed,Sandy,Region III,2025-11-22,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1236,Midlands,Gweru,2,Peri-Urban,7.15,99-Year Lease,Maize,3.31,12.21,3.69,Rainfed,Clay,Region III,2025-11-22,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1237,Midlands,Gweru,24,A2 Commercial,95.07,Customary Offer Letter,Soybean,50.94,150.78,2.96,Rainfed,Loam,Region III,2025-11-28,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1238,Midlands,Gweru,9,Communal,8.79,99-Year Lease,Sorghum,5.71,10.56,1.85,Rainfed,Sandy,Region III,2025-11-26,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1239,Midlands,Gweru,21,Peri-Urban,12.0,Customary Offer Letter,Sorghum,7.0,10.08,1.44,Rainfed,Clay Loam,Region III,2025-11-30,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1240,Midlands,Gweru,8,A2 Commercial,131.48,99-Year Lease,Sunflower,106.71,215.55,2.02,Rainfed,Clay Loam,Region III,2025-11-28,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1241,Midlands,Gweru,14,A1 Smallholder,6.44,Customary Offer Letter,Soybean,3.53,10.52,2.98,Rainfed,Clay,Region III,2025-11-17,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1242,Midlands,Gweru,24,A1 Smallholder,1.72,Communal,Cassava,1.15,19.04,16.56,Rainfed,Sandy,Region III,2025-11-21,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1243,Midlands,Gweru,25,A1 Smallholder,7.71,Customary Offer Letter,Cotton,6.4,18.82,2.94,Rainfed,Sandy,Region III,2025-12-08,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1244,Midlands,Gweru,16,A1 Smallholder,10.74,99-Year Lease,Sorghum,8.72,13.69,1.57,Rainfed,Clay Loam,Region III,2025-11-25,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-GWE-1245,Midlands,Gweru,10,Peri-Urban,7.53,Customary Offer Letter,Cotton,3.9,5.97,1.53,Rainfed,Sandy,Region III,2025-12-10,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1246,Midlands,Kwekwe,16,A2 Commercial,138.86,Customary Offer Letter,Groundnuts,81.41,144.1,1.77,Rainfed,Clay Loam,Region III,2025-12-12,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1247,Midlands,Kwekwe,24,A1 Smallholder,1.23,Communal,Cotton,0.58,1.05,1.81,Rainfed,Loam,Region III,2025-11-30,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1248,Midlands,Kwekwe,21,A2 Commercial,53.45,Communal,Sunflower,32.46,68.49,2.11,Rainfed,Clay,Region III,2025-11-20,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1249,Midlands,Kwekwe,24,Peri-Urban,3.58,Deed of Grant,SweetPotato,1.49,22.8,15.3,Rainfed,Sandy,Region III,2025-12-09,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1250,Midlands,Kwekwe,14,A1 Smallholder,12.8,99-Year Lease,Tobacco,9.19,13.88,1.51,Rainfed,Loam,Region III,2025-12-01,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1251,Midlands,Kwekwe,12,Communal,9.65,Communal,Sunflower,3.93,5.66,1.44,Rainfed,Sandy,Region III,2025-12-01,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1252,Midlands,Kwekwe,9,A2 Commercial,22.23,Communal,Wheat,9.96,47.71,4.79,Rainfed,Clay Loam,Region III,2025-11-19,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1253,Midlands,Kwekwe,7,A2 Commercial,125.98,Customary Offer Letter,Sorghum,54.87,99.86,1.82,Rainfed,Loam,Region III,2025-12-07,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1254,Midlands,Kwekwe,10,Communal,10.15,Deed of Grant,Tobacco,5.91,13.95,2.36,Center Pivot,Clay Loam,Region III,2025-11-30,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1255,Midlands,Kwekwe,21,Communal,10.84,Deed of Grant,Sunflower,8.46,13.54,1.6,Rainfed,Sandy,Region III,2025-12-13,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1256,Midlands,Kwekwe,2,A1 Smallholder,3.96,Communal,Cotton,1.67,2.87,1.72,Rainfed,Sandy,Region III,2025-12-06,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1257,Midlands,Kwekwe,9,Communal,3.51,Customary Offer Letter,Maize,2.92,9.4,3.22,Rainfed,Sandy Loam,Region III,2025-12-14,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1258,Midlands,Kwekwe,10,A1 Smallholder,8.9,Communal,SweetPotato,4.89,48.51,9.92,Rainfed,Loam,Region III,2025-12-10,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1259,Midlands,Kwekwe,24,Communal,8.01,Customary Offer Letter,Maize,3.56,16.16,4.54,Rainfed,Clay Loam,Region III,2025-12-09,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1260,Midlands,Kwekwe,20,Peri-Urban,14.56,Customary Offer Letter,Maize,9.98,48.5,4.86,Rainfed,Sandy Loam,Region III,2025-11-30,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1261,Midlands,Kwekwe,12,Peri-Urban,7.05,Communal,Tobacco,5.27,12.6,2.39,Rainfed,Sandy,Region III,2025-11-23,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1262,Midlands,Kwekwe,13,A1 Smallholder,11.36,Customary Offer Letter,Groundnuts,5.09,10.49,2.06,Rainfed,Sandy,Region III,2025-12-15,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1263,Midlands,Kwekwe,15,A2 Commercial,118.98,Deed of Grant,Wheat,52.27,200.72,3.84,Center Pivot,Sandy,Region III,2025-11-15,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1264,Midlands,Kwekwe,12,Communal,9.36,Customary Offer Letter,Sorghum,3.8,6.31,1.66,Rainfed,Sandy Loam,Region III,2025-11-27,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1265,Midlands,Kwekwe,3,A1 Smallholder,9.01,99-Year Lease,Sorghum,4.29,6.31,1.47,Rainfed,Loam,Region III,2025-11-17,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1266,Midlands,Kwekwe,14,A2 Commercial,74.74,Communal,Tobacco,42.04,121.5,2.89,Drip,Sandy Loam,Region III,2025-12-04,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1267,Midlands,Kwekwe,7,Peri-Urban,2.5,Customary Offer Letter,Maize,2.07,8.03,3.88,Rainfed,Clay,Region III,2025-11-29,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1268,Midlands,Kwekwe,14,A1 Smallholder,5.21,99-Year Lease,Sunflower,2.82,6.32,2.24,Rainfed,Sandy Loam,Region III,2025-12-15,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1269,Midlands,Kwekwe,10,Peri-Urban,14.55,99-Year Lease,Groundnuts,8.28,16.15,1.95,Rainfed,Sandy,Region III,2025-12-14,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1270,Midlands,Kwekwe,7,A1 Smallholder,10.54,Deed of Grant,Sunflower,8.69,12.77,1.47,Rainfed,Loam,Region III,2025-11-29,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1271,Midlands,Kwekwe,10,Communal,12.47,Communal,Sunflower,5.77,9.87,1.71,Rainfed,Loam,Region III,2025-12-07,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1272,Midlands,Kwekwe,13,Communal,7.29,Communal,Cassava,4.23,72.59,17.16,Rainfed,Clay Loam,Region III,2025-12-14,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1273,Midlands,Kwekwe,23,Peri-Urban,8.61,Customary Offer Letter,SweetPotato,5.74,74.56,12.99,Rainfed,Loam,Region III,2025-12-06,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1274,Midlands,Kwekwe,12,A1 Smallholder,10.06,Deed of Grant,Cassava,8.48,120.92,14.26,Rainfed,Sandy Loam,Region III,2025-12-15,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1275,Midlands,Kwekwe,11,Peri-Urban,2.48,Deed of Grant,Cotton,1.24,2.47,1.99,Rainfed,Clay Loam,Region III,2025-11-22,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1276,Midlands,Kwekwe,12,Peri-Urban,7.48,99-Year Lease,Groundnuts,6.35,8.51,1.34,Rainfed,Sandy Loam,Region III,2025-11-18,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1277,Midlands,Kwekwe,14,Communal,2.62,99-Year Lease,Groundnuts,1.42,2.22,1.56,Rainfed,Sandy Loam,Region III,2025-11-26,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1278,Midlands,Kwekwe,4,Peri-Urban,11.11,Communal,Groundnuts,4.78,8.94,1.87,Rainfed,Sandy,Region III,2025-12-10,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1279,Midlands,Kwekwe,4,Communal,12.89,Deed of Grant,Wheat,10.55,52.01,4.93,Drip,Clay,Region III,2025-12-02,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-KWE-1280,Midlands,Kwekwe,15,A1 Smallholder,12.17,99-Year Lease,Wheat,8.38,31.84,3.8,Center Pivot,Sandy Loam,Region III,2025-11-15,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1281,Midlands,Gokwe,20,A1 Smallholder,7.29,Communal,Sorghum,2.93,8.5,2.9,Rainfed,Sandy,Region IV,2025-12-03,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1282,Midlands,Gokwe,18,A1 Smallholder,6.12,99-Year Lease,Sunflower,2.76,5.74,2.08,Rainfed,Sandy Loam,Region IV,2025-12-01,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1283,Midlands,Gokwe,21,A2 Commercial,97.61,Communal,Cassava,44.06,573.66,13.02,Rainfed,Loam,Region IV,2025-12-11,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1284,Midlands,Gokwe,23,A2 Commercial,139.43,Deed of Grant,Wheat,75.42,266.23,3.53,Drip,Clay,Region IV,2025-11-18,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1285,Midlands,Gokwe,12,A1 Smallholder,8.15,Communal,Cassava,3.77,51.16,13.57,Rainfed,Clay Loam,Region IV,2025-12-07,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1286,Midlands,Gokwe,21,A1 Smallholder,8.77,Communal,Cotton,4.06,8.81,2.17,Rainfed,Clay,Region IV,2025-12-11,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1287,Midlands,Gokwe,20,Communal,13.12,Deed of Grant,Sunflower,6.05,13.13,2.17,Rainfed,Clay Loam,Region IV,2025-12-05,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1288,Midlands,Gokwe,14,Peri-Urban,6.82,Communal,Sunflower,3.24,3.08,0.95,Rainfed,Clay Loam,Region IV,2025-11-15,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1289,Midlands,Gokwe,25,A1 Smallholder,5.09,Customary Offer Letter,Soybean,3.27,5.43,1.66,Rainfed,Sandy Loam,Region IV,2025-12-02,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1290,Midlands,Gokwe,4,Communal,4.75,Customary Offer Letter,SweetPotato,3.66,52.37,14.31,Rainfed,Sandy,Region IV,2025-12-09,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1291,Midlands,Gokwe,15,A1 Smallholder,14.86,Deed of Grant,Soybean,7.93,14.51,1.83,Rainfed,Clay,Region IV,2025-12-12,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1292,Midlands,Gokwe,3,Peri-Urban,13.11,Deed of Grant,Soybean,6.48,9.72,1.5,Rainfed,Clay Loam,Region IV,2025-12-07,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1293,Midlands,Gokwe,23,Peri-Urban,3.32,99-Year Lease,Soybean,2.54,4.14,1.63,Rainfed,Clay Loam,Region IV,2025-11-23,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1294,Midlands,Gokwe,18,A1 Smallholder,5.53,Customary Offer Letter,Cotton,3.64,5.5,1.51,Rainfed,Clay Loam,Region IV,2025-12-13,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1295,Midlands,Gokwe,4,A1 Smallholder,14.48,Communal,Maize,12.26,15.69,1.28,Rainfed,Loam,Region IV,2025-11-22,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1296,Midlands,Gokwe,23,A2 Commercial,127.7,Communal,Sunflower,59.25,98.35,1.66,Rainfed,Clay,Region IV,2025-12-05,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1297,Midlands,Gokwe,13,Peri-Urban,2.06,Deed of Grant,Sorghum,1.3,3.34,2.57,Rainfed,Clay,Region IV,2025-11-29,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1298,Midlands,Gokwe,16,A2 Commercial,95.65,Deed of Grant,Sunflower,65.59,172.5,2.63,Rainfed,Clay,Region IV,2025-12-12,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1299,Midlands,Gokwe,18,Peri-Urban,4.05,Communal,Soybean,2.52,3.5,1.39,Rainfed,Clay Loam,Region IV,2025-12-03,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1300,Midlands,Gokwe,19,Peri-Urban,12.04,Deed of Grant,Maize,5.36,7.4,1.38,Rainfed,Sandy Loam,Region IV,2025-11-15,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1301,Midlands,Gokwe,6,Peri-Urban,7.39,Communal,Soybean,6.27,12.67,2.02,Rainfed,Clay,Region IV,2025-11-20,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1302,Midlands,Gokwe,9,Communal,10.16,Customary Offer Letter,Tobacco,5.76,11.17,1.94,Drip,Sandy,Region IV,2025-11-27,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1303,Midlands,Gokwe,10,A1 Smallholder,7.01,Deed of Grant,Tobacco,2.81,6.29,2.24,Drip,Clay Loam,Region IV,2025-12-06,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1304,Midlands,Gokwe,1,Communal,10.74,Deed of Grant,Sorghum,7.65,21.73,2.84,Rainfed,Sandy Loam,Region IV,2025-11-17,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1305,Midlands,Gokwe,13,Communal,11.23,Deed of Grant,Tobacco,6.08,16.42,2.7,Drip,Loam,Region IV,2025-11-17,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1306,Midlands,Gokwe,19,Communal,9.54,99-Year Lease,Sunflower,5.32,8.88,1.67,Rainfed,Loam,Region IV,2025-12-05,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1307,Midlands,Gokwe,5,Peri-Urban,9.63,Communal,Soybean,4.23,8.04,1.9,Rainfed,Clay Loam,Region IV,2025-12-08,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1308,Midlands,Gokwe,12,Peri-Urban,5.4,99-Year Lease,Soybean,2.83,5.09,1.8,Rainfed,Sandy,Region IV,2025-11-22,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1309,Midlands,Gokwe,20,A2 Commercial,121.27,Deed of Grant,Cotton,59.72,107.5,1.8,Rainfed,Sandy Loam,Region IV,2025-11-24,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1310,Midlands,Gokwe,2,A1 Smallholder,7.93,Deed of Grant,Soybean,4.95,6.83,1.38,Rainfed,Clay Loam,Region IV,2025-11-17,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1311,Midlands,Gokwe,1,A2 Commercial,141.41,99-Year Lease,Sorghum,111.34,257.2,2.31,Rainfed,Loam,Region IV,2025-12-09,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1312,Midlands,Gokwe,25,Communal,1.23,Deed of Grant,Maize,0.64,0.7,1.1,Rainfed,Sandy,Region IV,2025-12-14,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1313,Midlands,Gokwe,13,A2 Commercial,101.71,Communal,Sorghum,72.81,247.55,3.4,Rainfed,Clay Loam,Region IV,2025-11-19,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1314,Midlands,Gokwe,3,A2 Commercial,30.27,99-Year Lease,Wheat,19.41,65.41,3.37,Center Pivot,Clay Loam,Region IV,2025-12-05,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-GOK-1315,Midlands,Gokwe,21,Communal,5.34,Communal,Soybean,2.28,4.04,1.77,Rainfed,Sandy Loam,Region IV,2025-12-04,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1316,Masvingo,Masvingo,2,A2 Commercial,106.59,99-Year Lease,Tobacco,43.24,120.21,2.78,Drip,Sandy,Region IV,2025-11-20,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1317,Masvingo,Masvingo,12,A2 Commercial,41.71,99-Year Lease,Cotton,30.44,80.06,2.63,Rainfed,Clay,Region IV,2025-12-10,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1318,Masvingo,Masvingo,9,Communal,4.68,Deed of Grant,Sunflower,2.83,6.57,2.32,Rainfed,Clay,Region IV,2025-11-16,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1319,Masvingo,Masvingo,19,A1 Smallholder,6.15,Customary Offer Letter,Tobacco,4.93,11.78,2.39,Rainfed,Sandy,Region IV,2025-12-12,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1320,Masvingo,Masvingo,1,A1 Smallholder,1.64,Customary Offer Letter,Sorghum,1.34,3.42,2.55,Rainfed,Loam,Region IV,2025-12-14,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1321,Masvingo,Masvingo,2,Peri-Urban,4.14,99-Year Lease,Sorghum,3.36,7.9,2.35,Rainfed,Clay Loam,Region IV,2025-11-26,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1322,Masvingo,Masvingo,17,Communal,3.51,Deed of Grant,Sorghum,1.51,5.66,3.75,Rainfed,Sandy Loam,Region IV,2025-12-12,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1323,Masvingo,Masvingo,25,A2 Commercial,62.55,Communal,Maize,35.4,38.59,1.09,Rainfed,Clay Loam,Region IV,2025-11-22,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1324,Masvingo,Masvingo,12,Peri-Urban,14.97,99-Year Lease,SweetPotato,11.11,178.43,16.06,Rainfed,Loam,Region IV,2025-11-19,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1325,Masvingo,Masvingo,14,Communal,4.26,Customary Offer Letter,Maize,3.53,5.47,1.55,Rainfed,Clay,Region IV,2025-11-18,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1326,Masvingo,Masvingo,17,A1 Smallholder,6.88,Deed of Grant,Wheat,4.96,14.93,3.01,Rainfed,Sandy,Region IV,2025-12-14,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1327,Masvingo,Masvingo,17,Peri-Urban,10.81,Customary Offer Letter,Sunflower,9.06,17.58,1.94,Rainfed,Loam,Region IV,2025-12-05,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1328,Masvingo,Masvingo,13,Communal,9.29,Deed of Grant,Sorghum,6.49,19.02,2.93,Rainfed,Loam,Region IV,2025-11-22,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1329,Masvingo,Masvingo,9,A2 Commercial,140.39,Communal,Groundnuts,76.25,135.72,1.78,Rainfed,Loam,Region IV,2025-11-19,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1330,Masvingo,Masvingo,25,Communal,3.18,99-Year Lease,Sunflower,1.94,3.76,1.94,Rainfed,Sandy Loam,Region IV,2025-11-18,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1331,Masvingo,Masvingo,12,A1 Smallholder,7.33,Communal,Cotton,5.74,14.98,2.61,Rainfed,Clay,Region IV,2025-12-11,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1332,Masvingo,Masvingo,23,Communal,4.01,Customary Offer Letter,Wheat,1.77,6.35,3.59,Drip,Clay,Region IV,2025-11-27,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1333,Masvingo,Masvingo,2,A2 Commercial,53.82,99-Year Lease,Maize,44.59,61.98,1.39,Rainfed,Clay Loam,Region IV,2025-11-22,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1334,Masvingo,Masvingo,15,Communal,12.25,99-Year Lease,Tobacco,4.97,9.94,2.0,Drip,Loam,Region IV,2025-11-21,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1335,Masvingo,Masvingo,13,A2 Commercial,109.22,Deed of Grant,Cassava,72.5,1162.18,16.03,Rainfed,Sandy,Region IV,2025-11-21,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1336,Masvingo,Masvingo,21,Peri-Urban,12.33,Deed of Grant,Groundnuts,5.61,9.71,1.73,Rainfed,Sandy Loam,Region IV,2025-11-16,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1337,Masvingo,Masvingo,19,Peri-Urban,12.5,Communal,Sunflower,5.17,8.84,1.71,Rainfed,Loam,Region IV,2025-12-14,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1338,Masvingo,Masvingo,9,A2 Commercial,77.98,99-Year Lease,Maize,52.74,55.9,1.06,Rainfed,Clay Loam,Region IV,2025-11-22,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1339,Masvingo,Masvingo,10,Peri-Urban,6.77,Communal,Maize,2.98,3.01,1.01,Rainfed,Clay Loam,Region IV,2025-11-22,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1340,Masvingo,Masvingo,18,Communal,14.85,Customary Offer Letter,Sunflower,9.58,19.64,2.05,Rainfed,Sandy Loam,Region IV,2025-11-26,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1341,Masvingo,Masvingo,19,A2 Commercial,70.49,99-Year Lease,Maize,38.31,49.8,1.3,Rainfed,Clay,Region IV,2025-11-16,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1342,Masvingo,Masvingo,16,A2 Commercial,119.69,99-Year Lease,Wheat,53.27,226.4,4.25,Drip,Clay,Region IV,2025-12-02,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1343,Masvingo,Masvingo,24,Communal,11.7,99-Year Lease,Cassava,9.14,144.59,15.82,Rainfed,Loam,Region IV,2025-11-20,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1344,Masvingo,Masvingo,19,A2 Commercial,124.81,Customary Offer Letter,Cassava,51.51,634.6,12.32,Rainfed,Clay,Region IV,2025-12-15,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1345,Masvingo,Masvingo,19,A1 Smallholder,8.88,99-Year Lease,Sunflower,5.72,10.58,1.85,Rainfed,Sandy,Region IV,2025-11-22,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1346,Masvingo,Masvingo,8,Communal,8.37,Deed of Grant,Groundnuts,6.81,12.87,1.89,Rainfed,Loam,Region IV,2025-12-10,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1347,Masvingo,Masvingo,11,A1 Smallholder,13.86,Customary Offer Letter,Maize,5.68,4.2,0.74,Rainfed,Sandy,Region IV,2025-12-12,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1348,Masvingo,Masvingo,12,Communal,6.23,Communal,Cassava,2.78,32.05,11.53,Rainfed,Clay,Region IV,2025-11-25,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1349,Masvingo,Masvingo,6,Peri-Urban,12.09,Communal,Groundnuts,5.78,13.53,2.34,Rainfed,Clay Loam,Region IV,2025-12-10,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-MAS-1350,Masvingo,Masvingo,8,A1 Smallholder,6.3,Customary Offer Letter,Wheat,3.02,8.52,2.82,Rainfed,Clay Loam,Region IV,2025-11-27,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1351,Masvingo,Chiredzi,25,Communal,3.55,Customary Offer Letter,Cassava,1.77,15.12,8.54,Rainfed,Loam,Region V,2025-11-25,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1352,Masvingo,Chiredzi,3,A1 Smallholder,5.86,Customary Offer Letter,Wheat,4.02,9.81,2.44,Rainfed,Clay,Region V,2025-11-29,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1353,Masvingo,Chiredzi,9,A1 Smallholder,4.49,Deed of Grant,Groundnuts,2.31,2.33,1.01,Rainfed,Sandy Loam,Region V,2025-11-29,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1354,Masvingo,Chiredzi,14,A1 Smallholder,13.38,Communal,Sorghum,7.47,21.07,2.82,Rainfed,Sandy Loam,Region V,2025-11-18,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1355,Masvingo,Chiredzi,16,A1 Smallholder,3.28,Deed of Grant,Maize,1.75,1.66,0.95,Rainfed,Sandy,Region V,2025-11-25,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1356,Masvingo,Chiredzi,13,A1 Smallholder,11.25,Deed of Grant,Groundnuts,7.51,10.89,1.45,Rainfed,Clay Loam,Region V,2025-12-13,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1357,Masvingo,Chiredzi,23,Communal,7.04,99-Year Lease,Cassava,5.63,88.73,15.76,Rainfed,Loam,Region V,2025-11-21,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1358,Masvingo,Chiredzi,23,A2 Commercial,105.88,Customary Offer Letter,Soybean,46.92,76.01,1.62,Rainfed,Sandy Loam,Region V,2025-12-03,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1359,Masvingo,Chiredzi,16,A1 Smallholder,1.76,Deed of Grant,Sorghum,0.77,2.43,3.15,Rainfed,Sandy Loam,Region V,2025-11-21,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1360,Masvingo,Chiredzi,1,A1 Smallholder,3.39,Customary Offer Letter,Tobacco,2.08,1.87,0.9,Rainfed,Clay,Region V,2025-12-10,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1361,Masvingo,Chiredzi,16,Peri-Urban,13.53,Customary Offer Letter,Tobacco,9.32,9.51,1.02,Center Pivot,Clay,Region V,2025-11-20,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1362,Masvingo,Chiredzi,2,A2 Commercial,77.17,Customary Offer Letter,Soybean,59.94,101.3,1.69,Rainfed,Clay Loam,Region V,2025-11-16,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1363,Masvingo,Chiredzi,25,Communal,2.2,Customary Offer Letter,SweetPotato,1.29,15.57,12.07,Rainfed,Sandy,Region V,2025-12-11,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1364,Masvingo,Chiredzi,17,Peri-Urban,14.52,Communal,Cassava,11.57,148.67,12.85,Rainfed,Sandy Loam,Region V,2025-11-24,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1365,Masvingo,Chiredzi,13,Communal,8.03,99-Year Lease,Tobacco,6.64,4.25,0.64,Drip,Loam,Region V,2025-12-10,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1366,Masvingo,Chiredzi,5,Communal,6.93,Communal,Soybean,5.88,10.17,1.73,Rainfed,Loam,Region V,2025-12-11,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1367,Masvingo,Chiredzi,9,A2 Commercial,138.4,Deed of Grant,Tobacco,79.53,81.92,1.03,Overhead Canal,Clay Loam,Region V,2025-11-29,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1368,Masvingo,Chiredzi,1,Peri-Urban,2.58,99-Year Lease,Wheat,1.69,5.61,3.32,Rainfed,Sandy,Region V,2025-12-03,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1369,Masvingo,Chiredzi,4,A2 Commercial,132.77,Customary Offer Letter,Sorghum,68.89,164.65,2.39,Rainfed,Sandy Loam,Region V,2025-11-16,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1370,Masvingo,Chiredzi,9,Peri-Urban,3.01,Communal,Maize,1.74,1.64,0.94,Rainfed,Clay,Region V,2025-12-07,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1371,Masvingo,Chiredzi,2,Peri-Urban,13.89,Customary Offer Letter,Maize,7.67,9.66,1.26,Rainfed,Sandy Loam,Region V,2025-12-12,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1372,Masvingo,Chiredzi,22,Communal,14.61,99-Year Lease,Wheat,7.82,19.55,2.5,Center Pivot,Clay,Region V,2025-11-23,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1373,Masvingo,Chiredzi,14,Communal,3.63,99-Year Lease,Sorghum,2.66,7.63,2.87,Rainfed,Sandy,Region V,2025-12-01,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1374,Masvingo,Chiredzi,6,Communal,5.36,Communal,Wheat,4.03,7.25,1.8,Rainfed,Loam,Region V,2025-11-21,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1375,Masvingo,Chiredzi,7,Communal,4.49,Communal,Maize,3.65,4.2,1.15,Rainfed,Sandy Loam,Region V,2025-12-01,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1376,Masvingo,Chiredzi,21,Communal,10.54,99-Year Lease,Groundnuts,6.53,5.55,0.85,Rainfed,Sandy Loam,Region V,2025-11-20,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1377,Masvingo,Chiredzi,16,A2 Commercial,64.75,Customary Offer Letter,Tobacco,34.21,37.29,1.09,Drip,Loam,Region V,2025-12-05,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1378,Masvingo,Chiredzi,22,A1 Smallholder,4.77,Communal,SweetPotato,1.95,25.23,12.94,Rainfed,Sandy,Region V,2025-11-30,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1379,Masvingo,Chiredzi,5,A1 Smallholder,9.42,Deed of Grant,Soybean,4.84,7.7,1.59,Rainfed,Clay,Region V,2025-11-28,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1380,Masvingo,Chiredzi,13,A2 Commercial,79.67,99-Year Lease,Sunflower,42.7,64.48,1.51,Rainfed,Clay Loam,Region V,2025-12-11,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1381,Masvingo,Chiredzi,13,Communal,1.1,Customary Offer Letter,SweetPotato,0.76,7.93,10.44,Rainfed,Sandy,Region V,2025-11-30,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1382,Masvingo,Chiredzi,11,A2 Commercial,103.28,Customary Offer Letter,Cotton,71.81,128.54,1.79,Rainfed,Clay,Region V,2025-11-21,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1383,Masvingo,Chiredzi,17,A1 Smallholder,13.6,Communal,Groundnuts,9.61,9.13,0.95,Rainfed,Clay,Region V,2025-11-23,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1384,Masvingo,Chiredzi,14,Peri-Urban,6.44,Deed of Grant,Cassava,4.63,49.49,10.69,Rainfed,Clay Loam,Region V,2025-12-11,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1385,Masvingo,Chiredzi,11,A1 Smallholder,10.61,Communal,Groundnuts,6.67,8.14,1.22,Rainfed,Clay Loam,Region V,2025-11-20,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1386,Masvingo,Gutu,4,Peri-Urban,2.79,Customary Offer Letter,SweetPotato,2.07,16.97,8.2,Rainfed,Loam,Region IV,2025-12-15,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1387,Masvingo,Gutu,11,Communal,4.11,99-Year Lease,Cotton,2.42,5.54,2.29,Rainfed,Clay Loam,Region IV,2025-11-24,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1388,Masvingo,Gutu,4,Peri-Urban,1.75,Deed of Grant,Sunflower,1.4,2.2,1.57,Rainfed,Clay Loam,Region IV,2025-11-18,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1389,Masvingo,Gutu,22,Peri-Urban,8.42,Communal,Maize,6.67,10.94,1.64,Rainfed,Clay,Region IV,2025-11-28,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1390,Masvingo,Gutu,15,A1 Smallholder,5.43,99-Year Lease,Tobacco,3.36,12.67,3.77,Drip,Clay,Region IV,2025-12-05,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1391,Masvingo,Gutu,1,Peri-Urban,4.83,99-Year Lease,Cassava,3.59,35.61,9.92,Rainfed,Sandy,Region IV,2025-11-19,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1392,Masvingo,Gutu,14,Peri-Urban,6.65,Communal,Sorghum,2.67,7.64,2.86,Rainfed,Clay Loam,Region IV,2025-11-21,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1393,Masvingo,Gutu,12,Communal,13.49,99-Year Lease,Maize,9.5,10.17,1.07,Rainfed,Clay,Region IV,2025-11-24,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1394,Masvingo,Gutu,4,Peri-Urban,8.05,Customary Offer Letter,Wheat,3.46,9.27,2.68,Rainfed,Clay,Region IV,2025-12-15,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1395,Masvingo,Gutu,15,A2 Commercial,76.38,99-Year Lease,Groundnuts,64.79,77.75,1.2,Rainfed,Loam,Region IV,2025-12-15,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1396,Masvingo,Gutu,13,Communal,4.2,99-Year Lease,Soybean,3.07,4.7,1.53,Rainfed,Clay Loam,Region IV,2025-12-01,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1397,Masvingo,Gutu,4,A2 Commercial,112.44,Deed of Grant,Sorghum,89.33,247.44,2.77,Rainfed,Sandy,Region IV,2025-12-04,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1398,Masvingo,Gutu,22,Communal,10.15,Deed of Grant,Maize,7.21,10.81,1.5,Rainfed,Sandy Loam,Region IV,2025-11-29,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1399,Masvingo,Gutu,4,A2 Commercial,81.67,99-Year Lease,Soybean,58.22,77.43,1.33,Rainfed,Sandy,Region IV,2025-12-06,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1400,Masvingo,Gutu,9,A1 Smallholder,6.86,Deed of Grant,SweetPotato,4.96,52.18,10.52,Rainfed,Sandy,Region IV,2025-11-24,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1401,Masvingo,Gutu,4,Peri-Urban,3.78,99-Year Lease,Cotton,2.93,6.94,2.37,Rainfed,Sandy Loam,Region IV,2025-11-24,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1402,Masvingo,Gutu,2,Peri-Urban,13.74,Communal,Groundnuts,6.95,12.09,1.74,Rainfed,Sandy,Region IV,2025-12-06,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1403,Masvingo,Gutu,4,Peri-Urban,3.09,Deed of Grant,SweetPotato,1.34,14.93,11.14,Rainfed,Loam,Region IV,2025-11-29,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1404,Masvingo,Gutu,9,Peri-Urban,1.7,99-Year Lease,Maize,1.33,0.92,0.69,Rainfed,Clay,Region IV,2025-12-10,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1405,Masvingo,Gutu,11,Peri-Urban,11.34,Deed of Grant,Maize,4.59,6.52,1.42,Rainfed,Clay,Region IV,2025-11-26,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1406,Masvingo,Gutu,15,A2 Commercial,134.2,Deed of Grant,Groundnuts,102.9,226.38,2.2,Rainfed,Loam,Region IV,2025-11-18,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1407,Masvingo,Gutu,13,Peri-Urban,4.81,Communal,Sunflower,3.66,5.2,1.42,Rainfed,Sandy,Region IV,2025-11-19,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1408,Masvingo,Gutu,24,Communal,14.74,99-Year Lease,Tobacco,8.66,15.41,1.78,Center Pivot,Clay Loam,Region IV,2025-12-06,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1409,Masvingo,Gutu,6,Peri-Urban,11.91,Deed of Grant,Wheat,7.35,12.86,1.75,Center Pivot,Sandy,Region IV,2025-11-17,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1410,Masvingo,Gutu,21,A2 Commercial,21.61,99-Year Lease,Groundnuts,13.69,25.46,1.86,Rainfed,Clay Loam,Region IV,2025-11-18,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1411,Masvingo,Gutu,22,A1 Smallholder,7.75,Communal,Wheat,6.03,8.08,1.34,Rainfed,Sandy,Region IV,2025-12-05,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1412,Masvingo,Gutu,6,Peri-Urban,12.93,99-Year Lease,Tobacco,9.54,18.79,1.97,Overhead Canal,Loam,Region IV,2025-11-25,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1413,Masvingo,Gutu,2,A1 Smallholder,8.71,Communal,Sorghum,6.69,22.28,3.33,Rainfed,Clay Loam,Region IV,2025-11-29,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1414,Masvingo,Gutu,16,Peri-Urban,5.42,Communal,Maize,2.42,3.19,1.32,Rainfed,Sandy Loam,Region IV,2025-11-16,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1415,Masvingo,Gutu,18,Communal,12.56,Customary Offer Letter,SweetPotato,8.2,86.18,10.51,Rainfed,Clay,Region IV,2025-11-26,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1416,Masvingo,Gutu,2,A1 Smallholder,12.82,Customary Offer Letter,SweetPotato,9.56,93.78,9.81,Rainfed,Clay Loam,Region IV,2025-11-30,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1417,Masvingo,Gutu,22,A2 Commercial,113.07,Deed of Grant,Tobacco,83.86,216.36,2.58,Overhead Canal,Clay Loam,Region IV,2025-12-01,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1418,Masvingo,Gutu,23,Communal,1.64,99-Year Lease,Sunflower,0.76,1.61,2.12,Rainfed,Sandy Loam,Region IV,2025-11-18,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1419,Masvingo,Gutu,20,A1 Smallholder,3.63,Communal,Soybean,2.2,3.5,1.59,Rainfed,Sandy,Region IV,2025-12-09,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-GUT-1420,Masvingo,Gutu,2,Communal,11.81,Communal,Sunflower,8.22,10.19,1.24,Rainfed,Clay Loam,Region IV,2025-11-19,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1421,Matabeleland North,Binga,16,Communal,8.43,Deed of Grant,SweetPotato,6.92,93.14,13.46,Rainfed,Clay Loam,Region V,2025-12-09,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1422,Matabeleland North,Binga,6,A1 Smallholder,11.23,99-Year Lease,Tobacco,6.45,6.26,0.97,Overhead Canal,Clay Loam,Region V,2025-12-13,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1423,Matabeleland North,Binga,14,A1 Smallholder,4.83,Customary Offer Letter,Cotton,2.92,6.66,2.28,Rainfed,Clay Loam,Region V,2025-11-24,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1424,Matabeleland North,Binga,23,A2 Commercial,112.54,99-Year Lease,Soybean,55.64,96.26,1.73,Rainfed,Clay,Region V,2025-12-06,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1425,Matabeleland North,Binga,22,A1 Smallholder,14.74,99-Year Lease,SweetPotato,9.49,90.53,9.54,Rainfed,Clay,Region V,2025-12-02,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1426,Matabeleland North,Binga,19,Peri-Urban,10.44,Customary Offer Letter,Sorghum,7.97,16.98,2.13,Rainfed,Clay Loam,Region V,2025-11-18,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1427,Matabeleland North,Binga,13,A1 Smallholder,1.74,Deed of Grant,Soybean,0.91,1.54,1.69,Rainfed,Clay,Region V,2025-11-19,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1428,Matabeleland North,Binga,2,A2 Commercial,46.52,Deed of Grant,Groundnuts,35.65,15.69,0.44,Rainfed,Sandy,Region V,2025-12-04,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1429,Matabeleland North,Binga,22,A1 Smallholder,11.39,Communal,Soybean,7.17,11.69,1.63,Rainfed,Sandy,Region V,2025-12-14,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1430,Matabeleland North,Binga,13,Peri-Urban,14.39,Customary Offer Letter,SweetPotato,6.1,51.54,8.45,Rainfed,Clay,Region V,2025-11-21,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1431,Matabeleland North,Binga,25,Peri-Urban,12.62,Customary Offer Letter,Cassava,8.15,88.59,10.87,Rainfed,Loam,Region V,2025-11-24,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1432,Matabeleland North,Binga,6,Communal,3.62,99-Year Lease,SweetPotato,1.64,15.56,9.49,Rainfed,Sandy,Region V,2025-11-28,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1433,Matabeleland North,Binga,18,A2 Commercial,36.91,Customary Offer Letter,Maize,20.25,23.69,1.17,Rainfed,Loam,Region V,2025-12-14,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1434,Matabeleland North,Binga,20,Communal,11.83,Customary Offer Letter,Sunflower,8.94,14.3,1.6,Rainfed,Clay Loam,Region V,2025-11-26,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1435,Matabeleland North,Binga,23,A2 Commercial,88.3,99-Year Lease,SweetPotato,38.03,361.67,9.51,Rainfed,Clay Loam,Region V,2025-11-27,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1436,Matabeleland North,Binga,12,A1 Smallholder,13.37,Customary Offer Letter,Groundnuts,7.52,7.44,0.99,Rainfed,Loam,Region V,2025-12-15,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1437,Matabeleland North,Binga,20,Peri-Urban,14.95,Deed of Grant,Tobacco,10.48,7.44,0.71,Drip,Sandy,Region V,2025-12-06,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1438,Matabeleland North,Binga,11,Peri-Urban,13.82,Deed of Grant,Sorghum,7.12,22.86,3.21,Rainfed,Clay,Region V,2025-11-15,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1439,Matabeleland North,Binga,17,A2 Commercial,86.86,Communal,Sunflower,36.46,72.56,1.99,Rainfed,Clay Loam,Region V,2025-11-17,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1440,Matabeleland North,Binga,4,A1 Smallholder,14.6,Deed of Grant,Tobacco,7.22,8.01,1.11,Drip,Sandy Loam,Region V,2025-12-11,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1441,Matabeleland North,Binga,7,Peri-Urban,10.05,Deed of Grant,Wheat,4.13,12.27,2.97,Rainfed,Sandy,Region V,2025-11-20,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1442,Matabeleland North,Binga,9,Communal,9.05,99-Year Lease,Cotton,5.28,9.98,1.89,Rainfed,Sandy Loam,Region V,2025-12-05,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1443,Matabeleland North,Binga,14,A2 Commercial,22.2,Deed of Grant,SweetPotato,8.94,105.85,11.84,Rainfed,Clay Loam,Region V,2025-11-16,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1444,Matabeleland North,Binga,3,A2 Commercial,140.65,Deed of Grant,Cotton,106.06,197.27,1.86,Rainfed,Clay,Region V,2025-12-04,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1445,Matabeleland North,Binga,10,Peri-Urban,6.34,Deed of Grant,Sunflower,2.98,5.69,1.91,Rainfed,Clay Loam,Region V,2025-11-24,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1446,Matabeleland North,Binga,21,A1 Smallholder,5.17,Customary Offer Letter,Maize,3.36,5.34,1.59,Rainfed,Clay Loam,Region V,2025-11-19,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1447,Matabeleland North,Binga,2,Communal,9.02,Communal,SweetPotato,5.83,78.24,13.42,Rainfed,Clay,Region V,2025-11-21,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1448,Matabeleland North,Binga,21,A1 Smallholder,3.25,99-Year Lease,Cassava,2.52,40.45,16.05,Rainfed,Loam,Region V,2025-11-18,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1449,Matabeleland North,Binga,22,Communal,12.92,Communal,SweetPotato,5.59,62.27,11.14,Rainfed,Loam,Region V,2025-12-08,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1450,Matabeleland North,Binga,16,A2 Commercial,66.43,99-Year Lease,Tobacco,35.1,36.5,1.04,Rainfed,Loam,Region V,2025-11-25,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1451,Matabeleland North,Binga,15,A2 Commercial,100.12,Customary Offer Letter,Cassava,46.91,470.51,10.03,Rainfed,Sandy Loam,Region V,2025-11-20,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1452,Matabeleland North,Binga,11,A1 Smallholder,12.0,Communal,Cotton,9.34,15.88,1.7,Rainfed,Loam,Region V,2025-12-06,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1453,Matabeleland North,Binga,11,Peri-Urban,7.48,Customary Offer Letter,Cotton,4.63,11.34,2.45,Rainfed,Sandy,Region V,2025-12-11,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1454,Matabeleland North,Binga,5,A1 Smallholder,4.69,Deed of Grant,Tobacco,3.76,5.34,1.42,Rainfed,Clay Loam,Region V,2025-12-03,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-BIN-1455,Matabeleland North,Binga,25,A1 Smallholder,13.69,Customary Offer Letter,SweetPotato,10.98,94.54,8.61,Rainfed,Loam,Region V,2025-11-26,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1456,Matabeleland North,Lupane,8,A2 Commercial,37.4,Deed of Grant,Sorghum,21.08,54.81,2.6,Rainfed,Sandy,Region IV,2025-12-06,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1457,Matabeleland North,Lupane,20,A1 Smallholder,11.6,99-Year Lease,Sunflower,5.47,7.49,1.37,Rainfed,Loam,Region IV,2025-12-08,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1458,Matabeleland North,Lupane,16,A2 Commercial,25.25,Communal,Soybean,10.81,14.49,1.34,Rainfed,Clay,Region IV,2025-11-22,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1459,Matabeleland North,Lupane,22,A1 Smallholder,8.25,Customary Offer Letter,Sorghum,5.04,13.26,2.63,Rainfed,Clay,Region IV,2025-11-18,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1460,Matabeleland North,Lupane,17,A2 Commercial,128.53,Customary Offer Letter,Cassava,82.9,1265.05,15.26,Rainfed,Loam,Region IV,2025-11-27,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1461,Matabeleland North,Lupane,13,A2 Commercial,96.4,Deed of Grant,SweetPotato,49.47,676.75,13.68,Rainfed,Sandy Loam,Region IV,2025-11-26,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1462,Matabeleland North,Lupane,12,Peri-Urban,12.1,Deed of Grant,SweetPotato,9.64,112.88,11.71,Rainfed,Sandy Loam,Region IV,2025-11-20,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1463,Matabeleland North,Lupane,3,A2 Commercial,47.5,99-Year Lease,Wheat,26.74,78.62,2.94,Drip,Sandy Loam,Region IV,2025-12-10,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1464,Matabeleland North,Lupane,24,Communal,7.74,Communal,Sunflower,3.83,6.2,1.62,Rainfed,Loam,Region IV,2025-12-05,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1465,Matabeleland North,Lupane,14,Communal,4.41,99-Year Lease,Cassava,2.94,51.1,17.38,Rainfed,Clay Loam,Region IV,2025-11-19,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1466,Matabeleland North,Lupane,6,A2 Commercial,139.92,Communal,Cassava,117.0,2069.73,17.69,Rainfed,Sandy,Region IV,2025-12-13,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1467,Matabeleland North,Lupane,24,A2 Commercial,143.14,99-Year Lease,Sunflower,96.32,133.88,1.39,Rainfed,Loam,Region IV,2025-12-11,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1468,Matabeleland North,Lupane,20,A1 Smallholder,12.12,99-Year Lease,Cassava,8.45,131.9,15.61,Rainfed,Clay,Region IV,2025-11-20,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1469,Matabeleland North,Lupane,22,A2 Commercial,139.91,Deed of Grant,Soybean,79.78,122.86,1.54,Rainfed,Clay Loam,Region IV,2025-12-12,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1470,Matabeleland North,Lupane,17,Peri-Urban,12.57,Deed of Grant,Wheat,7.72,23.78,3.08,Rainfed,Clay Loam,Region IV,2025-12-01,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1471,Matabeleland North,Lupane,4,Communal,7.75,99-Year Lease,Cassava,4.98,109.91,22.07,Rainfed,Sandy Loam,Region IV,2025-12-01,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1472,Matabeleland North,Lupane,12,Communal,10.77,Communal,Soybean,8.86,13.38,1.51,Rainfed,Sandy Loam,Region IV,2025-12-10,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1473,Matabeleland North,Lupane,13,A2 Commercial,96.58,Deed of Grant,Sorghum,44.45,106.68,2.4,Rainfed,Sandy,Region IV,2025-11-24,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1474,Matabeleland North,Lupane,18,Peri-Urban,4.61,Deed of Grant,Maize,3.04,3.71,1.22,Rainfed,Sandy,Region IV,2025-12-01,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1475,Matabeleland North,Lupane,13,A1 Smallholder,10.63,Customary Offer Letter,Sorghum,5.98,19.49,3.26,Rainfed,Clay,Region IV,2025-11-23,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1476,Matabeleland North,Lupane,18,Peri-Urban,8.91,Customary Offer Letter,Sorghum,6.59,22.87,3.47,Rainfed,Sandy Loam,Region IV,2025-12-02,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1477,Matabeleland North,Lupane,18,Peri-Urban,3.5,Communal,Cotton,2.96,4.11,1.39,Rainfed,Sandy Loam,Region IV,2025-12-08,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1478,Matabeleland North,Lupane,22,Communal,11.47,Communal,Wheat,5.11,12.83,2.51,Center Pivot,Clay,Region IV,2025-12-10,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1479,Matabeleland North,Lupane,20,Communal,3.25,Deed of Grant,Tobacco,2.5,4.58,1.83,Rainfed,Sandy,Region IV,2025-11-23,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1480,Matabeleland North,Lupane,12,Communal,9.53,Communal,Sorghum,6.44,18.87,2.93,Rainfed,Clay Loam,Region IV,2025-11-24,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1481,Matabeleland North,Lupane,20,Communal,14.24,99-Year Lease,Sunflower,8.51,16.68,1.96,Rainfed,Clay Loam,Region IV,2025-11-24,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1482,Matabeleland North,Lupane,2,A1 Smallholder,9.61,Deed of Grant,Groundnuts,4.88,11.22,2.3,Rainfed,Sandy,Region IV,2025-11-20,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1483,Matabeleland North,Lupane,9,Peri-Urban,5.94,Communal,Sorghum,3.94,7.45,1.89,Rainfed,Sandy,Region IV,2025-12-14,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1484,Matabeleland North,Lupane,18,A2 Commercial,114.4,Customary Offer Letter,Groundnuts,95.35,164.96,1.73,Rainfed,Clay,Region IV,2025-11-22,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1485,Matabeleland North,Lupane,7,Peri-Urban,14.02,Deed of Grant,Cotton,6.71,10.0,1.49,Rainfed,Clay Loam,Region IV,2025-11-24,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1486,Matabeleland North,Lupane,4,A2 Commercial,133.89,Customary Offer Letter,Sunflower,111.76,198.93,1.78,Rainfed,Clay Loam,Region IV,2025-11-30,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1487,Matabeleland North,Lupane,8,A2 Commercial,144.96,Communal,Sunflower,116.47,241.09,2.07,Rainfed,Clay,Region IV,2025-11-17,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1488,Matabeleland North,Lupane,21,A1 Smallholder,10.48,99-Year Lease,Groundnuts,6.14,9.15,1.49,Rainfed,Clay,Region IV,2025-12-01,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1489,Matabeleland North,Lupane,1,A2 Commercial,52.27,Deed of Grant,Sorghum,36.75,106.58,2.9,Rainfed,Loam,Region IV,2025-11-30,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-LUP-1490,Matabeleland North,Lupane,12,A1 Smallholder,13.52,Customary Offer Letter,Wheat,11.17,31.05,2.78,Drip,Sandy Loam,Region IV,2025-12-08,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1491,Matabeleland North,Hwange,8,A1 Smallholder,13.22,99-Year Lease,Soybean,6.49,9.73,1.5,Rainfed,Loam,Region V,2025-12-09,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1492,Matabeleland North,Hwange,4,Communal,10.46,Communal,Cassava,4.22,80.9,19.17,Rainfed,Clay Loam,Region V,2025-12-15,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1493,Matabeleland North,Hwange,16,A2 Commercial,100.69,Communal,Cassava,79.64,506.51,6.36,Rainfed,Clay Loam,Region V,2025-11-23,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1494,Matabeleland North,Hwange,8,A1 Smallholder,1.76,Communal,Sunflower,1.45,2.7,1.86,Rainfed,Sandy,Region V,2025-12-01,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1495,Matabeleland North,Hwange,13,A1 Smallholder,7.4,Deed of Grant,SweetPotato,4.49,53.25,11.86,Rainfed,Loam,Region V,2025-11-27,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1496,Matabeleland North,Hwange,4,A2 Commercial,67.01,Customary Offer Letter,Wheat,43.35,126.15,2.91,Drip,Clay,Region V,2025-11-30,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1497,Matabeleland North,Hwange,20,A2 Commercial,67.57,Communal,Sorghum,33.43,88.26,2.64,Rainfed,Sandy Loam,Region V,2025-11-23,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1498,Matabeleland North,Hwange,6,A1 Smallholder,14.71,99-Year Lease,Tobacco,10.66,10.45,0.98,Drip,Clay Loam,Region V,2025-11-28,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1499,Matabeleland North,Hwange,13,A1 Smallholder,3.04,99-Year Lease,Sunflower,2.32,4.62,1.99,Rainfed,Clay Loam,Region V,2025-12-02,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1500,Matabeleland North,Hwange,11,Peri-Urban,5.2,Deed of Grant,Sorghum,2.31,7.83,3.39,Rainfed,Loam,Region V,2025-11-16,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1501,Matabeleland North,Hwange,9,Peri-Urban,12.75,Deed of Grant,Sunflower,9.37,16.68,1.78,Rainfed,Clay Loam,Region V,2025-12-14,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1502,Matabeleland North,Hwange,9,A2 Commercial,22.58,Deed of Grant,Groundnuts,17.85,21.24,1.19,Rainfed,Clay Loam,Region V,2025-11-21,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1503,Matabeleland North,Hwange,19,A1 Smallholder,14.71,Customary Offer Letter,Groundnuts,8.04,5.31,0.66,Rainfed,Sandy Loam,Region V,2025-12-13,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1504,Matabeleland North,Hwange,13,A2 Commercial,80.29,99-Year Lease,Wheat,55.26,161.91,2.93,Overhead Canal,Sandy Loam,Region V,2025-12-05,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1505,Matabeleland North,Hwange,19,Peri-Urban,12.88,Deed of Grant,Tobacco,6.09,7.49,1.23,Overhead Canal,Clay,Region V,2025-12-04,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1506,Matabeleland North,Hwange,13,A2 Commercial,135.4,Customary Offer Letter,Cassava,85.9,1510.98,17.59,Rainfed,Sandy Loam,Region V,2025-11-28,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1507,Matabeleland North,Hwange,6,Communal,2.75,99-Year Lease,Cotton,2.26,4.41,1.95,Rainfed,Loam,Region V,2025-11-27,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1508,Matabeleland North,Hwange,4,Communal,14.12,Communal,SweetPotato,5.99,66.31,11.07,Rainfed,Sandy Loam,Region V,2025-12-01,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1509,Matabeleland North,Hwange,3,Communal,4.67,99-Year Lease,Tobacco,3.24,4.41,1.36,Drip,Clay,Region V,2025-11-29,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1510,Matabeleland North,Hwange,5,A1 Smallholder,8.37,99-Year Lease,Maize,3.48,3.69,1.06,Rainfed,Clay,Region V,2025-12-12,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1511,Matabeleland North,Hwange,11,Peri-Urban,7.54,Customary Offer Letter,SweetPotato,4.53,70.85,15.64,Rainfed,Loam,Region V,2025-12-03,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1512,Matabeleland North,Hwange,15,Peri-Urban,8.33,Customary Offer Letter,Groundnuts,5.14,4.83,0.94,Rainfed,Loam,Region V,2025-12-10,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1513,Matabeleland North,Hwange,15,A2 Commercial,67.55,Customary Offer Letter,Wheat,36.25,148.62,4.1,Drip,Clay,Region V,2025-11-24,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1514,Matabeleland North,Hwange,18,Communal,10.63,Communal,Sunflower,5.69,10.24,1.8,Rainfed,Sandy Loam,Region V,2025-12-10,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1515,Matabeleland North,Hwange,20,A1 Smallholder,12.15,Customary Offer Letter,Soybean,7.11,8.67,1.22,Rainfed,Loam,Region V,2025-12-07,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1516,Matabeleland North,Hwange,21,Peri-Urban,12.6,99-Year Lease,Cotton,5.49,10.16,1.85,Rainfed,Loam,Region V,2025-12-01,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1517,Matabeleland North,Hwange,20,A2 Commercial,57.01,Customary Offer Letter,Sorghum,27.63,85.1,3.08,Rainfed,Sandy,Region V,2025-12-05,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1518,Matabeleland North,Hwange,20,Peri-Urban,4.81,Communal,Soybean,2.62,4.11,1.57,Rainfed,Loam,Region V,2025-11-16,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1519,Matabeleland North,Hwange,1,A1 Smallholder,14.61,Customary Offer Letter,Cotton,6.67,13.01,1.95,Rainfed,Sandy,Region V,2025-11-19,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1520,Matabeleland North,Hwange,16,A1 Smallholder,5.79,Customary Offer Letter,Sunflower,4.92,8.95,1.82,Rainfed,Sandy Loam,Region V,2025-12-07,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1521,Matabeleland North,Hwange,2,A2 Commercial,30.43,99-Year Lease,Maize,15.82,15.35,0.97,Rainfed,Loam,Region V,2025-11-21,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1522,Matabeleland North,Hwange,9,Peri-Urban,12.6,Deed of Grant,Soybean,7.22,12.49,1.73,Rainfed,Sandy Loam,Region V,2025-11-22,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1523,Matabeleland North,Hwange,2,A1 Smallholder,7.45,Deed of Grant,SweetPotato,5.21,65.75,12.62,Rainfed,Clay,Region V,2025-12-14,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1524,Matabeleland North,Hwange,6,Communal,11.43,Deed of Grant,Cotton,7.05,16.78,2.38,Rainfed,Clay,Region V,2025-11-21,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-HWA-1525,Matabeleland North,Hwange,2,A1 Smallholder,14.63,99-Year Lease,Sorghum,7.99,24.13,3.02,Rainfed,Sandy,Region V,2025-11-27,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1526,Matabeleland South,Gwanda,8,Communal,14.56,Communal,Cassava,6.84,116.9,17.09,Rainfed,Sandy,Region V,2025-11-22,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1527,Matabeleland South,Gwanda,16,Communal,10.6,Customary Offer Letter,Maize,4.53,4.39,0.97,Rainfed,Sandy,Region V,2025-11-19,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1528,Matabeleland South,Gwanda,8,A2 Commercial,147.62,Customary Offer Letter,Sunflower,107.75,146.54,1.36,Rainfed,Sandy,Region V,2025-12-07,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1529,Matabeleland South,Gwanda,12,A1 Smallholder,4.51,Deed of Grant,Sunflower,3.24,4.47,1.38,Rainfed,Sandy Loam,Region V,2025-11-21,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1530,Matabeleland South,Gwanda,6,A2 Commercial,62.08,Communal,Cotton,49.07,89.31,1.82,Rainfed,Clay Loam,Region V,2025-12-14,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1531,Matabeleland South,Gwanda,18,A1 Smallholder,1.96,99-Year Lease,Sunflower,1.04,1.84,1.77,Rainfed,Sandy,Region V,2025-12-09,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1532,Matabeleland South,Gwanda,17,Peri-Urban,11.27,Deed of Grant,Cassava,8.85,158.06,17.86,Rainfed,Clay Loam,Region V,2025-11-22,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1533,Matabeleland South,Gwanda,24,Communal,10.22,Communal,Soybean,6.5,7.28,1.12,Rainfed,Clay Loam,Region V,2025-11-24,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1534,Matabeleland South,Gwanda,14,A2 Commercial,34.36,Deed of Grant,Maize,26.66,31.99,1.2,Rainfed,Loam,Region V,2025-11-20,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1535,Matabeleland South,Gwanda,2,A1 Smallholder,2.5,99-Year Lease,Tobacco,1.04,1.09,1.05,Center Pivot,Clay Loam,Region V,2025-12-04,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1536,Matabeleland South,Gwanda,19,A2 Commercial,26.38,99-Year Lease,Cassava,19.07,242.0,12.69,Rainfed,Sandy,Region V,2025-12-14,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1537,Matabeleland South,Gwanda,7,Peri-Urban,14.0,Deed of Grant,Sunflower,10.65,23.75,2.23,Rainfed,Sandy Loam,Region V,2025-12-11,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1538,Matabeleland South,Gwanda,23,Communal,12.53,Customary Offer Letter,SweetPotato,5.24,68.85,13.14,Rainfed,Sandy,Region V,2025-12-11,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1539,Matabeleland South,Gwanda,3,A1 Smallholder,14.45,Deed of Grant,Tobacco,10.5,11.03,1.05,Drip,Clay Loam,Region V,2025-12-05,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1540,Matabeleland South,Gwanda,6,Peri-Urban,11.45,Customary Offer Letter,Sunflower,8.2,14.35,1.75,Rainfed,Sandy Loam,Region V,2025-12-13,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1541,Matabeleland South,Gwanda,6,A1 Smallholder,8.7,Customary Offer Letter,Wheat,5.57,10.42,1.87,Overhead Canal,Clay Loam,Region V,2025-11-25,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1542,Matabeleland South,Gwanda,12,Peri-Urban,11.7,Communal,Groundnuts,7.88,5.75,0.73,Rainfed,Clay Loam,Region V,2025-12-02,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1543,Matabeleland South,Gwanda,13,A2 Commercial,66.8,Communal,Sunflower,55.57,105.58,1.9,Rainfed,Clay,Region V,2025-12-04,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1544,Matabeleland South,Gwanda,17,A1 Smallholder,14.91,Customary Offer Letter,Maize,7.98,9.58,1.2,Rainfed,Loam,Region V,2025-11-21,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1545,Matabeleland South,Gwanda,11,Communal,11.8,Customary Offer Letter,SweetPotato,7.43,68.21,9.18,Rainfed,Sandy,Region V,2025-11-16,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1546,Matabeleland South,Gwanda,12,A1 Smallholder,2.94,Customary Offer Letter,Cassava,1.51,20.11,13.32,Rainfed,Clay,Region V,2025-12-10,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1547,Matabeleland South,Gwanda,3,Peri-Urban,8.97,99-Year Lease,Tobacco,6.51,8.07,1.24,Rainfed,Clay Loam,Region V,2025-12-05,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1548,Matabeleland South,Gwanda,2,Peri-Urban,2.1,Deed of Grant,Groundnuts,1.17,1.03,0.88,Rainfed,Sandy Loam,Region V,2025-11-28,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1549,Matabeleland South,Gwanda,4,A1 Smallholder,11.47,Deed of Grant,Sorghum,4.87,11.25,2.31,Rainfed,Clay Loam,Region V,2025-11-19,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1550,Matabeleland South,Gwanda,17,A1 Smallholder,3.14,Communal,Sunflower,2.32,4.06,1.75,Rainfed,Clay Loam,Region V,2025-12-01,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1551,Matabeleland South,Gwanda,8,Peri-Urban,5.06,Communal,Wheat,2.32,8.54,3.68,Rainfed,Clay Loam,Region V,2025-11-27,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1552,Matabeleland South,Gwanda,3,Peri-Urban,8.03,99-Year Lease,Wheat,4.95,16.78,3.39,Drip,Sandy Loam,Region V,2025-11-27,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1553,Matabeleland South,Gwanda,19,A1 Smallholder,8.86,99-Year Lease,Soybean,3.83,5.9,1.54,Rainfed,Clay Loam,Region V,2025-11-17,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1554,Matabeleland South,Gwanda,22,Peri-Urban,6.93,Customary Offer Letter,Soybean,3.77,4.67,1.24,Rainfed,Clay Loam,Region V,2025-12-05,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1555,Matabeleland South,Gwanda,25,A2 Commercial,42.0,Customary Offer Letter,Cassava,32.33,529.24,16.37,Rainfed,Sandy Loam,Region V,2025-11-16,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1556,Matabeleland South,Gwanda,8,A1 Smallholder,10.6,99-Year Lease,Tobacco,4.78,4.21,0.88,Rainfed,Loam,Region V,2025-12-15,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1557,Matabeleland South,Gwanda,5,A2 Commercial,21.79,Deed of Grant,Cotton,13.13,29.81,2.27,Rainfed,Clay Loam,Region V,2025-11-21,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1558,Matabeleland South,Gwanda,18,A2 Commercial,91.34,99-Year Lease,Maize,52.02,63.46,1.22,Rainfed,Clay Loam,Region V,2025-11-16,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1559,Matabeleland South,Gwanda,6,Communal,4.98,Customary Offer Letter,Maize,3.03,3.88,1.28,Rainfed,Clay,Region V,2025-12-06,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-GWA-1560,Matabeleland South,Gwanda,22,A2 Commercial,132.36,Deed of Grant,Cotton,104.61,203.99,1.95,Rainfed,Sandy Loam,Region V,2025-11-22,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1561,Matabeleland South,Beitbridge,17,Communal,13.65,Communal,Cassava,8.73,143.0,16.38,Rainfed,Sandy Loam,Region V,2025-12-02,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1562,Matabeleland South,Beitbridge,23,Communal,1.56,Customary Offer Letter,Groundnuts,0.97,1.18,1.22,Rainfed,Loam,Region V,2025-11-15,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1563,Matabeleland South,Beitbridge,22,A2 Commercial,66.2,Customary Offer Letter,Soybean,56.15,97.7,1.74,Rainfed,Sandy,Region V,2025-12-05,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1564,Matabeleland South,Beitbridge,13,Communal,14.22,Customary Offer Letter,Soybean,6.66,9.79,1.47,Rainfed,Sandy Loam,Region V,2025-12-06,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1565,Matabeleland South,Beitbridge,3,Peri-Urban,8.29,99-Year Lease,Sorghum,4.21,15.37,3.65,Rainfed,Clay Loam,Region V,2025-11-25,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1566,Matabeleland South,Beitbridge,18,A1 Smallholder,3.89,99-Year Lease,Cassava,2.5,53.8,21.52,Rainfed,Loam,Region V,2025-12-12,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1567,Matabeleland South,Beitbridge,10,A1 Smallholder,7.02,99-Year Lease,Cassava,5.71,76.63,13.42,Rainfed,Sandy,Region V,2025-11-20,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1568,Matabeleland South,Beitbridge,5,Communal,11.72,Communal,Sorghum,6.29,21.7,3.45,Rainfed,Clay,Region V,2025-11-19,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1569,Matabeleland South,Beitbridge,7,Communal,2.84,Deed of Grant,Cassava,1.92,22.56,11.75,Rainfed,Clay Loam,Region V,2025-11-22,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1570,Matabeleland South,Beitbridge,22,Communal,6.03,Communal,Wheat,3.78,9.41,2.49,Center Pivot,Clay,Region V,2025-11-20,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1571,Matabeleland South,Beitbridge,13,Peri-Urban,7.63,99-Year Lease,Soybean,3.83,3.22,0.84,Rainfed,Clay,Region V,2025-12-15,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1572,Matabeleland South,Beitbridge,8,A1 Smallholder,11.61,Deed of Grant,Wheat,9.49,36.63,3.86,Center Pivot,Clay Loam,Region V,2025-11-30,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1573,Matabeleland South,Beitbridge,11,Peri-Urban,13.43,Communal,Sorghum,10.06,20.02,1.99,Rainfed,Clay,Region V,2025-11-27,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1574,Matabeleland South,Beitbridge,24,Communal,8.29,Communal,Sunflower,6.4,8.83,1.38,Rainfed,Sandy,Region V,2025-12-13,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1575,Matabeleland South,Beitbridge,17,Peri-Urban,14.77,Deed of Grant,SweetPotato,8.48,106.76,12.59,Rainfed,Loam,Region V,2025-11-24,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1576,Matabeleland South,Beitbridge,13,A2 Commercial,120.58,Customary Offer Letter,Sunflower,57.27,50.4,0.88,Rainfed,Clay,Region V,2025-12-04,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1577,Matabeleland South,Beitbridge,2,A1 Smallholder,7.49,Communal,Tobacco,5.43,8.25,1.52,Drip,Sandy Loam,Region V,2025-11-28,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1578,Matabeleland South,Beitbridge,15,Communal,3.5,99-Year Lease,Sunflower,1.54,3.4,2.21,Rainfed,Clay,Region V,2025-12-07,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1579,Matabeleland South,Beitbridge,23,A1 Smallholder,11.06,Deed of Grant,Tobacco,4.99,4.89,0.98,Center Pivot,Clay Loam,Region V,2025-12-04,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1580,Matabeleland South,Beitbridge,6,Peri-Urban,8.7,Deed of Grant,Wheat,7.05,22.42,3.18,Drip,Loam,Region V,2025-12-12,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1581,Matabeleland South,Beitbridge,6,Communal,6.87,Customary Offer Letter,Sunflower,3.64,7.72,2.12,Rainfed,Loam,Region V,2025-11-15,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1582,Matabeleland South,Beitbridge,25,A2 Commercial,21.59,Communal,Sunflower,13.92,34.8,2.5,Rainfed,Sandy,Region V,2025-12-04,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1583,Matabeleland South,Beitbridge,16,A1 Smallholder,4.04,Communal,Sunflower,2.36,5.26,2.23,Rainfed,Loam,Region V,2025-12-13,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1584,Matabeleland South,Beitbridge,9,A1 Smallholder,1.68,99-Year Lease,Maize,1.17,1.59,1.36,Rainfed,Sandy,Region V,2025-11-19,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1585,Matabeleland South,Beitbridge,2,A2 Commercial,63.04,Deed of Grant,Maize,28.3,37.92,1.34,Rainfed,Clay,Region V,2025-12-04,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1586,Matabeleland South,Beitbridge,23,A1 Smallholder,14.53,Customary Offer Letter,Maize,6.42,7.64,1.19,Rainfed,Clay,Region V,2025-11-25,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1587,Matabeleland South,Beitbridge,13,Communal,11.62,Deed of Grant,Cotton,7.11,18.27,2.57,Rainfed,Clay,Region V,2025-12-01,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1588,Matabeleland South,Beitbridge,17,A1 Smallholder,10.74,Deed of Grant,Tobacco,7.06,10.8,1.53,Rainfed,Sandy Loam,Region V,2025-12-08,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1589,Matabeleland South,Beitbridge,20,A2 Commercial,75.52,Customary Offer Letter,Cotton,48.06,113.9,2.37,Rainfed,Loam,Region V,2025-12-04,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1590,Matabeleland South,Beitbridge,16,Peri-Urban,7.9,99-Year Lease,Cassava,3.99,59.49,14.91,Rainfed,Clay,Region V,2025-11-21,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1591,Matabeleland South,Beitbridge,4,Communal,7.51,Deed of Grant,Soybean,5.71,10.34,1.81,Rainfed,Clay,Region V,2025-11-26,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1592,Matabeleland South,Beitbridge,21,A1 Smallholder,1.16,99-Year Lease,Cotton,0.6,1.2,2.0,Rainfed,Sandy,Region V,2025-11-24,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1593,Matabeleland South,Beitbridge,17,A2 Commercial,119.71,Deed of Grant,Groundnuts,66.27,63.62,0.96,Rainfed,Sandy,Region V,2025-12-11,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1594,Matabeleland South,Beitbridge,7,A2 Commercial,128.4,Communal,Sunflower,97.43,127.63,1.31,Rainfed,Loam,Region V,2025-11-30,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-BEI-1595,Matabeleland South,Beitbridge,21,Peri-Urban,13.49,Customary Offer Letter,Sunflower,10.16,13.11,1.29,Rainfed,Clay Loam,Region V,2025-11-24,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1596,Manicaland,Mutare,24,A2 Commercial,92.17,Deed of Grant,Soybean,60.82,106.44,1.75,Rainfed,Clay,Region I,2025-12-10,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1597,Manicaland,Mutare,12,Communal,14.57,Customary Offer Letter,Maize,8.05,7.97,0.99,Rainfed,Loam,Region I,2025-12-03,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1598,Manicaland,Mutare,13,A1 Smallholder,9.33,Customary Offer Letter,Groundnuts,6.71,7.85,1.17,Rainfed,Clay,Region I,2025-11-28,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1599,Manicaland,Mutare,16,A1 Smallholder,6.2,Customary Offer Letter,Soybean,3.95,6.44,1.63,Rainfed,Sandy,Region I,2025-12-09,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1600,Manicaland,Mutare,3,Peri-Urban,8.08,Communal,SweetPotato,3.79,53.33,14.07,Rainfed,Clay,Region I,2025-12-14,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1601,Manicaland,Mutare,24,A2 Commercial,120.82,99-Year Lease,Tobacco,93.03,297.7,3.2,Drip,Loam,Region I,2025-12-08,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1602,Manicaland,Mutare,15,Peri-Urban,10.99,Deed of Grant,Maize,5.93,6.29,1.06,Rainfed,Sandy,Region I,2025-12-06,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1603,Manicaland,Mutare,20,Communal,5.67,Deed of Grant,Tobacco,3.6,8.17,2.27,Overhead Canal,Loam,Region I,2025-11-25,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1604,Manicaland,Mutare,7,A2 Commercial,55.96,Customary Offer Letter,Sunflower,39.28,60.49,1.54,Rainfed,Clay,Region I,2025-11-19,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1605,Manicaland,Mutare,9,Communal,1.21,Deed of Grant,Soybean,0.78,0.99,1.27,Rainfed,Clay,Region I,2025-12-03,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1606,Manicaland,Mutare,6,Communal,5.36,Customary Offer Letter,SweetPotato,3.21,36.66,11.42,Rainfed,Loam,Region I,2025-11-15,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1607,Manicaland,Mutare,22,Communal,2.48,Deed of Grant,Tobacco,1.47,4.1,2.79,Center Pivot,Clay Loam,Region I,2025-11-26,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1608,Manicaland,Mutare,11,A1 Smallholder,10.98,Deed of Grant,Sunflower,7.2,16.13,2.24,Rainfed,Sandy,Region I,2025-12-11,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1609,Manicaland,Mutare,23,Peri-Urban,2.36,Customary Offer Letter,Sunflower,1.44,2.87,1.99,Rainfed,Clay Loam,Region I,2025-11-23,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1610,Manicaland,Mutare,12,Peri-Urban,3.57,Customary Offer Letter,Groundnuts,2.16,2.07,0.96,Rainfed,Sandy,Region I,2025-11-17,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1611,Manicaland,Mutare,4,A2 Commercial,82.22,99-Year Lease,Cotton,61.3,56.4,0.92,Rainfed,Sandy,Region I,2025-11-27,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1612,Manicaland,Mutare,23,Communal,5.56,Deed of Grant,Cotton,3.56,3.35,0.94,Rainfed,Sandy Loam,Region I,2025-12-03,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1613,Manicaland,Mutare,8,A1 Smallholder,8.67,Communal,Sorghum,3.73,6.04,1.62,Rainfed,Sandy Loam,Region I,2025-12-10,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1614,Manicaland,Mutare,19,A2 Commercial,90.79,99-Year Lease,Wheat,63.39,246.59,3.89,Rainfed,Clay Loam,Region I,2025-12-11,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1615,Manicaland,Mutare,4,Peri-Urban,5.56,Deed of Grant,Sunflower,2.66,5.13,1.93,Rainfed,Sandy,Region I,2025-12-06,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1616,Manicaland,Mutare,20,Peri-Urban,5.58,Deed of Grant,Tobacco,2.78,6.81,2.45,Drip,Clay Loam,Region I,2025-12-13,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1617,Manicaland,Mutare,21,Communal,11.6,99-Year Lease,Sunflower,7.41,10.67,1.44,Rainfed,Loam,Region I,2025-11-21,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1618,Manicaland,Mutare,11,A2 Commercial,94.14,Customary Offer Letter,Sorghum,68.06,119.11,1.75,Rainfed,Clay,Region I,2025-11-17,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1619,Manicaland,Mutare,1,Peri-Urban,12.87,Customary Offer Letter,Maize,7.29,8.16,1.12,Rainfed,Clay Loam,Region I,2025-12-11,2026-04-26,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1620,Manicaland,Mutare,4,A2 Commercial,132.54,99-Year Lease,Sorghum,94.9,139.5,1.47,Rainfed,Sandy Loam,Region I,2025-12-05,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1621,Manicaland,Mutare,23,Peri-Urban,6.68,Communal,SweetPotato,3.31,41.74,12.61,Rainfed,Clay Loam,Region I,2025-11-27,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1622,Manicaland,Mutare,12,Peri-Urban,3.16,99-Year Lease,Wheat,1.28,4.21,3.29,Rainfed,Loam,Region I,2025-12-08,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1623,Manicaland,Mutare,16,Peri-Urban,14.65,99-Year Lease,Tobacco,6.76,19.2,2.84,Center Pivot,Clay Loam,Region I,2025-11-20,2026-04-29,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1624,Manicaland,Mutare,17,Peri-Urban,8.73,Communal,Sorghum,4.89,4.6,0.94,Rainfed,Loam,Region I,2025-11-28,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1625,Manicaland,Mutare,1,Peri-Urban,12.86,99-Year Lease,SweetPotato,6.7,99.29,14.82,Rainfed,Sandy,Region I,2025-11-16,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1626,Manicaland,Mutare,16,A2 Commercial,34.71,Communal,Tobacco,16.1,35.58,2.21,Overhead Canal,Sandy Loam,Region I,2025-12-01,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1627,Manicaland,Mutare,17,Communal,4.43,Deed of Grant,SweetPotato,3.36,39.31,11.7,Rainfed,Clay,Region I,2025-12-02,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1628,Manicaland,Mutare,1,Peri-Urban,7.36,Communal,Cassava,5.37,85.44,15.91,Rainfed,Sandy Loam,Region I,2025-11-26,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1629,Manicaland,Mutare,10,A2 Commercial,41.78,Customary Offer Letter,Cassava,21.61,265.59,12.29,Rainfed,Clay Loam,Region I,2025-11-16,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-MUT-1630,Manicaland,Mutare,10,Communal,5.02,Deed of Grant,Wheat,3.15,7.65,2.43,Overhead Canal,Clay,Region I,2025-11-19,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1631,Manicaland,Chipinge,9,A2 Commercial,131.52,Deed of Grant,Tobacco,88.34,281.8,3.19,Center Pivot,Clay,Region I,2025-12-10,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1632,Manicaland,Chipinge,9,A1 Smallholder,7.79,Deed of Grant,Groundnuts,6.57,5.39,0.82,Rainfed,Loam,Region I,2025-12-04,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1633,Manicaland,Chipinge,5,Peri-Urban,11.54,Communal,Sorghum,5.85,6.44,1.1,Rainfed,Loam,Region I,2025-12-03,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1634,Manicaland,Chipinge,12,Communal,9.99,Deed of Grant,Maize,4.75,6.32,1.33,Rainfed,Sandy Loam,Region I,2025-11-30,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1635,Manicaland,Chipinge,16,A1 Smallholder,6.32,Communal,Sunflower,3.27,4.64,1.42,Rainfed,Clay,Region I,2025-12-14,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1636,Manicaland,Chipinge,15,Peri-Urban,10.5,Deed of Grant,Tobacco,8.54,20.5,2.4,Overhead Canal,Sandy Loam,Region I,2025-12-04,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1637,Manicaland,Chipinge,21,A2 Commercial,63.55,Customary Offer Letter,Tobacco,32.72,66.09,2.02,Drip,Clay Loam,Region I,2025-12-09,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1638,Manicaland,Chipinge,17,A2 Commercial,108.1,99-Year Lease,Groundnuts,69.88,62.19,0.89,Rainfed,Sandy,Region I,2025-12-11,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1639,Manicaland,Chipinge,1,Peri-Urban,2.37,Deed of Grant,Sunflower,1.32,2.32,1.76,Rainfed,Sandy,Region I,2025-11-15,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1640,Manicaland,Chipinge,3,Communal,14.14,99-Year Lease,Cassava,9.72,123.83,12.74,Rainfed,Sandy,Region I,2025-11-17,2026-05-12,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1641,Manicaland,Chipinge,20,A1 Smallholder,6.26,99-Year Lease,Tobacco,4.46,11.11,2.49,Rainfed,Sandy Loam,Region I,2025-12-14,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1642,Manicaland,Chipinge,25,Peri-Urban,10.69,Customary Offer Letter,Cotton,5.06,6.17,1.22,Rainfed,Sandy,Region I,2025-11-23,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1643,Manicaland,Chipinge,2,Peri-Urban,6.44,Deed of Grant,Cotton,5.35,5.24,0.98,Rainfed,Sandy Loam,Region I,2025-12-14,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1644,Manicaland,Chipinge,20,Peri-Urban,3.5,Communal,Tobacco,1.63,4.96,3.04,Center Pivot,Loam,Region I,2025-12-04,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1645,Manicaland,Chipinge,4,Peri-Urban,11.02,Deed of Grant,Maize,4.77,4.96,1.04,Rainfed,Sandy Loam,Region I,2025-11-15,2026-05-13,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1646,Manicaland,Chipinge,16,A1 Smallholder,10.14,Deed of Grant,Maize,7.09,7.94,1.12,Rainfed,Clay,Region I,2025-11-19,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1647,Manicaland,Chipinge,11,Peri-Urban,9.04,Communal,Sunflower,5.39,11.59,2.15,Rainfed,Sandy,Region I,2025-12-02,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1648,Manicaland,Chipinge,1,Peri-Urban,14.36,Communal,Tobacco,9.41,16.75,1.78,Overhead Canal,Clay,Region I,2025-12-06,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1649,Manicaland,Chipinge,13,Communal,9.85,Deed of Grant,Groundnuts,6.31,6.81,1.08,Rainfed,Sandy Loam,Region I,2025-12-09,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1650,Manicaland,Chipinge,10,A1 Smallholder,3.47,Deed of Grant,Sorghum,2.42,3.56,1.47,Rainfed,Clay,Region I,2025-12-07,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1651,Manicaland,Chipinge,4,A2 Commercial,83.25,Communal,Soybean,38.54,64.36,1.67,Rainfed,Clay Loam,Region I,2025-11-22,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1652,Manicaland,Chipinge,13,Communal,12.1,Customary Offer Letter,Sunflower,7.75,18.13,2.34,Rainfed,Sandy Loam,Region I,2025-12-15,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1653,Manicaland,Chipinge,2,A2 Commercial,27.29,Deed of Grant,Sorghum,12.37,20.53,1.66,Rainfed,Sandy Loam,Region I,2025-12-15,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1654,Manicaland,Chipinge,18,A1 Smallholder,11.37,99-Year Lease,Tobacco,4.74,8.58,1.81,Drip,Sandy Loam,Region I,2025-12-05,2026-04-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1655,Manicaland,Chipinge,16,Communal,4.4,99-Year Lease,Maize,2.1,2.94,1.4,Rainfed,Sandy,Region I,2025-11-29,2026-05-04,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1656,Manicaland,Chipinge,6,Communal,12.45,Deed of Grant,Tobacco,7.77,20.44,2.63,Drip,Sandy,Region I,2025-12-10,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1657,Manicaland,Chipinge,14,A2 Commercial,125.5,Communal,Groundnuts,57.02,51.32,0.9,Rainfed,Clay,Region I,2025-12-11,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1658,Manicaland,Chipinge,7,Communal,9.3,Customary Offer Letter,Tobacco,4.23,8.12,1.92,Drip,Sandy Loam,Region I,2025-11-20,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1659,Manicaland,Chipinge,12,A1 Smallholder,7.14,Deed of Grant,Wheat,3.18,11.03,3.47,Drip,Sandy,Region I,2025-12-13,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1660,Manicaland,Chipinge,3,Communal,1.1,Deed of Grant,Cassava,0.88,10.23,11.62,Rainfed,Sandy Loam,Region I,2025-12-07,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1661,Manicaland,Chipinge,25,Peri-Urban,10.69,99-Year Lease,Wheat,7.35,17.57,2.39,Drip,Clay Loam,Region I,2025-12-07,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1662,Manicaland,Chipinge,20,A1 Smallholder,11.04,Deed of Grant,Cotton,6.14,5.96,0.97,Rainfed,Sandy,Region I,2025-12-02,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1663,Manicaland,Chipinge,7,Communal,14.81,Deed of Grant,Cassava,8.34,127.27,15.26,Rainfed,Loam,Region I,2025-11-29,2026-05-09,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1664,Manicaland,Chipinge,21,A1 Smallholder,4.87,99-Year Lease,Tobacco,3.69,6.94,1.88,Center Pivot,Sandy Loam,Region I,2025-11-20,2026-04-20,SYNTHETIC / SIMULATED DATA
+ZW-CHI-1665,Manicaland,Chipinge,22,Communal,1.76,Customary Offer Letter,Cotton,0.87,0.87,1.0,Rainfed,Sandy Loam,Region I,2025-11-16,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1666,Manicaland,Nyanga,24,Communal,13.95,99-Year Lease,Wheat,10.51,40.25,3.83,Center Pivot,Clay Loam,Region I,2025-11-18,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1667,Manicaland,Nyanga,8,Peri-Urban,9.3,Customary Offer Letter,Sorghum,4.55,6.28,1.38,Rainfed,Sandy,Region I,2025-11-25,2026-04-22,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1668,Manicaland,Nyanga,4,A1 Smallholder,11.33,99-Year Lease,Sorghum,9.08,11.44,1.26,Rainfed,Sandy,Region I,2025-11-30,2026-05-03,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1669,Manicaland,Nyanga,16,Communal,13.47,99-Year Lease,Soybean,11.01,13.32,1.21,Rainfed,Loam,Region I,2025-11-29,2026-05-08,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1670,Manicaland,Nyanga,7,A2 Commercial,146.82,99-Year Lease,Groundnuts,67.13,71.16,1.06,Rainfed,Clay Loam,Region I,2025-11-16,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1671,Manicaland,Nyanga,5,Communal,12.92,Communal,Sorghum,6.16,7.08,1.15,Rainfed,Clay Loam,Region I,2025-11-20,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1672,Manicaland,Nyanga,21,A1 Smallholder,9.09,99-Year Lease,Tobacco,5.32,17.93,3.37,Center Pivot,Loam,Region I,2025-12-03,2026-04-30,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1673,Manicaland,Nyanga,15,A2 Commercial,21.89,Communal,Soybean,11.2,14.67,1.31,Rainfed,Clay Loam,Region I,2025-12-15,2026-04-19,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1674,Manicaland,Nyanga,19,Communal,6.85,Deed of Grant,Maize,5.8,7.37,1.27,Rainfed,Clay Loam,Region I,2025-11-16,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1675,Manicaland,Nyanga,17,Peri-Urban,7.71,Deed of Grant,Sunflower,4.8,11.14,2.32,Rainfed,Sandy Loam,Region I,2025-12-15,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1676,Manicaland,Nyanga,5,A2 Commercial,58.45,Deed of Grant,Maize,36.0,50.4,1.4,Rainfed,Clay,Region I,2025-11-20,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1677,Manicaland,Nyanga,15,Communal,14.67,Communal,Wheat,11.64,24.68,2.12,Overhead Canal,Sandy Loam,Region I,2025-12-07,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1678,Manicaland,Nyanga,1,Communal,6.39,Customary Offer Letter,SweetPotato,2.65,38.08,14.37,Rainfed,Sandy Loam,Region I,2025-12-09,2026-04-23,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1679,Manicaland,Nyanga,23,A1 Smallholder,12.03,Deed of Grant,Cassava,9.58,142.84,14.91,Rainfed,Clay,Region I,2025-12-13,2026-04-16,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1680,Manicaland,Nyanga,4,Peri-Urban,6.12,Deed of Grant,Groundnuts,3.46,3.22,0.93,Rainfed,Clay Loam,Region I,2025-12-07,2026-04-17,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1681,Manicaland,Nyanga,18,A1 Smallholder,2.94,Customary Offer Letter,Soybean,1.89,2.29,1.21,Rainfed,Clay Loam,Region I,2025-12-12,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1682,Manicaland,Nyanga,23,A1 Smallholder,11.54,99-Year Lease,Groundnuts,6.45,4.77,0.74,Rainfed,Clay,Region I,2025-12-01,2026-05-06,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1683,Manicaland,Nyanga,14,A2 Commercial,27.08,Customary Offer Letter,Groundnuts,16.35,10.14,0.62,Rainfed,Sandy Loam,Region I,2025-12-07,2026-05-02,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1684,Manicaland,Nyanga,22,A2 Commercial,78.76,Customary Offer Letter,Tobacco,38.18,95.07,2.49,Center Pivot,Sandy,Region I,2025-11-17,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1685,Manicaland,Nyanga,6,A2 Commercial,144.57,Deed of Grant,Tobacco,68.55,186.46,2.72,Drip,Loam,Region I,2025-12-01,2026-05-15,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1686,Manicaland,Nyanga,21,Communal,5.1,99-Year Lease,Sunflower,2.84,5.48,1.93,Rainfed,Sandy Loam,Region I,2025-12-08,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1687,Manicaland,Nyanga,1,A2 Commercial,44.58,Deed of Grant,Soybean,34.58,42.53,1.23,Rainfed,Clay Loam,Region I,2025-11-25,2026-05-05,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1688,Manicaland,Nyanga,21,A2 Commercial,83.2,Communal,Sunflower,44.66,78.6,1.76,Rainfed,Loam,Region I,2025-12-13,2026-05-10,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1689,Manicaland,Nyanga,10,A1 Smallholder,12.05,99-Year Lease,Sunflower,6.84,11.15,1.63,Rainfed,Loam,Region I,2025-11-26,2026-04-24,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1690,Manicaland,Nyanga,15,A1 Smallholder,9.66,99-Year Lease,SweetPotato,5.1,84.2,16.51,Rainfed,Loam,Region I,2025-12-11,2026-05-07,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1691,Manicaland,Nyanga,23,A1 Smallholder,3.26,Deed of Grant,Maize,2.76,2.68,0.97,Rainfed,Clay,Region I,2025-11-20,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1692,Manicaland,Nyanga,18,Communal,10.32,Customary Offer Letter,Wheat,5.86,15.88,2.71,Drip,Clay Loam,Region I,2025-11-24,2026-04-18,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1693,Manicaland,Nyanga,1,Peri-Urban,14.03,99-Year Lease,Sunflower,11.47,26.73,2.33,Rainfed,Clay Loam,Region I,2025-12-01,2026-04-25,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1694,Manicaland,Nyanga,21,A2 Commercial,81.61,Customary Offer Letter,Cassava,57.14,1234.8,21.61,Rainfed,Clay Loam,Region I,2025-12-08,2026-05-14,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1695,Manicaland,Nyanga,15,A2 Commercial,109.59,Communal,Maize,50.71,50.71,1.0,Rainfed,Sandy Loam,Region I,2025-12-04,2026-05-11,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1696,Manicaland,Nyanga,8,Peri-Urban,6.0,Customary Offer Letter,Maize,4.04,4.61,1.14,Rainfed,Loam,Region I,2025-12-03,2026-05-01,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1697,Manicaland,Nyanga,8,A2 Commercial,45.44,Deed of Grant,SweetPotato,35.55,331.68,9.33,Rainfed,Clay Loam,Region I,2025-11-27,2026-04-21,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1698,Manicaland,Nyanga,16,A2 Commercial,98.41,Deed of Grant,Groundnuts,56.97,31.33,0.55,Rainfed,Sandy Loam,Region I,2025-11-26,2026-04-27,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1699,Manicaland,Nyanga,12,Communal,4.99,Customary Offer Letter,Cotton,4.19,4.44,1.06,Rainfed,Sandy Loam,Region I,2025-12-08,2026-04-28,SYNTHETIC / SIMULATED DATA
+ZW-NYA-1700,Manicaland,Nyanga,15,A2 Commercial,41.29,Communal,Sorghum,19.11,26.95,1.41,Rainfed,Clay Loam,Region I,2025-12-04,2026-04-17,SYNTHETIC / SIMULATED DATA

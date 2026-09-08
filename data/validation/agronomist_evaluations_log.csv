@@ -1,0 +1,2 @@
+case_id,expert_id,model_prediction,agronomist_prediction,validation_date,comments,is_match
+VAL-ZW-001,EXPERT-TEST-01,Recommended,Recommended,2026-09-06 13:54:10,Test evaluation,True

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify 2FA - AgricLedger</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #f0f4f2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: 
+                radial-gradient(ellipse at 20% 50%, rgba(26, 92, 74, 0.05) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 50%, rgba(244, 162, 97, 0.05) 0%, transparent 50%);
+            animation: backgroundFloat 20s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+        @keyframes backgroundFloat {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(2%, 2%) rotate(2deg); }
+        }
+        .verify-container {
+            background: rgba(255, 255, 255, 0.88);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(26, 92, 74, 0.08);
+            padding: 40px;
+            max-width: 420px;
+            width: 100%;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            position: relative;
+            z-index: 1;
+            animation: slideUp 0.6s ease;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .verify-container .brand-icon {
+            font-size: 2.8rem;
+            display: block;
+            margin-bottom: 4px;
+        }
+        .verify-container h1 {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #1a3c34;
+        }
+        .verify-container p {
+            color: #6b8a7a;
+            margin: 4px 0 16px;
+            font-size: 0.95rem;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e8edea;
+            border-radius: 12px;
+            font-size: 1.4rem;
+            text-align: center;
+            letter-spacing: 8px;
+            transition: border-color 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: #1a5c4a;
+            box-shadow: 0 0 0 4px rgba(26, 92, 74, 0.08);
+        }
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #1a5c4a, #2a7c6a);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Inter', sans-serif;
+            box-shadow: 0 4px 20px rgba(26, 92, 74, 0.2);
+        }
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(26, 92, 74, 0.3);
+        }
+        .alert {
+            padding: 12px 16px;
+            border-radius: 12px;
+            margin-bottom: 16px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .alert-danger { background: #f8d7da; color: #721c24; border: 1px solid #f1b0b7; }
+        .alert-warning { background: #fff3cd; color: #856404; border: 1px solid #ffd970; }
+        .back-link {
+            display: block;
+            margin-top: 16px;
+            color: #6b8a7a;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .back-link:hover {
+            color: #1a5c4a;
+            text-decoration: underline;
+        }
+        @media (max-width: 480px) {
+            .verify-container { padding: 24px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="verify-container">
+        <span class="brand-icon">🔐</span>
+        <h1>Two-Factor Authentication</h1>
+        <p>Enter the 6-digit code from your authenticator app</p>
+
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">
+                        <i class="fas {% if category == 'success' %}fa-check-circle{% elif category == 'danger' %}fa-exclamation-circle{% else %}fa-info-circle{% endif %}"></i>
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            <div class="form-group">
+                {{ form.code(placeholder="000000", maxlength=6, autofocus=true) }}
+                {% if form.code.errors %}
+                    <div style="color:#dc3545;font-size:0.8rem;margin-top:4px;">
+                        {{ form.code.errors[0] }}
+                    </div>
+                {% endif %}
+            </div>
+            <button type="submit" class="btn">
+                <i class="fas fa-check-circle"></i> Verify & Login
+            </button>
+        </form>
+
+        <a href="{{ url_for('login') }}" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to login
+        </a>
+    </div>
+</body>
+</html>

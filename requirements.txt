@@ -1,0 +1,57 @@
+# Core Web Framework
+Flask==2.3.3
+Flask-CORS==4.0.0
+Flask-Session==0.5.0
+Flask-Login==0.6.2
+Flask-WTF==1.1.1
+WTForms==3.0.1
+
+# Blockchain & Web3
+web3==6.11.0
+eth-account==0.9.0
+eth-hash==0.5.1
+
+# Data Science & Machine Learning
+numpy==1.24.3
+pandas==2.0.3
+scikit-learn==1.3.0
+joblib==1.3.2
+
+# Machine Learning Models
+xgboost==1.7.6
+lightgbm==4.1.0
+
+# NLP & Language Processing
+transformers==4.31.0
+torch==2.0.1
+sentencepiece==0.1.99
+# Removed the strict version for protobuf
+protobuf
+
+# Authentication & Security
+bcrypt==4.0.1
+pyotp==2.9.0
+qrcode==7.4.2
+Pillow==10.0.0
+cryptography==41.0.5
+
+# Database
+sqlalchemy==2.0.19
+pymongo==4.5.0
+python-dotenv==1.0.0
+
+# Utility
+requests==2.31.0
+python-dateutil==2.8.2
+schedule==1.2.0
+click==8.1.5
+
+# Data Visualization
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.15.0
+
+# Testing & Development
+pytest==7.4.0
+black==23.7.0
+flake8==6.1.0

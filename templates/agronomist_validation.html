@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgricLedger — Agronomist Validation Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { background-color: #f4f7f6; font-family: 'Segoe UI', system-ui, sans-serif; }
+        .hero-banner { background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 100%); color: white; padding: 2.5rem 0; margin-bottom: 2rem; border-radius: 0 0 1rem 1rem; }
+        .card-custom { border: none; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+        .badge-aez { background-color: #d8f3dc; color: #1b4332; font-weight: 600; font-size: 0.85rem; padding: 0.4em 0.8em; border-radius: 20px; }
+        .badge-rec { background-color: #d1e7dd; color: #0f5132; }
+        .badge-not-rec { background-color: #f8d7da; color: #842029; }
+        .btn-evaluate { border-radius: 8px; font-weight: 600; padding: 0.5rem 1.2rem; }
+    </style>
+</head>
+<body>
+
+<div class="hero-banner text-center">
+    <div class="container">
+        <h2><i class="fa-solid fa-user-check me-2"></i>AgricLedger Agronomist Validation Panel</h2>
+        <p class="lead mb-0">Genuine Human Expert Evaluation for Crop Suitability Machine Learning Models</p>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Objective 4 Status Alert -->
+    <div class="card card-custom p-4 mb-4">
+        <div class="d-flex justify-content-between align-items-center flex-wrap" id="metricsHeader">
+            <div>
+                <h5 class="fw-bold mb-1"><i class="fa-solid fa-chart-line text-success me-2"></i>Objective 4 Evaluation Status</h5>
+                <p class="text-muted mb-0">Target Agreement with Agronomist Advice: <strong>&ge; 75.0%</strong></p>
+            </div>
+            <div id="statusBadgeContainer">
+                <span class="badge bg-warning text-dark fs-6 px-3 py-2">NOT YET ACHIEVED</span>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center" id="metricsRow">
+            <div class="col-md-3 col-6">
+                <small class="text-muted">Empirical Agreement</small>
+                <h3 class="fw-bold text-primary mt-1" id="statAgreement">0.0%</h3>
+            </div>
+            <div class="col-md-3 col-6">
+                <small class="text-muted">Evaluated Cases</small>
+                <h3 class="fw-bold text-dark mt-1" id="statEvaluated">0 / 100</h3>
+            </div>
+            <div class="col-md-3 col-6">
+                <small class="text-muted">Precision / F1</small>
+                <h3 class="fw-bold text-success mt-1" id="statF1">0.00 / 0.00</h3>
+            </div>
+            <div class="col-md-3 col-6">
+                <small class="text-muted">Baseline Benchmark</small>
+                <h3 class="fw-bold text-secondary mt-1">49.0% (Dataset H)</h3>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Selection Table -->
+    <div class="card card-custom p-4">
+        <h5 class="fw-bold mb-3"><i class="fa-solid fa-list-check me-2"></i>Validation Cases Matrix (100 Stratified Cases)</h5>
+        <div class="table-responsive">
+            <table class="table table-hover align-middle" id="casesTable">
+                <thead class="table-light">
+                    <tr>
+                        <th>Case ID</th>
+                        <th>District / Province</th>
+                        <th>AEZ Zone</th>
+                        <th>Soil Type</th>
+                        <th>Crop</th>
+                        <th>Model Prediction</th>
+                        <th>Agronomist Prediction</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="casesTbody">
+                    <tr><td colspan="8" class="text-center py-4 text-muted"><i class="fa-solid fa-spinner fa-spin me-2"></i>Loading validation suite...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Evaluation Modal -->
+<div class="modal fade" id="evalModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title" id="modalTitle"><i class="fa-solid fa-clipboard-question me-2"></i>Submit Expert Evaluation</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-4">
+                <input type="hidden" id="evalCaseId">
+                <div class="mb-3">
+                    <label class="form-label text-muted small">Environmental Context</label>
+                    <div class="p-3 bg-light rounded" id="evalContextSummary"></div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="evalPrediction" class="form-label fw-bold">Agronomist Expert Recommendation</label>
+                    <select class="form-select form-select-lg" id="evalPrediction" required>
+                        <option value="" disabled selected>-- Select Expert Recommendation --</option>
+                        <option value="Recommended">Recommended (Suitable)</option>
+                        <option value="Not Recommended">Not Recommended (Unsuitable)</option>
+                        <option value="Uncertain">Uncertain / Needs More Data</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="evalExpertId" class="form-label text-muted small">Certified Expert Code / Identifier</label>
+                    <input type="text" class="form-control" id="evalExpertId" value="AGRO-ZW-001" placeholder="e.g. AGRO-ZW-042">
+                </div>
+
+                <div class="mb-3">
+                    <label for="evalComments" class="form-label text-muted small">Agronomic Justification / Comments</label>
+                    <textarea class="form-control" id="evalComments" rows="3" placeholder="Provide agronomic reasoning (e.g. Rainfall bounds, frost risk, soil pH incompatibility)..."></textarea>
+                </div>
+            </div>
+            <div class="modal-footer bg-light">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success btn-evaluate" onclick="submitEvaluation()"><i class="fa-solid fa-paper-plane me-2"></i>Save Evaluation</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    let currentCases = [];
+    let evalModal;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        evalModal = new bootstrap.Modal(document.getElementById('evalModal'));
+        loadMetrics();
+        loadCases();
+    });
+
+    async function loadMetrics() {
+        try {
+            const res = await fetch('/api/agronomist/metrics');
+            const data = await res.json();
+            if(data.success && data.metrics) {
+                const m = data.metrics;
+                document.getElementById('statAgreement').innerText = (m.agreement_pct || 0).toFixed(1) + '%';
+                document.getElementById('statEvaluated').innerText = `${m.evaluated_cases || 0} / ${m.total_cases_in_suite || 100}`;
+                document.getElementById('statF1').innerText = `${(m.precision || 0).toFixed(2)} / ${(m.f1_score || 0).toFixed(2)}`;
+                
+                const badgeContainer = document.getElementById('statusBadgeContainer');
+                if(m.objective_4_status === 'ACHIEVED') {
+                    badgeContainer.innerHTML = '<span class="badge bg-success fs-6 px-3 py-2"><i class="fa-solid fa-circle-check me-1"></i>ACHIEVED (&ge; 75%)</span>';
+                } else {
+                    badgeContainer.innerHTML = '<span class="badge bg-warning text-dark fs-6 px-3 py-2"><i class="fa-solid fa-clock me-1"></i>NOT YET ACHIEVED</span>';
+                }
+            }
+        } catch(e) { console.error("Error loading metrics:", e); }
+    }
+
+    async function loadCases() {
+        try {
+            const res = await fetch('/api/agronomist/cases');
+            const data = await res.json();
+            if(data.success) {
+                currentCases = data.cases;
+                renderCasesTable(currentCases);
+            }
+        } catch(e) {
+            document.getElementById('casesTbody').innerHTML = `<tr><td colspan="8" class="text-center text-danger py-4">Error loading validation cases.</td></tr>`;
+        }
+    }
+
+    function renderCasesTable(cases) {
+        const tbody = document.getElementById('casesTbody');
+        if(!cases || cases.length === 0) {
+            tbody.innerHTML = `<tr><td colspan="8" class="text-center py-4 text-muted">No cases found.</td></tr>`;
+            return;
+        }
+
+        tbody.innerHTML = cases.map(c => {
+            const isEvaluated = Boolean(c.agronomist_prediction && c.agronomist_prediction.trim() !== '');
+            const modelBadge = c.model_prediction === 'Recommended' ? 'badge-rec' : 'badge-not-rec';
+            const agronomistBadge = isEvaluated ? (c.agronomist_prediction === 'Recommended' ? 'badge-rec' : 'badge-not-rec') : 'bg-light text-muted';
+            
+            return `
+                <tr>
+                    <td><strong>${c.case_id}</strong></td>
+                    <td>${c.district}, ${c.province}</td>
+                    <td><span class="badge-aez">${c.agro_ecological_zone}</span></td>
+                    <td>${c.soil_type}</td>
+                    <td><strong class="text-success">${c.crop}</strong></td>
+                    <td><span class="badge ${modelBadge} px-2 py-1">${c.model_prediction}</span></td>
+                    <td><span class="badge ${agronomistBadge} px-2 py-1">${isEvaluated ? c.agronomist_prediction : '<em>Blank (Pending)</em>'}</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-outline-success" onclick="openEvalModal('${c.case_id}')">
+                            <i class="fa-solid fa-edit me-1"></i>${isEvaluated ? 'Edit' : 'Evaluate'}
+                        </button>
+                    </td>
+                </tr>
+            `;
+        }).join('');
+    }
+
+    function openEvalModal(caseId) {
+        const c = currentCases.find(item => item.case_id === caseId);
+        if(!c) return;
+
+        document.getElementById('evalCaseId').value = c.case_id;
+        document.getElementById('modalTitle').innerText = `Evaluate Case: ${c.case_id}`;
+        document.getElementById('evalContextSummary').innerHTML = `
+            <strong>District:</strong> ${c.district} (${c.province})<br>
+            <strong>Crop:</strong> ${c.crop} | <strong>Zone:</strong> ${c.agro_ecological_zone}<br>
+            <strong>Soil:</strong> ${c.soil_type} | <strong>Weather:</strong> ${c.weather_summary}<br>
+            <strong>Model Output:</strong> <span class="badge bg-secondary">${c.model_prediction}</span>
+        `;
+        document.getElementById('evalPrediction').value = c.agronomist_prediction || '';
+        document.getElementById('evalComments').value = c.comments || '';
+        evalModal.show();
+    }
+
+    async function submitEvaluation() {
+        const caseId = document.getElementById('evalCaseId').value;
+        const agronomistPred = document.getElementById('evalPrediction').value;
+        const expertId = document.getElementById('evalExpertId').value || 'AGRO-ZW-001';
+        const comments = document.getElementById('evalComments').value;
+
+        if(!agronomistPred) {
+            alert('Please select an expert recommendation.');
+            return;
+        }
+
+        try {
+            const res = await fetch('/api/agronomist/submit-evaluation', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    case_id: caseId,
+                    agronomist_prediction: agronomistPred,
+                    expert_id: expertId,
+                    comments: comments
+                })
+            });
+            const data = await res.json();
+            if(data.success) {
+                evalModal.hide();
+                loadMetrics();
+                loadCases();
+            } else {
+                alert('Error saving evaluation: ' + (data.error || 'Unknown error'));
+            }
+        } catch(e) { alert('Network error submitting evaluation.'); }
+    }
+</script>
+</body>
+</html>

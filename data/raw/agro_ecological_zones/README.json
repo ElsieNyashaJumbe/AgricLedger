@@ -1,0 +1,21 @@
+{
+  "dataset_name": "Zimbabwe Geoportal - Agro-Ecological Zones (Latest Classification)",
+  "source_url": "https://zimgeoportal.org.zw/datasets/agro-ecological-zones-latest/",
+  "publisher_organization": "Zimbabwe Geoportal / Ministry of Lands, Agriculture, Fisheries, Water and Rural Development / Agritex",
+  "collection_period": "Revised Agro-Ecological Zone Map (Natural Regions I to V)",
+  "geographic_coverage": "Zimbabwe (National Spatial Coverage)",
+  "geographic_reference_system": "EPSG:4326 (WGS 84)",
+  "zone_classification": [
+    "Region I: Specialised & Diversified Farming (Rainfall > 1000mm)",
+    "Region IIa: Intensive Farming (Rainfall 750-1000mm)",
+    "Region IIb: Intensive Farming (Sub-optimal rainfall distribution)",
+    "Region III: Semi-Intensive Farming (Rainfall 650-800mm)",
+    "Region IV: Semi-Extensive Farming (Rainfall 450-650mm)",
+    "Region V: Extensive Farming (Rainfall < 450mm)"
+  ],
+  "available_formats": ["GeoJSON", "Shapefile", "CSV"],
+  "license": "Public Government Open Data",
+  "access_status": "AUTHENTICATION_REQUIRED",
+  "access_note": "Direct GIS layer download requires ZimGeoportal user login. Spatial bounding boxes mapped in backend/spatial_service.py and fallback reference kept in data/external/zimbabwe_agro_ecological_zones.csv.",
+  "provenance_class": "OFFICIAL_AGGREGATED / REAL"
+}

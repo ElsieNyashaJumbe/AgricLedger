@@ -1,0 +1,2885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AgricLedger - Farmer Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    
+    <style>
+        /* ========================================
+           DASHBOARD REDESIGN - MODERN UI/UX
+           ======================================== */
+        
+        /* ----- GLASSMORPHISM CARDS ----- */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(26, 92, 74, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .glass-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 48px rgba(26, 92, 74, 0.12);
+        }
+        
+        /* ----- STAT CARDS WITH GRADIENTS ----- */
+        .stat-card-modern {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(232, 237, 234, 0.6);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .stat-card-modern::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(26, 92, 74, 0.03), rgba(244, 162, 97, 0.03));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+        
+        .stat-card-modern:hover::before {
+            opacity: 1;
+        }
+        
+        .stat-card-modern:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 60px rgba(26, 92, 74, 0.12);
+            border-color: rgba(26, 92, 74, 0.2);
+        }
+        
+        .stat-card-modern .stat-icon-wrapper {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            color: white;
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+        }
+        
+        .stat-card-modern:hover .stat-icon-wrapper {
+            transform: scale(1.05) rotate(-4deg);
+        }
+        
+        .stat-card-modern .stat-info h3 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            color: #1a3c34;
+            margin: 0;
+            line-height: 1.2;
+        }
+        
+        .stat-card-modern .stat-info p {
+            color: #6b8a7a;
+            font-size: 0.85rem;
+            font-weight: 500;
+            margin: 0;
+        }
+        
+        .stat-card-modern .stat-trend {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 20px;
+            background: rgba(46, 204, 113, 0.12);
+            color: #2ecc71;
+        }
+        
+        .stat-trend.down {
+            background: rgba(231, 76, 60, 0.12);
+            color: #e74c3c;
+        }
+        
+        /* ----- QUICK ACTIONS ----- */
+        .quick-actions-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 20px;
+        }
+        
+        .quick-action-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(232, 237, 234, 0.6);
+            cursor: pointer;
+            text-decoration: none;
+            color: #1a3c34;
+        }
+        
+        .quick-action-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 40px rgba(26, 92, 74, 0.1);
+            border-color: rgba(26, 92, 74, 0.2);
+        }
+        
+        .quick-action-card .qa-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 12px;
+            font-size: 1.3rem;
+            color: white;
+        }
+        
+        .quick-action-card .qa-title {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .quick-action-card .qa-desc {
+            font-size: 0.75rem;
+            color: #8aa89a;
+            margin: 4px 0 0;
+        }
+        
+        /* ----- ACTIVITY FEED ----- */
+        .activity-feed {
+            margin-top: 16px;
+        }
+        
+        .activity-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 16px;
+            border-radius: 12px;
+            transition: background 0.3s ease;
+            border-bottom: 1px solid rgba(232, 237, 234, 0.4);
+        }
+        
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+        
+        .activity-item:hover {
+            background: rgba(26, 92, 74, 0.04);
+        }
+        
+        .activity-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            color: white;
+            flex-shrink: 0;
+        }
+        
+        .activity-content {
+            flex: 1;
+        }
+        
+        .activity-content .activity-text {
+            font-size: 0.9rem;
+            color: #1a3c34;
+            font-weight: 500;
+        }
+        
+        .activity-content .activity-time {
+            font-size: 0.75rem;
+            color: #8aa89a;
+        }
+        
+        .activity-content .activity-text strong {
+            color: #1a5c4a;
+        }
+        
+        /* ----- ANIMATIONS ----- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .animate-in {
+            animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+            opacity: 0;
+        }
+        
+        .animate-in:nth-child(1) { animation-delay: 0.05s; }
+        .animate-in:nth-child(2) { animation-delay: 0.1s; }
+        .animate-in:nth-child(3) { animation-delay: 0.15s; }
+        .animate-in:nth-child(4) { animation-delay: 0.2s; }
+        .animate-in:nth-child(5) { animation-delay: 0.25s; }
+        .animate-in:nth-child(6) { animation-delay: 0.3s; }
+        
+        /* ----- CHART CARDS ----- */
+        .chart-card-modern {
+            background: white;
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid rgba(232, 237, 234, 0.6);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .chart-card-modern:hover {
+            box-shadow: 0 12px 40px rgba(26, 92, 74, 0.08);
+            border-color: rgba(26, 92, 74, 0.15);
+        }
+        
+        .chart-card-modern .chart-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        
+        .chart-card-modern .chart-header h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a3c34;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .chart-card-modern .chart-header .chart-badge {
+            font-size: 0.65rem;
+            padding: 4px 14px;
+            border-radius: 20px;
+            background: rgba(26, 92, 74, 0.08);
+            color: #1a5c4a;
+            font-weight: 600;
+        }
+        
+        .chart-container-modern {
+            height: 250px;
+            position: relative;
+        }
+        
+        /* ----- CHART LEGEND ----- */
+        .chart-legend-modern {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        
+        .legend-item-modern {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #6b8a7a;
+            font-weight: 500;
+        }
+        
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        
+        /* ========================================
+           DARK MODE OVERRIDES
+           ======================================== */
+        html.dark .glass-card {
+            background: rgba(26, 42, 36, 0.85);
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+        
+        html.dark .stat-card-modern {
+            background: #1a2a24;
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+        
+        html.dark .stat-card-modern .stat-info h3 {
+            color: #e8edea;
+        }
+        
+        html.dark .chart-card-modern {
+            background: #1a2a24;
+            border-color: rgba(255, 255, 255, 0.06);
+        }
+        
+        html.dark .chart-card-modern .chart-header h3 {
+            color: #e8edea;
+        }
+        
+        html.dark .quick-action-card {
+            background: #1a2a24;
+            border-color: rgba(255, 255, 255, 0.06);
+            color: #e8edea;
+        }
+        
+        html.dark .activity-item:hover {
+            background: rgba(255, 255, 255, 0.04);
+        }
+        
+        html.dark .activity-content .activity-text {
+            color: #e8edea;
+        }
+        
+        html.dark .stat-card-modern .stat-trend {
+            background: rgba(46, 204, 113, 0.15);
+        }
+        
+        html.dark .stat-trend.down {
+            background: rgba(231, 76, 60, 0.15);
+        }
+        
+        /* ----- RESPONSIVE ----- */
+        @media (max-width: 1024px) {
+            .quick-actions-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .quick-actions-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .stat-card-modern .stat-info h3 {
+                font-size: 1.5rem;
+            }
+            
+            .stat-card-modern {
+                padding: 16px;
+            }
+            
+            .stat-card-modern .stat-icon-wrapper {
+                width: 44px;
+                height: 44px;
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .quick-actions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ========== SIDEBAR - REDESIGNED ========== -->
+<div class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+        <div class="brand-left">
+            <div class="brand-logo-wrapper">
+                <span class="brand-icon">🌾</span>
+            </div>
+            <div class="brand-text">
+                <span class="brand-name">AgricLedger</span>
+                <span class="brand-tagline">Empowering Farmers</span>
+            </div>
+        </div>
+        <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+    
+    <div class="sidebar-user-profile">
+        <div class="user-avatar-wrapper">
+            <img src="https://ui-avatars.com/api/?name={{ user.first_name }}+{{ user.last_name }}&background=1a5c4a&color=fff&size=48&bold=true" 
+                 alt="{{ user.first_name }}" class="user-avatar" />
+            <span class="online-dot"></span>
+        </div>
+        <div class="user-info">
+            <span class="user-name">{{ user.first_name }} {{ user.last_name }}</span>
+            <span class="user-role-badge">{{ user.role|default('Farmer') }}</span>
+        </div>
+    </div>
+    
+    <nav class="sidebar-nav">
+        <!-- ===== MAIN SECTION ===== -->
+        <div class="nav-section-label">Main</div>
+
+        
+        <!-- Market -->
+        <a href="#" class="nav-link" data-section="market">
+            <span class="nav-icon-wrapper"><i class="fas fa-chart-bar"></i></span>
+            <span class="nav-text">Market</span>
+            <span class="nav-badge success">Live</span>
+        </a>
+        
+        <!-- Weather -->
+        <a href="#" class="nav-link" data-section="weather">
+            <span class="nav-icon-wrapper"><i class="fas fa-cloud-sun"></i></span>
+            <span class="nav-text">Weather</span>
+        </a>
+        
+        <!-- Crop Suitability -->
+        <a href="#" class="nav-link" data-section="crops">
+            <span class="nav-icon-wrapper"><i class="fas fa-leaf"></i></span>
+            <span class="nav-text">Crop Suitability</span>
+        </a>
+        
+        <!-- Land Tenure -->
+        <a href="#" class="nav-link" data-section="land">
+            <span class="nav-icon-wrapper"><i class="fas fa-map-marker-alt"></i></span>
+            <span class="nav-text">Land Tenure</span>
+        </a>
+        
+        <!-- ===== DATA & AI SECTION ===== -->
+        <div class="nav-section-label">Data &amp; AI</div>
+        
+        <!-- Data Sovereignty -->
+        <a href="#" class="nav-link" data-section="data">
+            <span class="nav-icon-wrapper"><i class="fas fa-lock"></i></span>
+            <span class="nav-text">Data Sovereignty</span>
+            <span class="nav-badge warning">3</span>
+        </a>
+        
+        <!-- AI Chat -->
+        <a href="#" class="nav-link" data-section="chat">
+            <span class="nav-icon-wrapper"><i class="fas fa-robot"></i></span>
+            <span class="nav-text">AI Chat</span>
+            <span class="nav-badge success">Online</span>
+        </a>
+        
+        <!-- ===== MANAGEMENT SECTION - ADMIN ONLY ===== -->
+        {% if current_user.role == 'admin' %}
+        <div class="nav-section-label">Management</div>
+        
+        <!-- Farmers Management -->
+        <a href="#" class="nav-link admin-only" data-section="farmers">
+            <span class="nav-icon-wrapper"><i class="fas fa-users"></i></span>
+            <span class="nav-text">Farmers</span>
+            <span class="nav-badge" id="farmers-badge">0</span>
+        </a>
+        {% endif %}
+        
+        <!-- ===== SETTINGS & REVIEWS ===== -->
+        <div class="nav-section-label">Account</div>
+        
+        <!-- Settings -->
+        <a href="#" class="nav-link" data-section="settings">
+            <span class="nav-icon-wrapper"><i class="fas fa-cog"></i></span>
+            <span class="nav-text">Settings</span>
+        </a>
+        
+        <!-- Reviews -->
+        <a href="#" class="nav-link" data-section="reviews">
+            <span class="nav-icon-wrapper"><i class="fas fa-star"></i></span>
+            <span class="nav-text">Reviews</span>
+            <span class="nav-badge">4.8</span>
+        </a>
+    </nav>
+    
+    <div class="sidebar-footer">
+        <div class="footer-status">
+            <span class="status-dot"></span>
+            <span class="status-text">Blockchain Connected</span>
+        </div>
+        <div class="footer-actions">
+            <button class="footer-btn" onclick="window.location.href='{{ url_for('logout') }}'" title="Logout">
+                <i class="fas fa-sign-out-alt"></i>
+            </button>
+        </div>
+    </div>
+</div>
+    <!-- ========== MAIN CONTENT ========== -->
+    <div class="main-content">
+        <!-- ===== TOP BAR ===== -->
+        <header class="top-bar">
+            <div>
+                <h1 id="page-title" style="font-weight:800;letter-spacing:-1px;">Dashboard</h1>
+                <p style="color:#6b8a7a;font-size:0.9rem;margin:-4px 0 0;">
+                    Welcome back, <strong id="farmer-name">{{ user.first_name }} {{ user.last_name }}</strong>
+                </p>
+            </div>
+            <div class="top-bar-actions">
+                <span class="farmer-info">
+                    <i class="fas fa-user"></i>
+                    <span id="farmer-name-short">{{ user.first_name }} {{ user.last_name }}</span>
+                    <span class="user-role" id="user-role">{{ user.role|default('Farmer') }}</span>
+                </span>
+                <a href="{{ url_for('logout') }}" class="btn btn-secondary" style="padding:8px 18px;font-size:0.8rem;border-radius:12px;">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+                <button class="btn btn-primary" id="refreshBtn" style="border-radius:12px;padding:8px 18px;font-size:0.8rem;">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </header>
+        <!-- ============================================================ -->
+        <!-- SECTION: MARKET DEMAND TRANSPARENCY                           -->
+        <!-- ============================================================ -->
+        <div id="section-market" class="section">
+            <div class="market-container glass-card">
+                
+                <!-- HEADER -->
+                <div class="market-header-modern">
+                    <div class="market-header-left">
+                        <div class="market-header-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div>
+                            <h2>Market Demand Transparency</h2>
+                            <p>
+                                <i class="fas fa-check-circle" style="color:var(--success);"></i>
+                                Real-time market data for informed farming decisions
+                            </p>
+                        </div>
+                    </div>
+                    <div class="market-header-right">
+                        <span class="market-status-badge" id="market-status">
+                            <i class="fas fa-sync-alt fa-spin" style="color:var(--primary);"></i>
+                            <span id="market-update-time">Loading data...</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- STATS ROW -->
+                <div class="market-stats-grid" id="market-stats-grid">
+                    <div class="market-stat-item">
+                        <div class="market-stat-icon" style="background:linear-gradient(135deg,#1a5c4a,#2a7c6a);">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <div class="market-stat-info">
+                            <span class="market-stat-number" id="stat-crops-in-demand">0</span>
+                            <span class="market-stat-label">Crops in Demand</span>
+                        </div>
+                    </div>
+                    <div class="market-stat-item">
+                        <div class="market-stat-icon" style="background:linear-gradient(135deg,#f4a261,#e08a3a);">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <div class="market-stat-info">
+                            <span class="market-stat-number" id="stat-active-buyers">0</span>
+                            <span class="market-stat-label">Active Buyers</span>
+                        </div>
+                    </div>
+                    <div class="market-stat-item">
+                        <div class="market-stat-icon" style="background:linear-gradient(135deg,#2ecc71,#27ae60);">
+                            <i class="fas fa-boxes"></i>
+                        </div>
+                        <div class="market-stat-info">
+                            <span class="market-stat-number" id="stat-suppliers">0</span>
+                            <span class="market-stat-label">Input Suppliers</span>
+                        </div>
+                    </div>
+                    <div class="market-stat-item">
+                        <div class="market-stat-icon" style="background:linear-gradient(135deg,#3498db,#2471a3);">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="market-stat-info">
+                            <span class="market-stat-number" id="stat-financial-institutes">0</span>
+                            <span class="market-stat-label">Financial Institutes</span>
+                        </div>
+                    </div>
+                    <div class="market-stat-item">
+                        <div class="market-stat-icon" style="background:linear-gradient(135deg,#9b59b6,#8e44ad);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="market-stat-info">
+                            <span class="market-stat-number" id="stat-avg-demand">0%</span>
+                            <span class="market-stat-label">Avg Demand Score</span>
+                        </div>
+                    </div>
+                    <div class="market-stat-item">
+                        <div class="market-stat-icon" style="background:linear-gradient(135deg,#e74c3c,#c0392b);">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="market-stat-info">
+                            <span class="market-stat-number" id="stat-top-crop">-</span>
+                            <span class="market-stat-label">Top Demand Crop</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TABS -->
+                <div class="market-tabs-modern">
+                    <button class="market-tab-modern active" data-tab="demand">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Crop Demand</span>
+                    </button>
+                    <button class="market-tab-modern" data-tab="buyers">
+                        <i class="fas fa-handshake"></i>
+                        <span>Buyers</span>
+                        <span class="tab-badge" id="buyers-count">0</span>
+                    </button>
+                    <button class="market-tab-modern" data-tab="prices">
+                        <i class="fas fa-tag"></i>
+                        <span>Prices</span>
+                    </button>
+                    <button class="market-tab-modern" data-tab="suppliers">
+                        <i class="fas fa-boxes"></i>
+                        <span>Suppliers</span>
+                    </button>
+                    <button class="market-tab-modern" data-tab="financial">
+                        <i class="fas fa-university"></i>
+                        <span>Financial</span>
+                    </button>
+                    <button class="market-tab-modern" data-tab="activity">
+                        <i class="fas fa-clock"></i>
+                        <span>Activity</span>
+                        <span class="tab-badge" id="activity-count">0</span>
+                    </button>
+                </div>
+
+                <!-- TAB: CROP DEMAND -->
+                <div id="market-tab-demand" class="market-tab-content-modern active">
+                    <div class="market-chart-container">
+                        <div class="market-chart-header">
+                            <div class="market-chart-title">
+                                <h4><i class="fas fa-seedling" style="color:var(--primary);"></i> Crop Demand Trends</h4>
+                                <span class="chart-subtitle">Monthly demand by crop type</span>
+                            </div>
+                            <div class="market-chart-controls">
+                                <select id="market-trend-location" class="form-select-modern" onchange="loadMarketTrends()">
+                                    <option value="Harare">Harare</option>
+                                    <option value="Bulawayo">Bulawayo</option>
+                                    <option value="Mutare">Mutare</option>
+                                    <option value="Gweru">Gweru</option>
+                                    <option value="Masvingo">Masvingo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="market-chart-wrapper">
+                            <canvas id="market-demand-chart"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="top-crops-container">
+                        <div class="top-crops-header">
+                            <h5><i class="fas fa-fire" style="color:var(--secondary);"></i> Crops in Demand</h5>
+                            <span class="top-crops-subtitle">Based on current market demand</span>
+                        </div>
+                        <div id="top-crops-list" class="top-crops-grid">
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading crop data...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: BUYERS -->
+                <div id="market-tab-buyers" class="market-tab-content-modern">
+                    <div class="buyers-container">
+                        <div class="buyers-header">
+                            <div class="buyers-header-left">
+                                <h4><i class="fas fa-handshake" style="color:var(--secondary);"></i> Active Buyers</h4>
+                                <span class="buyers-subtitle">Organizations purchasing from farmers</span>
+                            </div>
+                            <div class="buyers-filters">
+                                <select id="buyer-filter-crop" class="form-select-modern" onchange="loadBuyers()">
+                                    <option value="">All Crops</option>
+                                    <option value="Maize">Maize</option>
+                                    <option value="Tobacco">Tobacco</option>
+                                    <option value="Soybean">Soybean</option>
+                                    <option value="Wheat">Wheat</option>
+                                    <option value="Cotton">Cotton</option>
+                                    <option value="Sorghum">Sorghum</option>
+                                    <option value="Groundnuts">Groundnuts</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="buyers-list" class="buyers-grid">
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading buyers...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: PRICES -->
+                <div id="market-tab-prices" class="market-tab-content-modern">
+                    <div class="prices-container">
+                        <div class="prices-header">
+                            <div class="prices-header-left">
+                                <h4><i class="fas fa-tag" style="color:var(--success);"></i> Current Market Prices</h4>
+                                <span class="prices-subtitle">Price ranges per crop and location</span>
+                            </div>
+                            <div class="prices-filters">
+                                <select id="price-filter-crop" class="form-select-modern" onchange="loadPrices()">
+                                    <option value="">All Crops</option>
+                                    <option value="Maize">Maize</option>
+                                    <option value="Tobacco">Tobacco</option>
+                                    <option value="Soybean">Soybean</option>
+                                    <option value="Wheat">Wheat</option>
+                                    <option value="Cotton">Cotton</option>
+                                    <option value="Sorghum">Sorghum</option>
+                                </select>
+                                <select id="price-filter-location" class="form-select-modern" onchange="loadPrices()">
+                                    <option value="">All Locations</option>
+                                    <option value="Harare">Harare</option>
+                                    <option value="Bulawayo">Bulawayo</option>
+                                    <option value="Mutare">Mutare</option>
+                                    <option value="Gweru">Gweru</option>
+                                    <option value="Masvingo">Masvingo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="prices-list" class="prices-table-container">
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading prices...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: SUPPLIERS -->
+                <div id="market-tab-suppliers" class="market-tab-content-modern">
+                    <div class="suppliers-container">
+                        <div class="suppliers-header">
+                            <div class="suppliers-header-left">
+                                <h4><i class="fas fa-boxes" style="color:var(--info);"></i> Input Suppliers</h4>
+                                <span class="suppliers-subtitle">Providers of seeds, fertilizer, equipment, and more</span>
+                            </div>
+                            <div class="suppliers-filters">
+                                <select id="supplier-filter-category" class="form-select-modern" onchange="loadSuppliers()">
+                                    <option value="">All Categories</option>
+                                    <option value="Seed">Seed</option>
+                                    <option value="Fertilizer">Fertilizer</option>
+                                    <option value="Equipment">Equipment</option>
+                                    <option value="Pesticide">Pesticide</option>
+                                    <option value="Feed">Feed</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="suppliers-list" class="suppliers-grid">
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading suppliers...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: FINANCIAL -->
+                <div id="market-tab-financial" class="market-tab-content-modern">
+                    <div class="financial-container">
+                        <div class="financial-header">
+                            <div class="financial-header-left">
+                                <h4><i class="fas fa-university" style="color:var(--warning);"></i> Financial Institutes</h4>
+                                <span class="financial-subtitle">Banks, microfinance, and cooperatives supporting farmers</span>
+                            </div>
+                            <div class="financial-filters">
+                                <select id="financial-filter-type" class="form-select-modern" onchange="loadFinancialInstitutes()">
+                                    <option value="">All Types</option>
+                                    <option value="Bank">Bank</option>
+                                    <option value="Microfinance">Microfinance</option>
+                                    <option value="Cooperative">Cooperative</option>
+                                    <option value="Insurance">Insurance</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div id="financial-list" class="financial-grid">
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading financial institutes...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB: ACTIVITY -->
+                <div id="market-tab-activity" class="market-tab-content-modern">
+                    <div class="activity-container">
+                        <div class="activity-header">
+                            <div class="activity-header-left">
+                                <h4><i class="fas fa-clock" style="color:var(--primary);"></i> Market Activity Feed</h4>
+                                <span class="activity-subtitle">Real-time updates from the market</span>
+                            </div>
+                            <button class="btn btn-secondary btn-sm" onclick="loadMarketActivity()" style="border-radius:10px;">
+                                <i class="fas fa-sync-alt"></i> Refresh
+                            </button>
+                        </div>
+                        <div id="market-activity-list" class="market-activity-feed">
+                            <div class="loading-state">
+                                <div class="loading-spinner"></div>
+                                <p>Loading activity...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+<!-- SECTION: WEATHER - REDESIGNED UI/UX WITH PROFESSIONAL ICONS -->
+
+<div id="section-weather" class="section">
+    <div class="weather-container glass-card">
+        <!-- Header -->
+        <div class="weather-header-modern">
+            <div class="weather-header-left">
+                <div class="weather-icon-main-wrapper">
+                    <i class="fas fa-cloud-sun weather-icon-main"></i>
+                </div>
+                <div>
+                    <h3 style="font-weight:800;margin:0;">Weather & Forecast</h3>
+                    <p style="color:#6b8a7a;font-size:0.85rem;margin:0;">Real-time weather data for your farming decisions</p>
+                </div>
+            </div>
+            <div class="weather-header-right">
+                <span class="weather-status-badge" id="weather-status">
+                    <i class="fas fa-check-circle" style="color:#2ecc71;"></i> Live Data
+                </span>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="weather-search-modern">
+            <div class="search-wrapper">
+                <i class="fas fa-map-marker-alt search-icon"></i>
+                <input type="text" id="weather-location" placeholder="Search location... (e.g., Harare)" value="Harare" />
+                <button class="btn btn-primary" onclick="getWeather()">
+                    <i class="fas fa-search"></i> Get Weather
+                </button>
+                <button class="btn btn-secondary" onclick="getWeather()" style="background:transparent;border:1px solid #e8edea;color:#4a6b5a;">
+                    <i class="fas fa-location-dot"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Current Weather -->
+        <div id="weather-current" class="weather-current-modern">
+            <div class="weather-loading">
+                <div class="loading-spinner"></div>
+                <p style="color:#6b8a7a;">Loading weather data...</p>
+            </div>
+        </div>
+
+        <!-- 7-Day Forecast -->
+        <div class="forecast-header-modern">
+            <h4><i class="fas fa-calendar-alt" style="color:#f4a261;"></i> 7-Day Forecast</h4>
+            <span class="forecast-update" id="forecast-update">Last updated: Just now</span>
+        </div>
+        <div id="weather-forecast" class="weather-forecast-modern">
+            <div class="weather-loading">
+                <div class="loading-spinner"></div>
+                <p style="color:#6b8a7a;">Loading forecast...</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- SECTION: CROP SUITABILITY - REDESIGNED                       -->
+<!-- ============================================================ -->
+<div id="section-crops" class="section">
+    <div class="crop-container">
+        
+        <!-- LEFT: INPUT FORM - MODERN GLASS CARD -->
+        <div class="crop-form glass-card">
+            <div class="crop-form-header">
+                <div class="crop-form-header-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div>
+                    <h3>Crop Suitability Predictor</h3>
+                    <p>Get data-driven crop recommendations for your farm</p>
+                </div>
+            </div>
+
+            <form id="cropForm" onsubmit="event.preventDefault(); predictCrops();">
+                <!-- Section: Location & Region -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-map-marked-alt"></i> Location & Environment
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-location">
+                                <i class="fas fa-map-pin"></i> Location
+                            </label>
+                            <select id="crop-location" class="form-select">
+                                <option value="Harare"> Harare</option>
+                                <option value="Bulawayo"> Bulawayo</option>
+                                <option value="Mutare"> Mutare</option>
+                                <option value="Binga"> Binga</option>
+                                <option value="Murehwa"> Murehwa</option>
+                                <option value="Gweru"> Gweru</option>
+                                <option value="Masvingo"> Masvingo</option>
+                                <option value="Chinhoyi"> Chinhoyi</option>
+                                <option value="Kadoma"> Kadoma</option>
+                                <option value="Kwekwe"> Kwekwe</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-region">
+                                <i class="fas fa-globe-africa"></i> Region
+                            </label>
+                            <select id="crop-region" class="form-select">
+                                <option value="Lowveld"> Lowveld</option>
+                                <option value="Midveld" selected> Midveld</option>
+                                <option value="Highveld"> Highveld</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Soil & Climate -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-gem"></i> Soil & Climate
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-soil">
+                                <i class="fas fa-mountain"></i> Soil Type
+                            </label>
+                            <select id="crop-soil" class="form-select">
+                                <option value="Loam" selected> Loam</option>
+                                <option value="Sandy"> Sandy</option>
+                                <option value="Clay"> Clay</option>
+                                <option value="Sandy Loam"> Sandy Loam</option>
+                                <option value="Clay Loam"> Clay Loam</option>
+                                <option value="Peat"> Peat</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-climate">
+                                <i class="fas fa-cloud-sun"></i> Climate Type
+                            </label>
+                            <select id="crop-climate" class="form-select">
+                                <option value="Tropical"> Tropical</option>
+                                <option value="Subtropical" selected> Subtropical</option>
+                                <option value="Temperate"> Temperate</option>
+                                <option value="Arid"> Arid</option>
+                                <option value="Semi-arid"> Semi-arid</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="crop-ph">
+                            <i class="fas fa-flask"></i> Soil pH Level
+                        </label>
+                        <div class="range-wrapper">
+                            <input type="range" id="crop-ph" min="4.0" max="8.0" step="0.1" value="6.5" 
+                                   oninput="document.getElementById('ph-value').textContent = this.value" />
+                            <div class="range-labels">
+                                <span>🔴 Acidic (4.0)</span>
+                                <span class="range-value" id="ph-value">6.5</span>
+                                <span>🔵 Alkaline (8.0)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Farm Details -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-tractor"></i> Farm Details
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-type">
+                                <i class="fas fa-leaf"></i> Crop Type
+                            </label>
+                            <select id="crop-type" class="form-select">
+                                <option value="Maize"> Maize</option>
+                                <option value="Tobacco"> Tobacco</option>
+                                <option value="Wheat"> Wheat</option>
+                                <option value="Soybean"> Soybean</option>
+                                <option value="Cotton"> Cotton</option>
+                                <option value="Groundnuts"> Groundnuts</option>
+                                <option value="Sorghum"> Sorghum</option>
+                                <option value="Sunflower"> Sunflower</option>
+                                <option value="SweetPotato"> Sweet Potato</option>
+                                <option value="Cassava"> Cassava</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-hectares">
+                                <i class="fas fa-vector-square"></i> Land Size (ha)
+                            </label>
+                            <input type="number" id="crop-hectares" class="form-input" 
+                                   min="0.5" max="100" step="0.5" value="5" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-yield">
+                                <i class="fas fa-weight-hanging"></i> Target Yield (tonnes)
+                            </label>
+                            <input type="number" id="crop-yield" class="form-input" 
+                                   min="0.5" max="50" step="0.5" value="10" />
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-water">
+                                <i class="fas fa-water"></i> Water Availability (mm/yr)
+                            </label>
+                            <div class="range-wrapper">
+                                <input type="range" id="crop-water" min="200" max="2000" step="50" value="800"
+                                       oninput="document.getElementById('water-value').textContent = this.value + ' mm'" />
+                                <div class="range-labels">
+                                    <span>💧 Low (200mm)</span>
+                                    <span class="range-value" id="water-value">800 mm</span>
+                                    <span>💧 High (2000mm)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Financial & Labour -->
+                <div class="form-section">
+                    <div class="form-section-title">
+                        <i class="fas fa-chart-line"></i> Financial & Resources
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-budget">
+                                <i class="fas fa-money-bill-wave"></i> Budget (USD)
+                            </label>
+                            <input type="number" id="crop-budget" class="form-input" 
+                                   min="100" max="100000" step="100" value="5000" />
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-capital">
+                                <i class="fas fa-coins"></i> Available Capital (USD)
+                            </label>
+                            <input type="number" id="crop-capital" class="form-input" 
+                                   min="100" max="100000" step="100" value="3000" />
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="crop-labour">
+                                <i class="fas fa-users"></i> Available Labour
+                            </label>
+                            <input type="number" id="crop-labour" class="form-input" 
+                                   min="1" max="100" step="1" value="5" />
+                        </div>
+                        <div class="form-group">
+                            <label for="crop-seedlings">
+                                <i class="fas fa-seedling"></i> Seedlings Availability
+                            </label>
+                            <select id="crop-seedlings" class="form-select">
+                                <option value="High"> High - Easily Available</option>
+                                <option value="Medium" selected> Medium - Somewhat Available</option>
+                                <option value="Low"> Low - Difficult to Find</option>
+                                <option value="None"> None - Not Available</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-primary btn-block crop-submit-btn">
+                    <i class="fas fa-robot"></i> 
+                    <span>Predict Crop Suitability</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+
+        <!-- RIGHT: RESULTS - MODERN GLASS CARD -->
+        <div id="crop-results" class="crop-results glass-card">
+            <!-- Placeholder State -->
+            <div class="crop-placeholder" id="crop-placeholder">
+                <div class="placeholder-icon">
+                    <i class="fas fa-seedling"></i>
+                    <div class="placeholder-glow"></div>
+                </div>
+                <h4>Ready to Predict</h4>
+                <p>
+                    Fill in the details on the left and click 
+                    <strong>"Predict Crop Suitability"</strong>
+                </p>
+                <div class="placeholder-features">
+                    <span> Location</span>
+                    <span> Soil</span>
+                    <span> Climate</span>
+                    <span> Water</span>
+                    <span> Budget</span>
+                </div>
+            </div>
+
+            <!-- Results Container (populated by JS) -->
+            <div id="crop-results-content" style="display:none;"></div>
+        </div>
+
+    </div>
+</div> 
+
+<!-- ============================================================ -->
+<!-- SECTION: LAND TENURE - REDESIGNED UI/UX                     -->
+<!-- ============================================================ -->
+<div id="section-land" class="section">
+    <div class="land-container glass-card">
+        
+        <!-- Header with Stats -->
+        <div class="land-header-modern">
+            <div class="land-header-left">
+                <div class="land-header-icon">
+                    <i class="fas fa-map-marked-alt"></i>
+                </div>
+                <div>
+                    <h2>Land Tenure Management</h2>
+                    <p><i class="fas fa-shield-alt" style="color:var(--primary);"></i> Secure, verifiable land records on the blockchain</p>
+                </div>
+            </div>
+            <div class="land-header-right">
+                <div class="land-status-badge" id="land-status-badge">
+                    <span class="status-dot"></span>
+                    <span id="land-status-text">Checking Status...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quick Stats Row -->
+        <div class="land-stats-row" id="land-stats-row">
+            <div class="land-stat-item">
+                <span class="land-stat-number" id="stat-land-total">0</span>
+                <span class="land-stat-label">Total Records</span>
+            </div>
+            <div class="land-stat-item">
+                <span class="land-stat-number approved" id="stat-land-approved">0</span>
+                <span class="land-stat-label"> Approved</span>
+            </div>
+            <div class="land-stat-item">
+                <span class="land-stat-number pending" id="stat-land-pending">0</span>
+                <span class="land-stat-label"> Pending</span>
+            </div>
+            <div class="land-stat-item">
+                <span class="land-stat-number rejected" id="stat-land-rejected">0</span>
+                <span class="land-stat-label"> Rejected</span>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- VIEW MODE - Existing Land Record                            -->
+        <!-- ============================================================ -->
+        <div id="land-view-mode" style="display:none;">
+            <div class="land-record-display">
+                <div class="record-display-header">
+                    <div class="record-display-title">
+                        <i class="fas fa-certificate" style="color:var(--primary);"></i>
+                        <span>Registered Title Deed</span>
+                    </div>
+                    <span class="status-badge-modern approved" id="view-status-badge">✅ Approved</span>
+                </div>
+                <div class="record-display-grid" id="existing-land-record">
+                    <!-- Populated by JavaScript -->
+                </div>
+                <div class="record-display-footer">
+                    <i class="fas fa-check-circle" style="color:var(--success);"></i>
+                    <span>Verified on blockchain</span>
+                    <span class="footer-dot">•</span>
+                    <i class="fas fa-lock" style="color:var(--primary);"></i>
+                    <span>Tamper-proof record</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- REGISTER MODE - New Land Registration                      -->
+        <!-- ============================================================ -->
+        <div id="land-register-mode">
+            <div class="land-register-card">
+                <!-- Card Header -->
+                <div class="register-card-header">
+                    <div class="register-icon-wrapper">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <div>
+                        <h3>Register Your Title Deed</h3>
+                        <p>Secure your land rights on the blockchain</p>
+                    </div>
+                    <div class="register-step-indicator">
+                        <span class="step active">1</span>
+                        <span class="step-line"></span>
+                        <span class="step">2</span>
+                        <span class="step-line"></span>
+                        <span class="step">3</span>
+                    </div>
+                </div>
+
+                <form id="landRegistrationForm" onsubmit="event.preventDefault(); registerLand();">
+                    
+                    <!-- SECTION 1: Owner Information -->
+                    <div class="form-section-modern">
+                        <div class="form-section-header">
+                            <div class="section-icon" style="background:linear-gradient(135deg,#1a5c4a,#2a7c6a);">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div>
+                                <h5>Owner Information</h5>
+                                <p>Personal details of the land owner</p>
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-user-circle"></i> Full Name</label>
+                                <input type="text" id="land-owner-name" required class="form-input-modern" />
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-id-card"></i> National ID</label>
+                                <input type="text" id="land-national-id" required class="form-input-modern" />
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="land-phone"  required class="form-input-modern" />
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="land-email"  required class="form-input-modern" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: Land Details -->
+                    <div class="form-section-modern">
+                        <div class="form-section-header">
+                            <div class="section-icon" style="background:linear-gradient(135deg,#f4a261,#e08a3a);">
+                                <i class="fas fa-map"></i>
+                            </div>
+                            <div>
+                                <h5>Land Details</h5>
+                                <p>Information about your farm and location</p>
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-hashtag"></i> Title Deed Number</label>
+                                <input type="text" id="land-deed-number"  required class="form-input-modern" />
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-tractor"></i> Farm Name</label>
+                                <input type="text" id="land-farm-name"  required class="form-input-modern" />
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-vector-square"></i> Plot Number</label>
+                                <input type="text" id="land-plot" required class="form-input-modern" />
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-expand"></i> Farm Size (Hectares)</label>
+                                <input type="number" id="land-size" step="0.01" min="0.01" required class="form-input-modern" />
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-location-dot"></i> District</label>
+                                <input type="text" id="land-district"  required class="form-input-modern" />
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-globe-africa"></i> Province</label>
+                                <select id="land-province" required class="form-select-modern">
+                                    <option value="">Select Province</option>
+                                    <option value="Matabeleland North">Matabeleland North</option>
+                                    <option value="Matabeleland South">Matabeleland South</option>
+                                    <option value="Midlands">Midlands</option>
+                                    <option value="Mashonaland East">Mashonaland East</option>
+                                    <option value="Mashonaland West">Mashonaland West</option>
+                                    <option value="Mashonaland Central">Mashonaland Central</option>
+                                    <option value="Manicaland">Manicaland</option>
+                                    <option value="Masvingo">Masvingo</option>
+                                    <option value="Bulawayo">Bulawayo</option>
+                                    <option value="Harare">Harare</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-satellite"></i> GPS Coordinates</label>
+                                <input type="text" id="land-gps" class="form-input-modern" />
+                                <span class="input-hint">Optional - helps locate your farm</span>
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-city"></i> Nearest Town/City</label>
+                                <input type="text" id="land-town"  required class="form-input-modern" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: Land Rights -->
+                    <div class="form-section-modern">
+                        <div class="form-section-header">
+                            <div class="section-icon" style="background:linear-gradient(135deg,#3498db,#2471a3);">
+                                <i class="fas fa-gavel"></i>
+                            </div>
+                            <div>
+                                <h5>Land Rights</h5>
+                                <p>Define your tenure and usage rights</p>
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-file-contract"></i> Type of Tenure</label>
+                                <select id="land-tenure-type" required class="form-select-modern">
+                                    <option value="">Select Tenure Type</option>
+                                    <option value="Freehold"> Freehold</option>
+                                    <option value="Leasehold"> Leasehold</option>
+                                    <option value="99-Year Lease"> 99-Year Lease</option>
+                                    <option value="Offer Letter"> Offer Letter</option>
+                                    <option value="Communal"> Communal</option>
+                                    <option value="Permit"> Permit</option>
+                                </select>
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-hand-holding"></i> Use Rights</label>
+                                <select id="land-use-rights" required class="form-select-modern">
+                                    <option value="Full"> Full (Cultivation + Grazing)</option>
+                                    <option value="Cultivation Only"> Cultivation Only</option>
+                                    <option value="Grazing Only"> Grazing Only</option>
+                                    <option value="Residential"> Residential</option>
+                                    <option value="Commercial"> Commercial</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row-modern">
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-exchange-alt"></i> Transfer Rights</label>
+                                <select id="land-transfer-rights" required class="form-select-modern">
+                                    <option value="Full"> Full (Can Sell/Transfer)</option>
+                                    <option value="Restricted"> Restricted (Family Only)</option>
+                                    <option value="Not Transferable"> Not Transferable</option>
+                                </select>
+                            </div>
+                            <div class="form-group-modern">
+                                <label><i class="fas fa-calendar-alt"></i> Date of Acquisition</label>
+                                <input type="date" id="land-acquisition-date" required class="form-input-modern" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: Additional Information -->
+                    <div class="form-section-modern">
+                        <div class="form-section-header">
+                            <div class="section-icon" style="background:linear-gradient(135deg,#9b59b6,#8e44ad);">
+                                <i class="fas fa-info-circle"></i>
+                            </div>
+                            <div>
+                                <h5>Additional Information</h5>
+                                <p>Any extra details about your land</p>
+                            </div>
+                        </div>
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-border-all"></i> Description of Boundaries</label>
+                            <textarea id="land-boundaries" rows="2" placeholder="e.g., North: Main Road, South: Binga River, East: Neighbor's farm, West: Communal grazing land..." class="form-textarea-modern"></textarea>
+                        </div>
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-exclamation-triangle"></i> Encumbrances or Claims</label>
+                            <select id="land-encumbrances" class="form-select-modern">
+                                <option value="None"> None</option>
+                                <option value="Mortgage"> Mortgage</option>
+                                <option value="Dispute"> Dispute</option>
+                                <option value="Lease"> Lease to Third Party</option>
+                                <option value="Other"> Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 5: Document Upload -->
+                    <div class="form-section-modern">
+                        <div class="form-section-header">
+                            <div class="section-icon" style="background:linear-gradient(135deg,#e74c3c,#c0392b);">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                            </div>
+                            <div>
+                                <h5>Proof of Evidence</h5>
+                                <p>Upload a clear photo of your title deed</p>
+                            </div>
+                        </div>
+                        <div class="upload-zone" id="upload-zone">
+                            <div class="upload-zone-icon">
+                                <i class="fas fa-file-image"></i>
+                            </div>
+                            <p class="upload-zone-title">Drag & drop your document here</p>
+                            <p class="upload-zone-subtitle">or click to browse</p>
+                            <input type="file" id="land-document-upload" accept="image/*,.pdf" style="display:none;" />
+                            <button type="button" class="btn btn-primary btn-sm upload-browse-btn" onclick="document.getElementById('land-document-upload').click();">
+                                <i class="fas fa-folder-open"></i> Browse Files
+                            </button>
+                            <div id="upload-preview" class="upload-preview" style="display:none;">
+                                <img id="upload-preview-image" src="#" alt="Document Preview" />
+                                <div class="upload-preview-info">
+                                    <span id="upload-filename">document.pdf</span>
+                                    <button type="button" class="upload-remove-btn" onclick="removeUpload()">
+                                        <i class="fas fa-times"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <p class="upload-zone-formats">Supported: JPG, PNG, PDF (Max 10MB)</p>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="btn btn-primary btn-block land-submit-btn">
+                        <i class="fas fa-save"></i>
+                        <span>Register Land on Blockchain</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- LAND RECORDS LIST                                           -->
+        <!-- ============================================================ -->
+        <div class="land-records-section">
+            <div class="land-records-header">
+                <div class="land-records-title">
+                    <i class="fas fa-list-ul" style="color:var(--primary);"></i>
+                    <h4>Land Records</h4>
+                    <span class="records-count" id="records-count">0</span>
+                </div>
+                <button class="btn btn-secondary btn-sm" onclick="loadLandRecords()" style="border-radius:10px;">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+            <div id="land-records" class="land-records-grid">
+                <div class="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Loading land records...</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+        <!-- ============================================================ -->
+<!-- SECTION: DATA SOVEREIGNTY - REDESIGNED UI/UX                -->
+<!-- ============================================================ -->
+<div id="section-data" class="section">
+    <div class="data-container glass-card">
+        
+        <!-- ===== HEADER ===== -->
+        <div class="data-header-modern">
+            <div class="data-header-left">
+                <div class="data-header-icon">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <div>
+                    <h2>Data Sovereignty</h2>
+                    <p><i class="fas fa-check-circle" style="color:var(--success);"></i> You control who accesses your agricultural data</p>
+                </div>
+            </div>
+            <div class="data-header-right">
+                <span class="data-sovereign-badge">
+                    <i class="fas fa-shield-alt"></i> 
+                    <span>Your Data, Your Control</span>
+                </span>
+            </div>
+        </div>
+
+        <!-- ===== TRUST METER ===== -->
+        <div class="trust-meter">
+            <div class="trust-meter-item">
+                <div class="trust-meter-icon" style="background:linear-gradient(135deg,#2ecc71,#27ae60);">
+                    <i class="fas fa-database"></i>
+                </div>
+                <div class="trust-meter-info">
+                    <span class="trust-meter-label">Data Stored</span>
+                    <span class="trust-meter-value" id="data-stored-count">0</span>
+                </div>
+            </div>
+            <div class="trust-meter-item">
+                <div class="trust-meter-icon" style="background:linear-gradient(135deg,#3498db,#2471a3);">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <div class="trust-meter-info">
+                    <span class="trust-meter-label">Active Grants</span>
+                    <span class="trust-meter-value" id="active-grants-count">0</span>
+                </div>
+            </div>
+            <div class="trust-meter-item">
+                <div class="trust-meter-icon" style="background:linear-gradient(135deg,#f4a261,#e08a3a);">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="trust-meter-info">
+                    <span class="trust-meter-label">Total Accesses</span>
+                    <span class="trust-meter-value" id="total-accesses-count">0</span>
+                </div>
+            </div>
+            <div class="trust-meter-item">
+                <div class="trust-meter-icon" style="background:linear-gradient(135deg,#9b59b6,#8e44ad);">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <div class="trust-meter-info">
+                    <span class="trust-meter-label">Benefits Received</span>
+                    <span class="trust-meter-value" id="benefits-count">0</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TABS ===== -->
+        <div class="data-tabs-modern">
+            <button class="data-tab-modern active" data-tab="yield">
+                <i class="fas fa-seedling"></i>
+                <span>Crop Records</span>
+                <span class="tab-count" id="crop-records-count">0</span>
+            </button>
+            <button class="data-tab-modern" data-tab="access">
+                <i class="fas fa-users-cog"></i>
+                <span>Access Management</span>
+                <span class="tab-count pending" id="pending-requests-count">0</span>
+            </button>
+            <button class="data-tab-modern" data-tab="history">
+                <i class="fas fa-history"></i>
+                <span>Access History</span>
+            </button>
+            <button class="data-tab-modern" data-tab="benefits">
+                <i class="fas fa-gem"></i>
+                <span>Benefits</span>
+            </button>
+        </div>
+
+        <!-- ===== TAB CONTENT: CROP RECORDS ===== -->
+        <div id="data-tab-yield" class="data-tab-content-modern active">
+            <div class="crop-records-modern">
+                <!-- Stats Row -->
+                <div class="crop-stats-row">
+                    <div class="crop-stat-item">
+                        <span class="crop-stat-number" id="total-yield">0</span>
+                        <span class="crop-stat-label"> Total Yield (Tonnes)</span>
+                    </div>
+                    <div class="crop-stat-item">
+                        <span class="crop-stat-number" id="total-crops">0</span>
+                        <span class="crop-stat-label"> Crops Grown</span>
+                    </div>
+                    <div class="crop-stat-item">
+                        <span class="crop-stat-number success" id="avg-success">0%</span>
+                        <span class="crop-stat-label"> Success Rate</span>
+                    </div>
+                </div>
+
+                <!-- Action Bar -->
+                <div class="crop-action-bar">
+                    <button class="btn btn-primary" onclick="showAddCropModal()">
+                        <i class="fas fa-plus-circle"></i> Add Crop Record
+                    </button>
+                    <span class="crop-action-hint">
+                        <i class="fas fa-info-circle"></i> Track your farming journey
+                    </span>
+                </div>
+
+                <!-- Records List -->
+                <div id="crop-records-list" class="crop-records-modern-list">
+                    <div class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Loading your crop records...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB CONTENT: ACCESS MANAGEMENT ===== -->
+        <div id="data-tab-access" class="data-tab-content-modern">
+            <div class="access-management-modern">
+                <!-- Header -->
+                <div class="access-header-modern">
+                    <div class="access-header-left">
+                        <h4><i class="fas fa-bell" style="color:var(--primary);"></i> Access Requests</h4>
+                        <span class="access-subtitle">Organizations requesting to view your data</span>
+                    </div>
+                    <div class="access-header-right">
+                        <span class="pending-badge" id="pending-count">
+                            <span class="pending-dot"></span>
+                            <span id="pending-number">0</span> Pending
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Requests List -->
+                <div id="data-access-list" class="access-requests-list">
+                    <div class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Loading requests...</p>
+                    </div>
+                </div>
+
+                <!-- Active Grants -->
+                <div class="active-grants-modern">
+                    <div class="active-grants-header">
+                        <h4><i class="fas fa-check-circle" style="color:var(--success);"></i> Active Grants</h4>
+                        <span class="grants-subtitle">Organizations with current access</span>
+                    </div>
+                    <div id="active-grants-list" class="active-grants-list">
+                        <div class="loading-state">
+                            <div class="loading-spinner"></div>
+                            <p>Loading active grants...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB CONTENT: ACCESS HISTORY ===== -->
+        <div id="data-tab-history" class="data-tab-content-modern">
+            <div class="history-modern">
+                <div class="history-header-modern">
+                    <div class="history-header-left">
+                        <h4><i class="fas fa-clock" style="color:var(--primary);"></i> Access History</h4>
+                        <span class="history-subtitle">Complete audit trail of data access</span>
+                    </div>
+                    <div class="history-header-right">
+                        <span class="history-total" id="history-total">
+                            <i class="fas fa-list"></i> 0 accesses
+                        </span>
+                    </div>
+                </div>
+                <div id="data-history" class="history-timeline">
+                    <div class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Loading history...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== TAB CONTENT: BENEFITS ===== -->
+        <div id="data-tab-benefits" class="data-tab-content-modern">
+            <div class="benefits-modern">
+                <div class="benefits-header-modern">
+                    <div class="benefits-header-left">
+                        <h4><i class="fas fa-gem" style="color:var(--secondary);"></i> Value Feedback</h4>
+                        <span class="benefits-subtitle">Tangible benefits from sharing your data</span>
+                    </div>
+                    <div class="benefits-header-right">
+                        <span class="benefits-total" id="benefits-total">
+                            <i class="fas fa-star"></i> 0 benefits
+                        </span>
+                    </div>
+                </div>
+                <div id="benefits-list" class="benefits-grid">
+                    <div class="loading-state">
+                        <div class="loading-spinner"></div>
+                        <p>Loading benefits...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ============================================================ -->
+<!-- MODAL: ADD CROP RECORD                                      -->
+<!-- ============================================================ -->
+<div id="cropModal" class="modal" style="display:none;">
+    <div class="modal-content glass-card">
+        <div class="modal-header-modern">
+            <div class="modal-header-left">
+                <div class="modal-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <div>
+                    <h3>Record Your Crop Journey</h3>
+                    <p>Document your farming experience</p>
+                </div>
+            </div>
+            <button class="modal-close-modern" onclick="closeModal('cropModal')">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="modal-body-modern">
+            <form id="cropRecordForm" onsubmit="event.preventDefault(); saveCropRecord();">
+                
+                <!-- Crop Information -->
+                <div class="modal-form-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-leaf" style="color:var(--primary);"></i>
+                        <span>Crop Information</span>
+                    </div>
+                    <div class="modal-form-row">
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-seedling"></i> Crop Type</label>
+                            <select id="crop-type-select" class="form-select-modern" required>
+                                <option value="Maize"> Maize</option>
+                                <option value="Tobacco"> Tobacco</option>
+                                <option value="Wheat"> Wheat</option>
+                                <option value="Soybean"> Soybean</option>
+                                <option value="Cotton"> Cotton</option>
+                                <option value="Groundnuts"> Groundnuts</option>
+                                <option value="Sorghum"> Sorghum</option>
+                                <option value="Sunflower"> Sunflower</option>
+                                <option value="SweetPotato"> Sweet Potato</option>
+                                <option value="Cassava"> Cassava</option>
+                            </select>
+                        </div>
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-tag"></i> Variety/Strain</label>
+                            <input type="text" id="crop-variety" class="form-input-modern" placeholder="e.g., SC 403" />
+                        </div>
+                    </div>
+                    <div class="modal-form-row">
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-calendar-plus"></i> Planting Date</label>
+                            <input type="date" id="crop-planting-date" class="form-input-modern" required />
+                        </div>
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-calendar-check"></i> Harvest Date</label>
+                            <input type="date" id="crop-harvest-date" class="form-input-modern" />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Growing Details -->
+                <div class="modal-form-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-water" style="color:var(--secondary);"></i>
+                        <span>Growing Details</span>
+                    </div>
+                    <div class="modal-form-row">
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-vector-square"></i> Land Size (ha)</label>
+                            <input type="number" id="crop-land-size" class="form-input-modern" step="0.01" placeholder="e.g., 5.5" required />
+                        </div>
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-weight-hanging"></i> Total Yield (tonnes)</label>
+                            <input type="number" id="crop-yield-tonnes" class="form-input-modern" step="0.01" placeholder="e.g., 8.5" required />
+                        </div>
+                    </div>
+                    <div class="modal-form-row">
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-flask"></i> Fertilizer Used</label>
+                            <input type="text" id="crop-fertilizer" class="form-input-modern" placeholder="e.g., Compound D, Urea" />
+                        </div>
+                        <div class="form-group-modern">
+                            <label><i class="fas fa-tint"></i> Watering Method</label>
+                            <select id="crop-watering" class="form-select-modern">
+                                <option value="Rain-fed">  Rain-fed</option>
+                                <option value="Irrigation">  Irrigation</option>
+                                <option value="Drip">  Drip</option>
+                                <option value="Sprinkler">  Sprinkler</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group-modern">
+                        <label><i class="fas fa-bug"></i> Pest Control Methods</label>
+                        <textarea id="crop-pest-control" class="form-textarea-modern" rows="2" placeholder="Describe pest control methods used"></textarea>
+                    </div>
+                </div>
+
+                <!-- Harvest Summary -->
+                <div class="modal-form-section">
+                    <div class="modal-section-title">
+                        <i class="fas fa-clipboard-list" style="color:var(--info);"></i>
+                        <span>Harvest Summary</span>
+                    </div>
+                    <div class="form-group-modern">
+                        <label><i class="fas fa-notes-medical"></i> Harvest Notes</label>
+                        <textarea id="crop-notes" class="form-textarea-modern" rows="3" placeholder="Describe your growing journey, challenges, and results..."></textarea>
+                    </div>
+                    <div class="form-group-modern">
+                        <label><i class="fas fa-chart-simple"></i> Success Rate</label>
+                        <div class="range-wrapper">
+                            <input type="range" id="crop-success-rate" min="0" max="100" value="75"
+                                   oninput="document.getElementById('success-rate-display').textContent = this.value + '%'" />
+                            <div class="range-labels">
+                                <span>0%</span>
+                                <span class="range-value" id="success-rate-display">75%</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="btn btn-primary btn-block modal-submit-btn">
+                    <i class="fas fa-save"></i>
+                    <span>Save Crop Record</span>
+                    <i class="fas fa-arrow-right"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- SECTION: CHAT - REDESIGNED UI/UX                            -->
+<!-- ============================================================ -->
+<div id="section-chat" class="section">
+    <div class="chat-wrapper">
+        <div class="chat-container-modern glass-card">
+            
+            <!-- ===== CHAT HEADER ===== -->
+            <div class="chat-header-modern">
+                <div class="chat-header-left">
+                    <div class="chat-avatar-wrapper">
+                        <div class="chat-avatar">
+                            <i class="fas fa-robot"></i>
+                            <div class="avatar-ring"></div>
+                        </div>
+                        <span class="online-dot-chat"></span>
+                    </div>
+                    <div class="chat-header-info">
+                        <h3>AgricLedger AI</h3>
+                        <p>
+                            <span class="status-indicator"></span>
+                            Online • Powered by AI
+                        </p>
+                    </div>
+                </div>
+                <div class="chat-header-right">
+                    <div class="chat-language-selector">
+                        <button class="lang-btn active" data-lang="English">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-name">EN</span>
+                        </button>
+                        <button class="lang-btn" data-lang="Shona">
+                            <span class="lang-flag">🇿🇼</span>
+                            <span class="lang-name">SH</span>
+                        </button>
+                        <button class="lang-btn" data-lang="Ndebele">
+                            <span class="lang-flag">🇿🇼</span>
+                            <span class="lang-name">ND</span>
+                        </button>
+                    </div>
+                    <button class="chat-clear-btn" onclick="clearChat()" title="Clear Chat">
+                        <i class="fas fa-eraser"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ===== CHAT MESSAGES ===== -->
+            <div class="chat-messages-modern" id="chat-messages-modern">
+                
+                <!-- Welcome Message -->
+                <div class="message-modern bot">
+                    <div class="message-avatar bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="message-content-modern">
+                        <div class="message-header">
+                            <span class="message-sender">AgricLedger AI</span>
+                            <span class="message-time" id="welcome-time">Just now</span>
+                        </div>
+                        <div class="message-text">
+                            <div class="welcome-message">
+                                <div class="welcome-emoji">👋</div>
+                                <div class="welcome-text">
+                                    <strong>Sawubona / Mhoro / Hello!</strong>
+                                    <p>I'm your AgricLedger AI Assistant. I can help you with:</p>
+                                </div>
+                            </div>
+                            <div class="quick-actions">
+                                <button class="quick-action" onclick="sendQuickMessage('How do I grow maize?')">
+                                    <span class="quick-icon"></span> Maize farming
+                                </button>
+                                <button class="quick-action" onclick="sendQuickMessage('How do I control pests?')">
+                                    <span class="quick-icon"></span> Pest control
+                                </button>
+                                <button class="quick-action" onclick="sendQuickMessage('What is the best time to plant?')">
+                                    <span class="quick-icon"></span> Planting tips
+                                </button>
+                                <button class="quick-action" onclick="sendQuickMessage('How do I market my produce?')">
+                                    <span class="quick-icon"></span> Marketing
+                                </button>
+                            </div>
+                            <div class="chat-tip">
+                                <i class="fas fa-camera"></i> Upload a photo of your crop for diagnosis!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===== CHAT INPUT ===== -->
+            <div class="chat-input-modern">
+                <div class="chat-input-wrapper">
+                    <div class="chat-input-actions">
+                        <button class="chat-action-btn" id="chat-upload-btn" title="Upload Image">
+                            <i class="fas fa-image"></i>
+                        </button>
+                        <input type="file" id="chat-image-input" accept="image/*" style="display:none;">
+                    </div>
+                    
+                    <div class="chat-input-field">
+                        <input type="text" id="chat-input-modern" placeholder="Type your message here..." autocomplete="off" />
+                        <div class="chat-input-typing" id="typing-dots" style="display:none;">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    
+                    <button class="chat-send-btn" id="chat-send-btn" onclick="sendMessageModern()">
+                        <i class="fas fa-paper-plane"></i>
+                        <span class="send-tooltip">Send</span>
+                    </button>
+                </div>
+
+                <!-- Image Preview -->
+                <div id="chat-image-preview" style="display:none;">
+                    <div class="preview-container">
+                        <img id="chat-preview-img" src="#" alt="Preview" />
+                        <div class="preview-info">
+                            <span id="chat-preview-filename">image.jpg</span>
+                            <button class="preview-remove" onclick="cancelImageUpload()">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                        <button class="preview-analyze-btn" onclick="sendImageForAnalysis()">
+                            <i class="fas fa-search"></i> Analyze
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> 
+
+<!-- ============================================================ -->
+<!-- SECTION: FARMERS MANAGEMENT - REDESIGNED UI/UX              -->
+<!-- ============================================================ -->
+ {% if current_user.role == 'admin' %}
+<div id="section-farmers" class="section">
+    <div class="farmers-management-wrapper">
+
+        <!-- ===== HEADER ===== -->
+        <div class="farmers-header-modern">
+            <div class="farmers-header-left">
+                <div class="farmers-header-icon">
+                    <i class="fas fa-users-cog"></i>
+                </div>
+                <div>
+                    <h2>Farmers Management</h2>
+                    <p>
+                        <i class="fas fa-check-circle" style="color:var(--success);"></i>
+                        Manage registered farmers and approvals
+                    </p>
+                </div>
+            </div>
+            <div class="farmers-header-right">
+                <button class="btn btn-secondary btn-sm" onclick="refreshFarmers()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+                <button class="btn btn-secondary btn-sm" onclick="exportFarmers()">
+                    <i class="fas fa-download"></i> Export
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== STATS ROW ===== -->
+        <div class="farmers-stats-modern">
+            <div class="stat-card-mini">
+                <div class="stat-card-mini-icon" style="background:linear-gradient(135deg,#1a5c4a,#2a7c6a);">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="stat-card-mini-info">
+                    <span class="stat-number" id="total-farmers">0</span>
+                    <span class="stat-label">Total Farmers</span>
+                </div>
+            </div>
+            <div class="stat-card-mini">
+                <div class="stat-card-mini-icon" style="background:linear-gradient(135deg,#2ecc71,#27ae60);">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="stat-card-mini-info">
+                    <span class="stat-number active" id="active-farmers">0</span>
+                    <span class="stat-label">Active</span>
+                </div>
+            </div>
+            <div class="stat-card-mini">
+                <div class="stat-card-mini-icon" style="background:linear-gradient(135deg,#f39c12,#e67e22);">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="stat-card-mini-info">
+                    <span class="stat-number pending" id="pending-farmers">0</span>
+                    <span class="stat-label">Pending</span>
+                </div>
+            </div>
+            <div class="stat-card-mini">
+                <div class="stat-card-mini-icon" style="background:linear-gradient(135deg,#e74c3c,#c0392b);">
+                    <i class="fas fa-ban"></i>
+                </div>
+                <div class="stat-card-mini-info">
+                    <span class="stat-number inactive" id="inactive-farmers">0</span>
+                    <span class="stat-label">Inactive</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== FILTER TABS ===== -->
+        <div class="farmers-tabs-modern" id="farmers-tabs">
+            <button class="farmers-tab-modern active" data-filter="all" onclick="filterFarmers('all')">
+                <i class="fas fa-th-list"></i> All
+                <span class="tab-badge-modern" id="tab-all-count">0</span>
+            </button>
+            <button class="farmers-tab-modern" data-filter="active" onclick="filterFarmers('active')">
+                <i class="fas fa-check-circle" style="color:var(--success);"></i> Active
+                <span class="tab-badge-modern" id="tab-active-count">0</span>
+            </button>
+            <button class="farmers-tab-modern" data-filter="pending" onclick="filterFarmers('pending')">
+                <i class="fas fa-clock" style="color:var(--warning);"></i> Pending
+                <span class="tab-badge-modern" id="tab-pending-count">0</span>
+            </button>
+            <button class="farmers-tab-modern" data-filter="inactive" onclick="filterFarmers('inactive')">
+                <i class="fas fa-ban" style="color:var(--danger);"></i> Inactive
+                <span class="tab-badge-modern" id="tab-inactive-count">0</span>
+            </button>
+        </div>
+
+        <!-- ===== SEARCH & ACTIONS ===== -->
+        <div class="farmers-actions-modern">
+            <div class="search-wrapper-modern">
+                <i class="fas fa-search search-icon"></i>
+                <input 
+                    type="text" 
+                    id="farmers-search-input" 
+                    placeholder="Search by name, email, or farmer ID..."
+                    oninput="searchFarmers()"
+                    autocomplete="off"
+                />
+                <button class="search-clear" id="search-clear" onclick="clearSearch()" style="display:none;">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="actions-wrapper">
+                <button class="btn btn-secondary btn-sm" onclick="exportFarmers()">
+                    <i class="fas fa-file-export"></i> Export
+                </button>
+                <button class="btn btn-primary btn-sm" onclick="refreshFarmers()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== TABLE ===== -->
+        <div class="farmers-table-modern">
+            <div id="farmers-list" class="farmers-list">
+                <div class="loading-state">
+                    <div class="loading-spinner"></div>
+                    <p>Loading farmers...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== PAGINATION ===== -->
+        <div class="farmers-pagination-modern">
+            <button class="page-btn-modern" id="prev-page" onclick="changePage('prev')">
+                <i class="fas fa-chevron-left"></i> Previous
+            </button>
+            <span class="page-info-modern" id="page-info">Page 1 of 1</span>
+            <button class="page-btn-modern" id="next-page" onclick="changePage('next')">
+                Next <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+    </div>
+</div>
+{% endif %}
+<!-- ============================================================ -->
+<!-- SECTION: SETTINGS - Glossy & Creative UI/UX                  -->
+<!-- ============================================================ -->
+<div id="section-settings" class="section">
+    <div class="settings-container">
+        
+        <!-- ===== GLOSSY BACKGROUND EFFECT ===== -->
+        <div class="settings-glow-bg"></div>
+        
+        <!-- ===== PROFILE HEADER ===== -->
+<div class="settings-profile-header">
+    <div class="settings-avatar-wrapper">
+        <div class="settings-avatar-ring">
+            <div class="settings-avatar-glow"></div>
+            <div class="settings-avatar" id="settings-avatar">
+                <span id="avatar-initials">
+                    {% if user.first_name and user.last_name %}
+                        {{ user.first_name[0] }}{{ user.last_name[0] }}
+                    {% else %}
+                        U
+                    {% endif %}
+                </span>
+            </div>
+        </div>
+        <div class="settings-avatar-status online"></div>
+        <button class="settings-avatar-edit" type="button" onclick="document.getElementById('avatar-input').click()">
+            <i class="fas fa-camera"></i>
+        </button>
+        <input type="file" id="avatar-input" accept="image/*" style="display:none" onchange="handleAvatarUpload(event)" />
+    </div>
+    <h2 id="settings-display-name">{{ user.first_name }} {{ user.last_name }}</h2>
+    <p id="settings-display-email">{{ user.email }}</p>
+    <div class="settings-badge-wrapper">
+        <span class="settings-role-badge">🌾 {{ user.role|capitalize }}</span>
+        <span class="settings-role-badge premium"><i class="fas fa-crown"></i> Premium</span>
+    </div>
+</div>
+
+        <!-- ===== TAB NAVIGATION ===== -->
+        <div class="settings-tabs-nav">
+            <button class="settings-tab-btn active" data-tab="personal" onclick="switchTab('personal')">
+                <div class="tab-icon-wrapper">
+                    <i class="fas fa-user"></i>
+                    <span class="tab-tooltip">Personal</span>
+                </div>
+                <span>Personal</span>
+                <div class="tab-indicator"></div>
+            </button>
+            <button class="settings-tab-btn" data-tab="security" onclick="switchTab('security')">
+                <div class="tab-icon-wrapper">
+                    <i class="fas fa-lock"></i>
+                    <span class="tab-tooltip">Security</span>
+                </div>
+                <span>Security</span>
+                <div class="tab-indicator"></div>
+            </button>
+            <button class="settings-tab-btn" data-tab="preferences" onclick="switchTab('preferences')">
+                <div class="tab-icon-wrapper">
+                    <i class="fas fa-palette"></i>
+                    <span class="tab-tooltip">Preferences</span>
+                </div>
+                <span>Preferences</span>
+                <div class="tab-indicator"></div>
+            </button>
+            <button class="settings-tab-btn" data-tab="notifications" onclick="switchTab('notifications')">
+                <div class="tab-icon-wrapper">
+                    <i class="fas fa-bell"></i>
+                    <span class="tab-tooltip">Notifications</span>
+                    <span class="tab-badge">3</span>
+                </div>
+                <span>Notifications</span>
+                <div class="tab-indicator"></div>
+            </button>
+            <button class="settings-tab-btn" data-tab="twofa" onclick="switchTab('twofa')">
+                <div class="tab-icon-wrapper">
+                    <i class="fas fa-shield-alt"></i>
+                    <span class="tab-tooltip">2FA</span>
+                </div>
+                <span>2FA</span>
+                <div class="tab-indicator"></div>
+            </button>
+        </div>
+
+        <!-- ===== TAB CONTENT ===== -->
+        <div class="settings-tab-content-wrapper">
+            
+            <!-- Tab: Personal Information -->
+            <div id="settings-tab-personal" class="settings-tab-panel active">
+                <div class="settings-tab-header">
+                    <div class="tab-header-icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div>
+                        <h3>Personal Information</h3>
+                        <p>Update your personal details</p>
+                    </div>
+                </div>
+                <div class="settings-tab-body">
+                    <form id="profile-form">
+                        <div class="settings-form-row">
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-user"></i> First Name</label>
+                                <input type="text" id="profile-first-name" value="{{ user.first_name }}" placeholder="First name" class="glossy-input" />
+                            </div>
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-user"></i> Last Name</label>
+                                <input type="text" id="profile-last-name" value="{{ user.last_name }}" placeholder="Last name" class="glossy-input" />
+                            </div>
+                        </div>
+                        <div class="settings-form-row">
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-envelope"></i> Email Address</label>
+                                <input type="email" id="profile-email" value="{{ user.email }}" placeholder="Email" disabled class="glossy-input" />
+                                <span class="field-hint"><i class="fas fa-info-circle"></i> Email cannot be changed</span>
+                            </div>
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-phone"></i> Phone Number</label>
+                                <input type="tel" id="profile-phone" value="{{ user.phone }}" placeholder="Phone number" class="glossy-input" />
+                            </div>
+                        </div>
+                        <div class="settings-form-row">
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-map-marker-alt"></i> Location</label>
+                                <input type="text" id="profile-location" value="{{ user.location }}" placeholder="Your location" class="glossy-input" />
+                            </div>
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-id-card"></i> Farmer ID</label>
+                                <input type="text" id="profile-farmer-id" value="{{ user.farmer_id }}" disabled class="glossy-input" />
+                                <span class="field-hint"><i class="fas fa-info-circle"></i> Unique identifier</span>
+                            </div>
+                        </div>
+                        <div class="settings-form-row full-width">
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-quote-left"></i> Bio</label>
+                                <textarea id="profile-bio" rows="3" placeholder="Tell us about yourself..." class="glossy-input">{{ user.bio }}</textarea>
+                            </div>
+                        </div>
+                        <div class="settings-form-actions">
+                            <button type="button" class="btn-primary glossy-btn" onclick="saveProfile()">
+                                <i class="fas fa-save"></i> Save Changes
+                                <span class="btn-shimmer"></span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Tab: Security -->
+            <div id="settings-tab-security" class="settings-tab-panel">
+                <div class="settings-tab-header">
+                    <div class="tab-header-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h3>Security</h3>
+                        <p>Manage your password and account protection</p>
+                    </div>
+                </div>
+                <div class="settings-tab-body">
+                    <form id="password-form">
+                        <div class="settings-form-row">
+                            <div class="settings-form-group full-width">
+                                <label><i class="fas fa-key"></i> Current Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="current-password" placeholder="Enter current password" required class="glossy-input" />
+                                    <button type="button" class="password-toggle" onclick="toggleVisibility('current-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-form-row">
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-lock"></i> New Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="new-password" placeholder="Min 8 characters" required class="glossy-input" />
+                                    <button type="button" class="password-toggle" onclick="toggleVisibility('new-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="strength-bar">
+                                        <div class="strength-segment" id="seg-1"></div>
+                                        <div class="strength-segment" id="seg-2"></div>
+                                        <div class="strength-segment" id="seg-3"></div>
+                                        <div class="strength-segment" id="seg-4"></div>
+                                    </div>
+                                    <span class="strength-label" id="strength-text">Weak</span>
+                                </div>
+                            </div>
+                            <div class="settings-form-group">
+                                <label><i class="fas fa-check-circle"></i> Confirm Password</label>
+                                <div class="password-input-wrapper">
+                                    <input type="password" id="confirm-password" placeholder="Confirm new password" required class="glossy-input" />
+                                    <button type="button" class="password-toggle" onclick="toggleVisibility('confirm-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                                <span class="password-match" id="match-text"></span>
+                            </div>
+                        </div>
+                        <div class="settings-form-actions">
+                            <button type="button" class="btn-primary glossy-btn" onclick="changePassword()">
+                                <i class="fas fa-key"></i> Update Password
+                                <span class="btn-shimmer"></span>
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Logout -->
+                    <div class="settings-divider">
+                        <span>or</span>
+                    </div>
+                    <div class="settings-logout-wrapper">
+                        <button class="btn-logout glossy-btn" onclick="logoutUser()">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                            <span class="btn-shimmer"></span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Preferences -->
+            <div id="settings-tab-preferences" class="settings-tab-panel">
+                <div class="settings-tab-header">
+                    <div class="tab-header-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div>
+                        <h3>Preferences</h3>
+                        <p>Customize your experience</p>
+                    </div>
+                </div>
+                <div class="settings-tab-body">
+                    <!-- Theme -->
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-moon"></i>
+                            </div>
+                            <div>
+                                <span>Dark Mode</span>
+                                <p>Switch between light and dark theme</p>
+                            </div>
+                        </div>
+                        <label class="toggle-switch glossy-toggle-switch">
+                            <input type="checkbox" id="theme-toggle" onchange="toggleTheme()" />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+
+                    <!-- Font Size -->
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-font"></i>
+                            </div>
+                            <div>
+                                <span>Font Size</span>
+                                <p>Adjust text size for better readability</p>
+                            </div>
+                        </div>
+                        <div class="font-size-control">
+                            <button class="font-btn glossy-btn" onclick="changeFontSize(-5)">A-</button>
+                            <span class="font-size-display" id="font-size-display">100%</span>
+                            <button class="font-btn glossy-btn" onclick="changeFontSize(5)">A+</button>
+                            <input type="range" id="font-size-slider" min="80" max="140" value="100" step="5"
+                                   oninput="updateFontSize(this.value)" class="font-slider glossy-slider" />
+                        </div>
+                    </div>
+
+                    <!-- Language -->
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div>
+                                <span>Language</span>
+                                <p>Select your preferred language</p>
+                            </div>
+                        </div>
+                        <select class="settings-select glossy-select" id="language-select" onchange="changeLanguage(this.value)">
+                            <option value="en">🇬🇧 English</option>
+                            <option value="sn">🇿🇼 Shona</option>
+                            <option value="nd">🇿🇼 Ndebele</option>
+                            <option value="fr">🇫🇷 Français</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Notifications -->
+            <div id="settings-tab-notifications" class="settings-tab-panel">
+                <div class="settings-tab-header">
+                    <div class="tab-header-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div>
+                        <h3>Notifications</h3>
+                        <p>Manage what updates you receive</p>
+                    </div>
+                </div>
+                <div class="settings-tab-body">
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span>Email Notifications</span>
+                                <p>Receive updates via email</p>
+                            </div>
+                        </div>
+                        <label class="toggle-switch glossy-toggle-switch">
+                            <input type="checkbox" checked />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div>
+                                <span>Data Requests</span>
+                                <p>Get notified when someone requests your data</p>
+                            </div>
+                        </div>
+                        <label class="toggle-switch glossy-toggle-switch">
+                            <input type="checkbox" checked />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <span>Market Updates</span>
+                                <p>Receive market trends and price alerts</p>
+                            </div>
+                        </div>
+                        <label class="toggle-switch glossy-toggle-switch">
+                            <input type="checkbox" />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="settings-toggle-row glossy-toggle">
+                        <div class="toggle-info">
+                            <div class="toggle-icon-wrapper">
+                                <i class="fas fa-cloud-sun"></i>
+                            </div>
+                            <div>
+                                <span>Weather Alerts</span>
+                                <p>Get notified about weather changes</p>
+                            </div>
+                        </div>
+                        <label class="toggle-switch glossy-toggle-switch">
+                            <input type="checkbox" checked />
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab: Two-Factor Authentication -->
+            <div id="settings-tab-twofa" class="settings-tab-panel">
+                <div class="settings-tab-header">
+                    <div class="tab-header-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div>
+                        <h3>Two-Factor Authentication</h3>
+                        <p>Add an extra layer of security to your account</p>
+                    </div>
+                </div>
+                <div class="settings-tab-body">
+                    <div class="settings-twofa glossy-card">
+                        <div class="twofa-status-icon">
+                            <i class="fas fa-shield-alt" id="twofa-icon"></i>
+                            <div class="twofa-pulse"></div>
+                        </div>
+                        <div class="twofa-content">
+                            <p id="twofa-text">Two-factor authentication adds an extra layer of security to your account. When enabled, you'll need to enter a verification code from your authenticator app when signing in.</p>
+                            <div class="twofa-features">
+                                <span class="feature-tag"><i class="fas fa-check-circle"></i> Extra Security</span>
+                                <span class="feature-tag"><i class="fas fa-check-circle"></i> Authenticator App</span>
+                                <span class="feature-tag"><i class="fas fa-check-circle"></i> Backup Codes</span>
+                            </div>
+                            <div class="twofa-actions">
+                                <button class="btn-primary glossy-btn" id="twofa-btn" onclick="setup2FA()">
+                                    <i class="fas fa-plus"></i> Set up 2FA
+                                    <span class="btn-shimmer"></span>
+                                </button>
+                                <button class="btn-secondary glossy-btn" id="twofa-disable-btn" onclick="disable2FA()" style="display:none;">
+                                    <i class="fas fa-times"></i> Disable 2FA
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+ <!-- ============================================================ -->
+<!-- SECTION: REVIEWS & FEEDBACK - Premium UI/UX                   -->
+<!-- ============================================================ -->
+<div id="section-reviews" class="section">
+    <div class="reviews-wrapper">
+        
+        <!-- ===== HEADER ===== -->
+        <div class="reviews-header">
+            <div class="reviews-header-left">
+                <div class="reviews-header-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div>
+                    <h2>Reviews & Feedback</h2>
+                    <p>Share your experience and help us improve</p>
+                </div>
+            </div>
+            <div class="reviews-header-right">
+                <button class="btn btn-secondary btn-sm" onclick="refreshReviews()">
+                    <i class="fas fa-sync-alt"></i> Refresh
+                </button>
+            </div>
+        </div>
+
+        <!-- ===== MAIN GRID ===== -->
+        <div class="reviews-grid">
+            
+            <!-- ===== LEFT: WRITE REVIEW ===== -->
+            <div class="reviews-form-column">
+                <div class="review-form-card">
+                    <div class="form-card-header">
+                        <h3><i class="fas fa-pen-fancy"></i> Write a Review</h3>
+                        <p>Share your experience with AgricLedger</p>
+                    </div>
+
+                    <form id="reviewForm" onsubmit="event.preventDefault(); submitReview();">
+                        <!-- Overall Rating -->
+                        <div class="form-group-modern">
+                            <label>Overall Rating <span class="required">*</span></label>
+                            <div class="star-rating" id="star-rating">
+                                <span class="star" data-value="1" onclick="setRating(1)">☆</span>
+                                <span class="star" data-value="2" onclick="setRating(2)">☆</span>
+                                <span class="star" data-value="3" onclick="setRating(3)">☆</span>
+                                <span class="star" data-value="4" onclick="setRating(4)">☆</span>
+                                <span class="star" data-value="5" onclick="setRating(5)">☆</span>
+                            </div>
+                            <input type="hidden" id="rating-value" value="0" />
+                            <div class="rating-text" id="rating-text">Click a star to rate</div>
+                        </div>
+
+                        <!-- Review Title -->
+                        <div class="form-group-modern">
+                            <label>Review Title <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-heading input-icon"></i>
+                                <input type="text" id="review-title" placeholder="e.g., Great platform for farmers!" required />
+                            </div>
+                        </div>
+
+                        <!-- Review Content -->
+                        <div class="form-group-modern">
+                            <label>Your Review <span class="required">*</span></label>
+                            <div class="input-wrapper">
+                                <i class="fas fa-quote-left input-icon" style="top:16px;"></i>
+                                <textarea id="review-content" rows="4" placeholder="Tell us about your experience..." required></textarea>
+                            </div>
+                            <div class="char-counter">
+                                <span id="char-count">0</span> / 500 characters
+                            </div>
+                        </div>
+
+                        <!-- Feature Ratings -->
+                        <div class="form-group-modern">
+                            <label>Feature Ratings</label>
+                            <div class="feature-rating-grid">
+                                <div class="feature-rating-item">
+                                    <span class="feature-icon"></span>
+                                    <span class="feature-name">Crop Suitability</span>
+                                    <div class="mini-stars" data-feature="crops">
+                                        <span class="mini-star" data-value="1" onclick="setFeatureRating('crops',1)">☆</span>
+                                        <span class="mini-star" data-value="2" onclick="setFeatureRating('crops',2)">☆</span>
+                                        <span class="mini-star" data-value="3" onclick="setFeatureRating('crops',3)">☆</span>
+                                        <span class="mini-star" data-value="4" onclick="setFeatureRating('crops',4)">☆</span>
+                                        <span class="mini-star" data-value="5" onclick="setFeatureRating('crops',5)">☆</span>
+                                    </div>
+                                </div>
+                                <div class="feature-rating-item">
+                                    <span class="feature-icon"></span>
+                                    <span class="feature-name">Weather Forecast</span>
+                                    <div class="mini-stars" data-feature="weather">
+                                        <span class="mini-star" data-value="1" onclick="setFeatureRating('weather',1)">☆</span>
+                                        <span class="mini-star" data-value="2" onclick="setFeatureRating('weather',2)">☆</span>
+                                        <span class="mini-star" data-value="3" onclick="setFeatureRating('weather',3)">☆</span>
+                                        <span class="mini-star" data-value="4" onclick="setFeatureRating('weather',4)">☆</span>
+                                        <span class="mini-star" data-value="5" onclick="setFeatureRating('weather',5)">☆</span>
+                                    </div>
+                                </div>
+                                <div class="feature-rating-item">
+                                    <span class="feature-icon"></span>
+                                    <span class="feature-name">Land Tenure</span>
+                                    <div class="mini-stars" data-feature="land">
+                                        <span class="mini-star" data-value="1" onclick="setFeatureRating('land',1)">☆</span>
+                                        <span class="mini-star" data-value="2" onclick="setFeatureRating('land',2)">☆</span>
+                                        <span class="mini-star" data-value="3" onclick="setFeatureRating('land',3)">☆</span>
+                                        <span class="mini-star" data-value="4" onclick="setFeatureRating('land',4)">☆</span>
+                                        <span class="mini-star" data-value="5" onclick="setFeatureRating('land',5)">☆</span>
+                                    </div>
+                                </div>
+                                <div class="feature-rating-item">
+                                    <span class="feature-icon"></span>
+                                    <span class="feature-name">AI Assistant</span>
+                                    <div class="mini-stars" data-feature="chat">
+                                        <span class="mini-star" data-value="1" onclick="setFeatureRating('chat',1)">☆</span>
+                                        <span class="mini-star" data-value="2" onclick="setFeatureRating('chat',2)">☆</span>
+                                        <span class="mini-star" data-value="3" onclick="setFeatureRating('chat',3)">☆</span>
+                                        <span class="mini-star" data-value="4" onclick="setFeatureRating('chat',4)">☆</span>
+                                        <span class="mini-star" data-value="5" onclick="setFeatureRating('chat',5)">☆</span>
+                                    </div>
+                                </div>
+                                <div class="feature-rating-item">
+                                    <span class="feature-icon"></span>
+                                    <span class="feature-name">Data Sovereignty</span>
+                                    <div class="mini-stars" data-feature="data">
+                                        <span class="mini-star" data-value="1" onclick="setFeatureRating('data',1)">☆</span>
+                                        <span class="mini-star" data-value="2" onclick="setFeatureRating('data',2)">☆</span>
+                                        <span class="mini-star" data-value="3" onclick="setFeatureRating('data',3)">☆</span>
+                                        <span class="mini-star" data-value="4" onclick="setFeatureRating('data',4)">☆</span>
+                                        <span class="mini-star" data-value="5" onclick="setFeatureRating('data',5)">☆</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recommend -->
+                        <div class="form-group-modern">
+                            <label>Would you recommend AgricLedger?</label>
+                            <div class="recommend-options">
+                                <label class="recommend-option">
+                                    <input type="radio" name="recommend" value="yes" checked />
+                                    <span class="option-label yes"> Yes</span>
+                                </label>
+                                <label class="recommend-option">
+                                    <input type="radio" name="recommend" value="no" />
+                                    <span class="option-label no"> No</span>
+                                </label>
+                                <label class="recommend-option">
+                                    <input type="radio" name="recommend" value="maybe" />
+                                    <span class="option-label maybe"> Maybe</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-submit-review">
+                            <i class="fas fa-paper-plane"></i> Submit Review
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- ===== RIGHT: REVIEWS DISPLAY ===== -->
+            <div class="reviews-display-column">
+                
+                <!-- Stats -->
+                <div class="reviews-stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#1a5c4a,#2a7c6a);">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <span class="stat-number" id="avg-rating">0.0</span>
+                            <span class="stat-label">Average Rating</span>
+                            <span class="stat-stars" id="avg-stars">☆☆☆☆☆</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#f39c12,#e67e22);">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <span class="stat-number" id="total-reviews">0</span>
+                            <span class="stat-label">Total Reviews</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-card-icon" style="background:linear-gradient(135deg,#2ecc71,#27ae60);">
+                            <i class="fas fa-thumbs-up"></i>
+                        </div>
+                        <div class="stat-card-info">
+                            <span class="stat-number" id="recommend-rate">0%</span>
+                            <span class="stat-label">Would Recommend</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters -->
+                <div class="reviews-filter-bar">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="all" onclick="filterReviews('all')">
+                            <i class="fas fa-list"></i> All
+                        </button>
+                        <button class="filter-btn" data-filter="5" onclick="filterReviews('5')">
+                            <i class="fas fa-star" style="color:#f4a261;"></i> 5 Stars
+                        </button>
+                        <button class="filter-btn" data-filter="4" onclick="filterReviews('4')">
+                            <i class="fas fa-star" style="color:#f4a261;"></i> 4 Stars
+                        </button>
+                        <button class="filter-btn" data-filter="3" onclick="filterReviews('3')">
+                            <i class="fas fa-star" style="color:#f4a261;"></i> 3 Stars
+                        </button>
+                        <button class="filter-btn" data-filter="latest" onclick="filterReviews('latest')">
+                            <i class="fas fa-clock"></i> Latest
+                        </button>
+                    </div>
+                    <span class="review-count" id="review-count">0 reviews</span>
+                </div>
+
+                <!-- Reviews List -->
+                <div class="reviews-list-container">
+                    <div id="reviews-list" class="reviews-list">
+                        <div class="loading-state">
+                            <div class="loading-spinner"></div>
+                            <p>Loading reviews...</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+        <!-- ============================================================ -->
+        <!-- FOOTER -->
+        <!-- ============================================================ -->
+        <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <div class="footer-brand">
+                    <span class="brand-icon">🌾</span>
+                    <span>AgricLedger</span>
+                </div>
+                <span class="footer-divider">|</span>
+                <span class="footer-copyright-text">© 2026 All Rights Reserved</span>
+            </div>
+            <div class="footer-center">
+                <span class="footer-label">Follow us:</span>
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="social-icon whatsapp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <span class="footer-version">v2.0.0</span>
+            </div>
+        </div>
+    </footer>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+    
+    <!-- ========== ADDITIONAL SCRIPTS FOR INTEGRATED FEATURES ========== -->
+    <script>
+        // ================================================================
+        // NAVIGATION
+        // ================================================================
+        function navigateTo(section) {
+            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+            document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+            
+            const link = document.querySelector(`.nav-link[data-section="${section}"]`);
+            if (link) link.classList.add('active');
+            
+            const target = document.getElementById(`section-${section}`);
+            if (target) target.classList.add('active');
+            
+            const titles = {
+                dashboard: 'Dashboard',
+                weather: 'Weather & Forecast',
+                crops: 'Crop Suitability',
+                land: 'Land Tenure',
+                data: 'Data Sovereignty',
+                chat: 'AI Assistant',
+                farmers: 'Registered Farmers',
+                settings: 'Settings',
+                reviews: 'Reviews & Feedback'
+            };
+            document.getElementById('page-title').textContent = titles[section] || 'Dashboard';
+        }
+
+        // ================================================================
+        // SIDEBAR TOGGLE
+        // ================================================================
+        function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle('collapsed');
+        }
+
+        // ================================================================
+        // SETTINGS TAB SWITCHING
+        // ================================================================
+        function switchSettingsTab(tab) {
+            document.querySelectorAll('.settings-section').forEach(s => s.classList.remove('active'));
+            document.querySelectorAll('.settings-nav-link').forEach(l => l.classList.remove('active'));
+            
+            document.getElementById(`settings-section-${tab}`).classList.add('active');
+            document.querySelector(`.settings-nav-link[data-section="${tab}"]`).classList.add('active');
+        }
+
+        // ================================================================
+        // THEME TOGGLE
+        // ================================================================
+        function toggleTheme() {
+            document.documentElement.classList.toggle('dark');
+            const isDark = document.documentElement.classList.contains('dark');
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            const icon = document.getElementById('theme-icon');
+            const label = document.getElementById('theme-label');
+            if (isDark) {
+                icon.className = 'fas fa-moon';
+                label.textContent = 'Dark Mode';
+            } else {
+                icon.className = 'fas fa-sun';
+                label.textContent = 'Light Mode';
+            }
+        }
+
+        // ================================================================
+        // THEME RESTORE
+        // ================================================================
+        document.addEventListener('DOMContentLoaded', function() {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark') {
+                document.documentElement.classList.add('dark');
+                const icon = document.getElementById('theme-icon');
+                const label = document.getElementById('theme-label');
+                if (icon) icon.className = 'fas fa-moon';
+                if (label) label.textContent = 'Dark Mode';
+            }
+        });
+
+        // ================================================================
+        // TOAST NOTIFICATION
+        // ================================================================
+        function showToast(message, type = 'info') {
+            const container = document.createElement('div');
+            const colors = { success: '#2ecc71', error: '#e74c3c', warning: '#f39c12', info: '#3498db' };
+            const icons = { success: 'fa-check-circle', error: 'fa-exclamation-circle', warning: 'fa-exclamation-triangle', info: 'fa-info-circle' };
+            
+            container.style.cssText = `
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                background: white;
+                padding: 16px 24px;
+                border-radius: 14px;
+                box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+                border-left: 4px solid ${colors[type] || colors.info};
+                z-index: 9999;
+                animation: slideUp 0.4s cubic-bezier(0.4,0,0.2,1);
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-family: 'Inter', sans-serif;
+            `;
+            container.innerHTML = `
+                <i class="fas ${icons[type] || icons.info}" style="color:${colors[type] || colors.info};font-size:1.2rem;"></i>
+                <span style="color:#1a3c34;font-size:0.9rem;font-weight:500;">${message}</span>
+                <button onclick="this.parentElement.remove()" style="background:none;border:none;color:#8aa89a;cursor:pointer;font-size:1.4rem;padding:0 4px;">×</button>
+            `;
+            document.body.appendChild(container);
+            setTimeout(() => container.remove(), 5000);
+        }
+    </script>
+</body>
+</html>

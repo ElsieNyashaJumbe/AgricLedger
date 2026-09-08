@@ -1,0 +1,21 @@
+{
+  "dataset_name": "Zimbabwe Geoportal - Soil Types Classification",
+  "source_url": "https://zimgeoportal.org.zw/datasets/soil-types/",
+  "publisher_organization": "Zimbabwe Geoportal / Survey of Zimbabwe / Agritex",
+  "collection_period": "Authoritative National Soil Survey Classification",
+  "geographic_coverage": "Zimbabwe (National Spatial Boundaries)",
+  "geographic_reference_system": "EPSG:4326 (WGS 84)",
+  "spatial_resolution": "Vector Spatial Polygons / District Bounding Aggregates",
+  "available_formats": ["GeoJSON", "Shapefile", "CSV"],
+  "license": "Public Access / Government Open Data",
+  "access_status": "AUTHENTICATION_REQUIRED",
+  "access_note": "Requires ZimGeoportal registered account access. Reference lookup tables retained in data/external/zimbabwe_soil_data.csv for offline baseline compatibility.",
+  "provenance_class": "REAL / REFERENCE",
+  "soil_classifications": [
+    "Orthoferralitic (Sandy Loam)",
+    "Fersiallitic (Clay Loam)",
+    "Vertisol (Heavy Black Clay)",
+    "Regosol (Deep Sands)",
+    "Lithosol (Shallow Rocky Soil)"
+  ]
+}

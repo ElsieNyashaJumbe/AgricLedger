@@ -1,0 +1,11 @@
+location,soil_type,soil_class,pH,drainage,texture,fertility_index
+Harare,Red Clay Loam,Fersiallitic,6.2,Good,Clay Loam,8.2
+Bulawayo,Sandy Loam,Amorphic,6.8,Well-drained,Sandy Loam,6.0
+Mutare,Deep Loam,Orthoferrallitic,5.8,Excellent,Loam,8.8
+Gweru,Sandy Clay Loam,Fersiallitic,6.4,Moderate,Clay Loam,6.5
+Masvingo,Granitic Sand,Regosol,5.5,Excessive,Sandy,4.5
+Binga,Silt Sand,Lithosol,7.2,Rapid,Sandy,3.8
+Chinhoyi,Heavy Red Clay,Fersiallitic,6.5,Good,Clay,8.5
+Kwekwe,Loam,Fersiallitic,6.3,Good,Loam,7.0
+Kadoma,Sandy Clay,Fersiallitic,6.6,Moderate,Sandy Clay,6.8
+Murehwa,Sandy Loam,Fersiallitic,5.9,Well-drained,Sandy Loam,7.5
